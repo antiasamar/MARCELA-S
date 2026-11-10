@@ -1,0 +1,137 @@
+/* -------VARIABLES------- */
+:root {
+    --color-vino: #481229; 
+    --color-naranja: #D34736; 
+    --color-rosa: #F6C9E0; 
+    --color-crema: #F6F2EF; 
+
+
+}
+
+/* -------RESET BÁSICO------ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ------MENÚ RESPONSIVE------ */
+
+.cabecera {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--color-vino);
+    color: var(--color-naranja);
+    padding: 12px 20px;
+}
+
+.cabecera__barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem var(--espacio);
+}
+
+.logo {
+    font-size: 2.2rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--color-naranja);
+}
+
+/* Botón hamburguesa */
+.menu-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-btn span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background-color: var(--color-naranja);
+    border-radius: 2px;
+    transition: transform var(--transicion), opacity var(--transicion);
+}
+
+/* Clase que se añade con jQuery: las tres barras forman una X */
+.menu-btn.abierto span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-btn.abierto span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.abierto span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* En móvil el menú empieza oculto: jQuery lo despliega */
+.menu {
+    display: none;
+    padding: 0 var(--espacio) 1rem;
+}
+
+.menu a {
+    font-family: Fragment Mono;
+        font-size: 1.2rem;
+        color: var(--color-rosa);
+    display: block;
+    padding: 0.8rem 0;
+    font-weight: 600;
+    text-decoration: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    transition: color var(--transicion);
+}
+
+
+
+
+
+
+/* ---------- Escritorio ---------- */
+@media (min-width: 768px) {
+    .cabecera {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 40px;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    /* !important porque jQuery deja un display en línea en el HTML
+       al plegar el menú en móvil; así el menú siempre se ve en escritorio */
+    .menu {
+        display: flex !important;
+        gap: 3rem;
+        padding: 0;
+    }
+
+    .menu a {
+        padding: 0;
+        border-top: none;
+        font-family: Fragment Mono;
+        font-size: 1.2rem;
+        color: var(--color-rosa);
+    }
+
+    .menu a:hover {
+    color: var(--color-naranja);
+    scale: 1.2;
+    }
+}
