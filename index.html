@@ -54,6 +54,7 @@
         </nav>
     </header>
 
+
     <!-- HERO  -->
     <section class="hero">
         <div class="hero-left">
@@ -88,7 +89,7 @@
         <h1>Marcela's</h1>
     </section>
 
-    <!-- PROPUESTA -->
+     <!-- PROPUESTA  -->
 
     <section class="propuesta">
         <div class="propuesta-text">
@@ -118,9 +119,92 @@
         </div>
     </section>
 
+    <!-- PROPUESTA -->
+     <!-- Contenedor principal con section -->
+    <section class="espacios-container">
+        
+        <!-- Bloque izquierdo: Carrusel / Slideshow -->
+        <div class="slideshow">
+            <div class="slideshow__pantalla">
+                <!-- Diapositiva 1 -->
+                <div class="slide">
+                    <img src="media/img/barra.png" alt="La Barra">
+                    <div class="slide__overlay">
+                        <h2 class="slide__titulo">La Barra</h2>
+                        <p class="slide__descripcion">Espacio para tomar copas, cócteles y disfrutar de un ambiente más informal.</p>
+                    </div>
+                </div>
+
+                <!-- Diapositiva 2 -->
+                <div class="slide">
+                    <img src="media/img/comedor.png" alt="El Comedor">
+                    <div class="slide__overlay">
+                        <h2 class="slide__titulo">El Comedor</h2>
+                        <p class="slide__descripcion">Zona principal para comidas y cenas, con mesas para parejas y grupos.</p>
+                    </div>
+                </div>
+
+                <!-- Diapositiva 3 -->
+                <div class="slide">
+                    <img src="media/img/salon.png" alt="El Salón">
+                    <div class="slide__overlay">
+                        <h2 class="slide__titulo">El Salón</h2>
+                        <p class="slide__descripcion">Un rincón más relajado para conversar, reunirse y disfrutar de encuentros tranquilos.</p>
+                    </div>
+                </div>
+
+                <!-- Diapositiva 4 -->
+                <div class="slide">
+                    <img src="media/img/escenario.png" alt="El Escenario">
+                    <div class="slide__overlay">
+                        <h2 class="slide__titulo">El Escenario</h2>
+                        <p class="slide__descripcion">Para actuaciones, música en directo, presentaciones, charlas y propuestas artísticas.</p>
+                    </div>
+                </div>
+
+                <!-- Diapositiva 5 -->
+                <div class="slide">
+                    <img src="media/img/pista.png" alt="La Pista">
+                    <div class="slide__overlay">
+                        <h2 class="slide__titulo">La Pista</h2>
+                        <p class="slide__descripcion">Un rincón más relajado para conversar, reunirse y disfrutar de encuentros tranquilos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controles (Puntos indicadores generados por JS) -->
+            <div class="slideshow__controles">
+                <div class="puntos" id="puntos-container"></div>
+                <button type="button" class="boton" id="anterior" style="display:none;"></button>
+                <button type="button" class="boton" id="siguiente" style="display:none;"></button>
+                <span id="contador" style="display:none;"></span>
+            </div>
+        </div>
+
+        <!-- Bloque derecho: Textos del diseño -->
+        <div class="espacios__info">
+
+            <div class="brand-info">
+                <div class="brand-logo">M's</div>
+                
+                <p class="brand-description">
+                    Un lugar donde cada rincón invita a quedarse. Descubre los espacios de Marcela's, pensados para compartir comidas, cenas, encuentros, cultura y noches de celebración.
+                </p>
+            </div>
+
+            <h1 class="brand-heading">
+                UN ESPACIO<br>PARA VIVIRLO
+            </h1>
+        </div>
+
+    </section>
+
+    
+     
     <!----------ENLACES JS---------->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/slideshow.js"></script>
     
 </body>
 

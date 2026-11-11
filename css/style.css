@@ -330,6 +330,213 @@ body {
     color: var(--color-vino);
 }
 
+/* ----------ESPACIOS---------- */
+
+/* ---------- Layout General con Flexbox (2 Columnas) ---------- */
+.espacios-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100vw;
+    height: calc(100vh - 65.1px);
+    max-height: 100vh;
+    padding: 40px;
+    background-color: var(--color-crema);
+    
+}
+
+/* ---------- Slideshow (Columna Izquierda con Flexbox) ---------- */
+.slideshow {
+    flex: 1; /* Ancho fijo para el carrusel */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    
+}
+
+.slideshow__pantalla {
+    position: relative;
+    aspect-ratio: 4/ 5;
+    overflow: hidden;
+    /* background-color: var(--primary-color); */
+}
+
+/* Diapositivas superpuestas */
+.slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: none; /* Ocultas por defecto */
+}
+
+.slide:first-child {
+    display: block; /* Solo la primera se ve al cargar */
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* filter: brightness(0.8); */
+}
+
+/* Overlay distribuido con Flexbox (Título a la izq, Descripción a la der) */
+.slide__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    pointer-events: none;
+}
+
+/* ---------- Título con rectángulo translúcido ---------- */
+/* Bloque translúcido único que contiene el título y la descripción usando tu variable */
+.slide__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 7rem;
+    padding: 1.2rem 1.5rem;
+    
+    /* Distribución interna con Flexbox */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    
+    /* Fondo translúcido utilizando la variable --color-rosa */
+    /* Nota: Si --color-rosa es un valor hexadecimal o RGB, puedes usar rgba() o ajustar la opacidad según prefieras */
+   background-color: color-mix(in srgb, var(--color-rosa) 70%, transparent);
+    backdrop-filter: blur(4px);
+    
+    /* Estado inicial: oculto mediante opacidad y desplazamiento sutil */
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.slide__titulo {
+    font-family: Alga;
+    font-size: 2.5rem;
+    color: var(--color-vino);
+    flex: 1;
+}
+
+.slide__descripcion {
+    font-family: Fragment Mono;
+    font-size: 1.2rem;
+    color: var(--color-vino);
+    flex: 2;
+}
+
+/* Al hacer hover sobre la pantalla del carrusel, ambos elementos aparecen a la vez */
+.slideshow__pantalla:hover .slide__overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* ---------- Controles (Barra inferior con Puntos usando Flexbox) ---------- */
+.slideshow__controles {
+    background-color: var(--color-vino);
+    padding: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.puntos {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+}
+
+.punto {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--color-rosa);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.punto.activo {
+    background-color: var(--color-naranja);
+    transform: scale(1.2);
+}
+
+/* ---------- Sección Informativa (Columna Derecha con Flexbox) ---------- */
+.espacios__info {
+    flex: 1;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.brand-logo {
+    font-family: Beth Ellen;
+    font-size: 3rem;
+    color: var(--color-vino);
+    line-height: 1;
+    margin-bottom: 1rem;
+    /* align-self: center; */
+}
+
+.brand-description {
+    font-family: Fragment Mono;
+    font-size: 1.2rem;
+    color: var(--color-vino);
+    /* line-height: 1.6; */
+    max-width: 442px;
+    margin-bottom: auto;
+}
+
+.brand-heading {
+    font-family: Alga;
+    font-size: 6rem;
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: -1px;
+    color: var(--color-vino);
+    margin-top: 4rem;
+    align-self: flex-end;
+}
+
+.brand-info {
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-end; */
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 900px) {
+    .espacios-container {
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+    .slideshow {
+        /* flex: none; */
+        width: 100%;
+    }
+
+    .espacios__info {
+        flex-direction: row-reverse;
+    }
+}
+
+
+
 
 
 
