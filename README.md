@@ -23,3 +23,7 @@ font-family: "alga", serif;
 font-weight: 700;
 font-style: italic;
 
+
+
+# para la animación de que crezca la foto: 
+https://api.jquery.com/animate/
