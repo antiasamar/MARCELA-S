@@ -110,7 +110,7 @@ body {
     gap: 1rem;
     width: 100vw;
     /* height: 100vh; */
-     min-height: calc(100vh - 65.1px);
+    min-height: calc(100vh - 65.1px);
     flex-wrap: wrap-reverse;
     overflow: hidden;
 }
@@ -206,8 +206,130 @@ body {
     gap: 1rem;
 }
 
+/* ----------SEPARADOR---------- */
+
+.separador {
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 65.1px);
+    overflow: hidden;
+}
+
+.separador > img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.separador > h1 {
+    position: absolute;
+    z-index: 2;
+
+    width: 100%;
+    left: 0;
+    bottom: 20px;
+
+    margin: 0;
+    text-align: center;
+    white-space: nowrap;
+
+    font-size: 22vw;
+    line-height: 0.8;
+    color: var(--color-rosa);
+}
+
+/* ----------PROPUESTA---------- */
+
+.propuesta {
+    background-color: var(--color-naranja);
+    width: 100vw;
+    min-height: calc(100vh - 65.1px);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+}
+
+.propuesta-text {
+    display: flex;
+    /* gap: 2rem; */
+}
+
+.propuesta-text > h3 {
+    font-size: 3rem;
+    color: var(--color-vino);
+    flex: 1;
+}
+
+.propuesta-text > p {
+    font-family: Fragment Mono;
+    color: var(--color-vino);
+    font-size: 1.2rem;
+    flex: 1;
+}
+
+.propuesta-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem; 
+}
+
+.propuesta-tarjeta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+}
+
+.propuesta-tarjeta > p {
+    text-align: center;
+    font-family: Fragment Mono;
+    color: var(--color-vino);
+    font-size: 1.2rem;
+}
+
+.propuesta-tarjeta > h2 {
+    font-family: Beth Ellen;
+    color: var(--color-vino);
+    font-size: 2rem;
+    padding-bottom: 1.5rem;
+}
+
+.propuesta-newsletter {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
 
 
+.propuesta-newsletter > p {
+    font-family: Fragment Mono;
+    color: var(--color-vino);
+    font-size: 1.2rem;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+}
+
+.btn-newsletter {
+    text-decoration: none;
+    color: var(--color-rosa);
+    font-family: Fragment Mono;
+    font-size: 1.5rem;
+    transition: var(--transicion);
+}
+
+.btn-newsletter:hover {
+    color: var(--color-vino);
+}
 
 
 
