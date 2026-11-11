@@ -5,6 +5,8 @@
     --color-rosa: #F6C9E0; 
     --color-crema: #F6F2EF; 
 
+    --transicion: 0.25s ease;
+
 
 }
 
@@ -35,7 +37,6 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem var(--espacio);
 }
 
 .logo {
@@ -45,7 +46,7 @@ html {
     color: var(--color-naranja);
 }
 
-/* Botón hamburguesa */
+/* BOTÓN HAMBURGUESA */
 .menu-btn {
     display: flex;
     flex-direction: column;
@@ -62,10 +63,11 @@ html {
     height: 3px;
     background-color: var(--color-naranja);
     border-radius: 2px;
-    transition: transform var(--transicion), opacity var(--transicion);
+    transition: transform var(--transicion);
 }
 
-/* Clase que se añade con jQuery: las tres barras forman una X */
+/* ANIMACIÓN BOTÓN  */
+
 .menu-btn.abierto span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
 }
@@ -81,18 +83,17 @@ html {
 /* En móvil el menú empieza oculto: jQuery lo despliega */
 .menu {
     display: none;
-    padding: 0 var(--espacio) 1rem;
 }
 
 .menu a {
     font-family: Fragment Mono;
-        font-size: 1.2rem;
-        color: var(--color-rosa);
+    font-size: 1.2rem;
+    color: var(--color-rosa);
     display: block;
     padding: 0.8rem 0;
     font-weight: 600;
     text-decoration: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-top: 1px solid var(--color-rosa);
     transition: color var(--transicion);
 }
 
@@ -101,7 +102,14 @@ html {
 
 
 
-/* ---------- Escritorio ---------- */
+
+
+
+
+
+/* -----------MEDIA QUERYS----------- */
+
+/* ---------- ESCRITORIO ---------- */
 @media (min-width: 768px) {
     .cabecera {
         display: flex;
@@ -110,12 +118,11 @@ html {
         padding: 12px 40px;
     }
 
+
     .menu-btn {
         display: none;
     }
 
-    /* !important porque jQuery deja un display en línea en el HTML
-       al plegar el menú en móvil; así el menú siempre se ve en escritorio */
     .menu {
         display: flex !important;
         gap: 3rem;
