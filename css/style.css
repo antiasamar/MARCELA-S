@@ -101,6 +101,42 @@ body {
     transition: color var(--transicion);
 }
 
+/* ---------- ESCRITORIO ---------- */
+@media (min-width: 768px) {
+
+    /* MENÚ */
+    .cabecera {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 40px;
+    }
+
+
+    .menu-btn {
+        display: none;
+    }
+
+    .menu {
+        display: flex !important;
+        gap: 3rem;
+        padding: 0;
+    }
+
+    .menu a {
+        padding: 0;
+        border-top: none;
+        font-family: Fragment Mono;
+        font-size: 1.2rem;
+        color: var(--color-rosa);
+    }
+
+    .menu a:hover {
+    color: var(--color-naranja);
+    scale: 1.2;
+    }
+}
+
 /* ----------HERO---------- */
 
 .hero {
@@ -658,7 +694,7 @@ body {
     background-color: var(--color-vino);
     height: calc(100vh - 65.1px);
     box-sizing: border-box;
-    padding: 2rem 2.5rem;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -781,49 +817,267 @@ body {
     }
 }
 
-/* ----------PRÓXIMOS EVENTOS---------- */
+/* ==========================================
+   SECCIÓN PRÓXIMOS EVENTOS (100% Viewport)
+   ========================================== */
+.prox-eventos {
+    background-color: var(--color-vino); /* Tono burdeos oscuro de fondo */
+    width: 100%;
+    min-height: calc(100vh - 65.1px);
+    /* box-sizing: border-box; */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem; /* Controla el espacio natural entre el header y las tarjetas sin huecos raros */
+    justify-content: space-between;
+}
 
+/* Cabecera de la sección */
+.prox-eventos-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+}
 
+.prox-eventos-header h2 {
+    font-family: 'Alga', serif;
+    color: var(--color-rosa);
+    font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+    font-weight: 400;
+    margin: 0;
+    line-height: 1;
+}
 
+.prox-eventos-header a {
+   text-decoration: none;
+   font-family: Fragment Mono;
+   color: var(--color-rosa);
+   font-size: clamp(0.9rem, 1.1vw, 2rem);
+   transition: color 0.2s ease;
+}
 
-
-
-
-
-/* ---------------MEDIA QUERYS--------------- */
-
-/* ---------- ESCRITORIO ---------- */
-@media (min-width: 768px) {
-
-    /* MENÚ */
-    .cabecera {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 12px 40px;
-    }
-
-
-    .menu-btn {
-        display: none;
-    }
-
-    .menu {
-        display: flex !important;
-        gap: 3rem;
-        padding: 0;
-    }
-
-    .menu a {
-        padding: 0;
-        border-top: none;
-        font-family: Fragment Mono;
-        font-size: 1.2rem;
-        color: var(--color-rosa);
-    }
-
-    .menu a:hover {
+.prox-eventos-header a:hover {
     color: var(--color-naranja);
-    scale: 1.2;
+}
+
+/* ==========================================
+   CONTENEDOR DE TARJETAS (Grid de 3 columnas)
+   ========================================== */
+.eventos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales exactas */
+    gap: 2rem;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: start; /* Evita que las tarjetas se estiren verticalmente a la fuerza */
+    height: 90%;
+}
+
+/* Tarjeta individual con forma de arco superior */
+.eventos-tarjeta {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: space-between; /* Mantiene el contenido ordenado desde arriba */
+    padding: 2rem;
+    box-sizing: border-box;
+    /* Efecto de arco superior limpio y proporcionado */
+    border-top-left-radius: 300px;
+    border-top-right-radius: 300px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* ==========================================
+   COLORES SEGÚN EL TIPO DE EVENTO (CLASES)
+   ========================================== */
+.espectaculo {
+    background-color: var(--color-rosa); /* Rosa pastel */
+    color: var(--color-vino);
+}
+
+.cultura {
+    background-color: var(--color-naranja); /* Rojo teja / coral */
+    color: var(--color-vino);
+}
+
+.fiesta {
+    background-color: var(--color-crema); /* Beige claro / blanco roto */
+    color: var(--color-vino);
+}
+
+/* ==========================================
+   ESTRUCTURA INTERNA DE LA TARJETA
+   ========================================== */
+
+/* Imagen de la tarjeta (Círculo perfecto fijo que nunca se achata) */
+.eventos-tarjeta img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem auto;
+    display: block;
+    flex-shrink: 0;
+}
+
+/* Bloque de descripción intermedia */
+.eventos-descripcion {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    width: 80%;
+    align-self: center;
+}
+
+.eventos-descripcion h3 {
+    font-family: Beth Ellen;
+    font-size: 2.2rem;
+    margin: 0 0 0.8rem 0;
+    font-weight: normal;
+}
+
+.eventos-descripcion p {
+    font-family: Fragment Mono;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    margin: 0 0 0.6rem 0;
+}
+
+/* Pie de la tarjeta (Horario, precio y título) */
+.eventos-info {
+    padding-top: 1.2rem;
+    margin-top: auto; /* Empuja el bloque de info siempre al fondo de forma limpia */
+    /* opacity: 0.9; */
+}
+
+.eventos-info div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.eventos-info h2 {
+    font-family: Alga;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.eventos-info p {
+    font-family: Fragment Mono;
+    font-size: 0.8rem;
+}
+
+
+
+/* ==========================================
+   ADAPTACIÓN RESPONSIVE (Móviles y Tablets)
+   ========================================== */
+@media (max-width: 1024px) {
+    .eventos-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
     }
 }
+
+@media (max-width: 768px) {
+    .prox-eventos {
+        height: auto;
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .eventos-container {
+        grid-template-columns: 1fr; /* 1 columna en móviles */
+        justify-items: center;
+    }
+
+    .eventos-tarjeta {
+        max-width: 380px;
+        width: 100%;
+    }
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    height: calc(100vh - 65.1px);
+    background-color: var(--color-naranja);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer h1 {
+    font-size: 22vw;
+    color: var(--color-vino);
+    line-height: 18vw;
+    align-self: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: self-end;
+}
+
+.footer-izq {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+}
+
+.footer-horario > div > p {
+    font-family: Fragment Mono;
+    color: var(--color-vino);
+    font-size: 1.8rem;
+}
+
+.footer-izq > p {
+    font-family: Alga;
+    font-size: 2rem;
+    color: var(--color-vino);
+    font-weight: 600;
+}
+
+.footer-drch {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+    align-items: self-end;
+}
+
+.footer-drch > div:first-child > p {
+    font-family: Fragment Mono;
+    color: var(--color-vino);
+    font-size: 1.8rem;
+    text-align: right;
+}
+
+.footer-drch > div:last-child {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
+
+
+
+
+
+/* ---------------MEDIA QUERYS --------------- */
+
+
