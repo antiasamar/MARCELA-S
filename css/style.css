@@ -336,12 +336,11 @@ body {
 .espacios-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
     gap: 2rem;
     width: 100vw;
-    height: calc(100vh - 65.1px);
-    max-height: 100vh;
+    min-height: calc(100vh - 65.1px);
     padding: 40px;
     background-color: var(--color-crema);
     
@@ -350,7 +349,7 @@ body {
 /* ---------- Slideshow (Columna Izquierda con Flexbox) ---------- */
 .slideshow {
     flex: 1; /* Ancho fijo para el carrusel */
-    height: 100%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -479,9 +478,10 @@ body {
 .espacios__info {
     flex: 1;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column;
+    /* flex-wrap: wrap-reverse; */
     justify-content: space-between;
-    height: 100%;
+    min-height: 100%;
 }
 
 .brand-logo {
@@ -489,7 +489,7 @@ body {
     font-size: 3rem;
     color: var(--color-vino);
     line-height: 1;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
     /* align-self: center; */
 }
 
@@ -504,19 +504,21 @@ body {
 
 .brand-heading {
     font-family: Alga;
-    font-size: 6rem;
+    font-size: 5rem;
     font-weight: 400;
     line-height: 0.95;
     letter-spacing: -1px;
     color: var(--color-vino);
     margin-top: 4rem;
-    align-self: flex-end;
+    /* align-self: flex-end; */
+    /* justify-self: flex-start; */
 }
 
 .brand-info {
     display: flex;
     flex-direction: column;
-    /* align-items: flex-end; */
+    gap: 2rem;
+    align-self: flex-end;
 }
 
 /* Responsive para pantallas pequeñas */
@@ -535,6 +537,252 @@ body {
     }
 }
 
+/* ----------HISTORIA NOMBRE---------- */
+
+.nombre {
+    background-color: var(--color-rosa);
+    width: 100vw;
+    min-height: calc(100vh - 65.1px);
+    padding: 60px;
+    justify-content: space-between;
+    gap: 6rem;
+    display: flex;
+    flex-direction: column;
+     justify-content: space-between;
+}
+
+/* IMAGEN Y TEXTOS SUPERPUESTOS */
+
+.nombre-container {
+    position: relative;
+    width: 70%;
+    max-width: 1000px;
+    margin: 80px auto;
+
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.nombre-foto {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* NOMBRE ELISA Y MARCELA */
+
+.nombre-titulo {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    margin: 0;
+
+    font-family: Beth Ellen;
+    font-size: clamp(25px, 4vw, 55px);
+    color: var(--color-vino);
+    transform: rotate(-26deg);
+}
+
+/* FECHA */
+
+.nombre-fecha {
+    position: absolute;
+    bottom: 80px;
+    right: 110px;
+    margin: 0;
+
+    font-family: Beth Ellen;
+    font-size: clamp(25px, 4vw, 40px);
+    color: var(--color-vino);
+    transform: rotate(-26deg);
+}
+
+/* BLOQUE INFERIOR */
+
+.nombre-historia {
+    display: flex;
+    /* align-items: end; */
+    justify-content: flex-end;
+    align-items: end;
+    gap: 30px;
+    /* margin-top: 80px; */
+}
+
+.nombre-subtitulo {
+    flex: 1;
+    font-family: Alga;
+    font-size: clamp(28px, 3.5vw, 48px);
+    color: var(--color-vino);
+    margin: 0;
+}
+
+.nombre-descripcion {
+    flex: 2;
+    font-family: Fragment Mono;
+    font-size: clamp(12px, 1.1vw, 16px);
+    line-height: 1.3;
+    color: var(--color-vino);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+
+    .nombre {
+        padding: 50px 5% 30px;
+        min-height: auto;
+    }
+
+    .nombre-container {
+        width: 95%;
+    }
+
+    .nombre-historia {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-top: 70px;
+    }
+
+    .nombre-subtitulo {
+        font-size: 32px;
+    }
+
+    .nombre-descripcion {
+        font-size: 13px;
+    }
+}
+
+/* ---------- ESPECIALIDADES ---------- */
+
+.especialidades {
+    background-color: var(--color-vino);
+    height: calc(100vh - 65.1px);
+    box-sizing: border-box;
+    padding: 2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.especialidades > h2 {
+    font-family: 'Alga', serif;
+    color: var(--color-naranja);
+    font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+    font-weight: 400;
+    margin: 0;
+    line-height: 1;
+}
+
+/* Retícula de 8 columnas exactas */
+.especialidades-container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 2rem;
+    width: 100%;
+    max-height: calc(100vh - 220px);
+    align-items: start;
+}
+
+/* Laterales: 3 columnas cada una */
+.columna-grande {
+    grid-column: span 3;
+}
+
+/* Central: 2 columnas */
+.columna-pequena {
+    grid-column: span 2;
+}
+
+.especialidades-tarjeta {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    gap: 0.5rem;
+}
+
+.especialidades-tarjeta > img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 1ª Tarjeta (Ostras): Vertical alta */
+.especialidades-tarjeta:nth-child(1) > img {
+    aspect-ratio: 3 / 4;
+    max-height: calc(100vh - 300px);
+}
+
+/* 2ª Tarjeta (Cóctel): Vertical media */
+.especialidades-tarjeta:nth-child(2) > img {
+    aspect-ratio: 3 / 3.3;
+    max-height: calc(100vh - 300px);
+}
+
+/* 3ª Tarjeta (Tiramisú): Horizontal real (sin aspect-ratio forzado, la altura la da su propia forma) */
+.especialidades-tarjeta:nth-child(3) > img {
+    height: auto;
+    max-height: calc(100vh - 350px); /* Límite para que no baje demasiado, manteniendo su formato apaisado */
+}
+
+.especialidades-tarjeta > h3 {
+    font-family: 'Beth Ellen', cursive;
+    color: var(--color-naranja);
+    font-size: clamp(1rem, 1.3vw, 1.5rem);
+    font-weight: 400;
+    margin: 0.4rem 0 0.1rem 0;
+    line-height: 1.2;
+}
+
+.especialidades-tarjeta > p {
+    font-family: 'Fragment Mono', monospace;
+    color: var(--color-naranja);
+    font-size: clamp(0.75rem, 0.9vw, 0.9rem);
+    margin: 0;
+}
+
+.especialidades > a {
+    text-decoration: none;
+    font-family: 'Fragment Mono', monospace;
+    color: var(--color-naranja);
+    font-size: clamp(0.9rem, 1.1vw, 2rem);
+    align-self: flex-end;
+    transition: color 0.2s ease;
+}
+
+.especialidades > a:hover {
+    color: var(--color-rosa);
+}
+
+/* ---------- RESPONSIVE (Tablet y Móvil) ---------- */
+@media (max-width: 900px) {
+    .especialidades {
+        height: auto;
+        min-height: calc(100vh - 65.1px);
+        padding: 2rem 1.5rem;
+        gap: 2rem;
+        overflow: visible;
+    }
+
+    .especialidades-container {
+        display: flex;
+        flex-direction: column;
+        max-height: none;
+        gap: 2.5rem;
+    }
+
+    .especialidades-tarjeta > img {
+        max-height: none;
+        aspect-ratio: 4 / 3;
+    }
+
+    .especialidades > a {
+        align-self: flex-start;
+    }
+}
+
+/* ----------PRÓXIMOS EVENTOS---------- */
+
 
 
 
@@ -546,6 +794,8 @@ body {
 
 /* ---------- ESCRITORIO ---------- */
 @media (min-width: 768px) {
+
+    /* MENÚ */
     .cabecera {
         display: flex;
         justify-content: space-between;
