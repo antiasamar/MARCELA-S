@@ -376,7 +376,7 @@ body {
     /* align-items: center; */
     gap: 2rem;
     width: 100vw;
-    min-height: calc(100vh - 65.1px);
+    height: calc(100vh - 65.1px);
     padding: 40px;
     background-color: var(--color-crema);
     
@@ -385,7 +385,7 @@ body {
 /* ---------- Slideshow (Columna Izquierda con Flexbox) ---------- */
 .slideshow {
     flex: 1; /* Ancho fijo para el carrusel */
-    height: 90%;
+    max-height: 100%;
     display: flex;
     flex-direction: column;
     align-self: center;
