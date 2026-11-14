@@ -137,6 +137,12 @@ body {
     }
 }
 
+@media (max-width: 480px) {
+    .cabecera {
+        padding: 12px 12px;
+    }
+}
+
 /* ----------HERO---------- */
 
 .hero {
@@ -1899,8 +1905,6 @@ footer h1 {
     flex: 1;
 }
 
-
-
 .plato__nombre {
     font-family: Beth Ellen;
     font-size: 2.1rem;
@@ -1914,12 +1918,12 @@ footer h1 {
     font-size: 1.2rem;
     line-height: 1.4;
     color: inherit;
-}s
+}
 
 .plato__precio {
-    font-family: Fragment Mono;
-    font-size: 8rem;
-    /* font-weight: 600; */
+    font-family: Alga;
+    font-size: 2rem;
+    font-weight: 600;
     white-space: nowrap;
     color: inherit;
 }
@@ -1957,29 +1961,109 @@ footer h1 {
 /* ---------- Botón inferior ---------- */
 .acordeon-carta__cta {
     margin-top: 3rem;
+    margin-bottom: 3rem;
     text-align: center;
     width: 100%;
 }
 
 .btn-reserva {
+    font-family: Fragment Mono;
     display: inline-block;
     text-decoration: none;
-    color: var(--color-acento);
-    font-size: 1.1rem;
+    color: var(--color-naranja);
+    font-size: 1.5rem;
     letter-spacing: 0.08em;
     transition: opacity var(--transicion);
 }
 
 .btn-reserva:hover {
-    opacity: 0.7;
+    color: var(--color-vino);
 }
 
-/* Adaptación a móvil */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+
+    .acordeon-carta {
+        padding: 20px;
+    }
+
     .acordeon-carta__grid {
         grid-template-columns: 1fr;
+        gap: 0;
     }
+
     .acordeon-carta__visor {
         display: none;
     }
+
+    .plato__desc {
+        font-size: 1rem;
+    }
+
+
+    
 }
+
+@media (max-width: 480px) {
+
+    .acordeon-carta {
+        padding: 10px;
+    }
+
+    .acordeon-carta__titulo-seccion {
+        font-size: 2rem;
+         margin-bottom: 0.5rem;
+    }
+
+    .acordeon__titulo {
+        font-size: 1.8rem;
+       
+    }
+
+    .plato {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .plato__nombre {
+        font-size: 1.5rem;
+    }
+
+    .plato__desc {
+        font-size: 1rem;
+    }
+
+    .plato__precio {
+        align-self: self-start;
+        font-size: 1.5rem;
+    }
+}
+
+
+
+/* FOOTER  */
+
+.footer-carta {
+    background-color: var(--color-vino);
+}
+
+.footer-carta > h1 {
+    color: var(--color-rosa);
+}
+
+.footer-carta > .footer-content > .footer-izq > .footer-horario > div > p {
+    color: var(--color-rosa);
+}
+
+.footer-carta > .footer-content > .footer-izq > p {
+    color: var(--color-rosa);
+}
+
+.footer-carta > .footer-content > .footer-drch > div > p {
+    color: var(--color-rosa);
+}
+
+
+
+
+
+
