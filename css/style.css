@@ -24,6 +24,7 @@ html {
 
 body {
   overflow-x: hidden;
+  background-color: var(--color-vino);
 }
 
 /* ----------MENÚ RESPONSIVE---------- */
@@ -281,7 +282,7 @@ body {
 
 /* ----------PROPUESTA---------- */
 
-.propuesta {
+/* .propuesta {
     background-color: var(--color-naranja);
     width: 100vw;
     min-height: calc(100vh - 65.1px);
@@ -293,7 +294,6 @@ body {
 
 .propuesta-text {
     display: flex;
-    /* gap: 2rem; */
 }
 
 .propuesta-text > h3 {
@@ -364,6 +364,131 @@ body {
 
 .btn-newsletter:hover {
     color: var(--color-vino);
+} */
+
+.propuesta {
+    background-color: var(--color-naranja);
+    width: 100vw;
+    min-height: calc(100vh - 65.1px);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem; /* Reducido ligeramente para pantallas medianas */
+    box-sizing: border-box; /* Vital para que el padding no genere scroll horizontal */
+}
+
+.propuesta-text {
+    display: flex;
+    gap: 2rem;
+}
+
+.propuesta-text > h3 {
+    font-size: 3rem;
+    color: var(--color-vino);
+    flex: 1;
+}
+
+.propuesta-text > p {
+    font-family: Fragment Mono;
+    color: var(--color-vino);
+    font-size: 1.2rem;
+    flex: 1;
+}
+
+/* Contenedor de las tarjetas */
+.propuesta-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem; /* Espacio más manejable */
+    flex-wrap: wrap; /* Permite que bajen si no caben */
+}
+
+/* Tarjetas individuales adaptables */
+.propuesta-tarjeta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    min-width: 280px; /* Ancho mínimo antes de saltar */
+    max-width: 380px;  /* Ancho máximo para pantallas grandes */
+}
+
+/* Hacemos que la imagen sea 100% responsive dentro de su tarjeta */
+.propuesta-tarjeta > img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.propuesta-tarjeta > p {
+    text-align: center;
+    font-family: Fragment Mono;
+    color: var(--color-vino);
+    font-size: 1.2rem;
+}
+
+.propuesta-tarjeta > h2 {
+    font-family: Beth Ellen;
+    color: var(--color-vino);
+    font-size: 2rem;
+    padding-bottom: 1.5rem;
+}
+
+.propuesta-newsletter {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Para que en pantallas pequeñas el botón baje de línea ordenadamente */
+    text-align: center;
+}
+
+.propuesta-newsletter > p {
+    font-family: Fragment Mono;
+    color: var(--color-vino);
+    font-size: 1.2rem;
+}
+
+.btn-newsletter {
+    text-decoration: none;
+    color: var(--color-rosa);
+    font-family: Fragment Mono;
+    font-size: 1.5rem;
+    transition: var(--transicion);
+}
+
+.btn-newsletter:hover {
+    color: var(--color-vino);
+}
+
+
+/* ---------- MEDIA QUERY PARA TABLET Y MÓVIL (<= 900px) ---------- */
+@media (max-width: 900px) {
+    
+    /* El texto superior pasa a una sola columna para que no se apretujen */
+    .propuesta-text {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    /* Las tarjetas pasan a una única columna vertical centrada */
+    .propuesta-container {
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    .propuesta-tarjeta {
+        width: 100%;
+        max-width: 450px; /* Ancho cómodo en tablet para la tarjeta */
+    }
+
+    /* Ajuste del bloque de newsletter inferior para pantallas estrechas */
+    .propuesta-newsletter {
+        flex-direction: column;
+        gap: 1rem;
+    }
 }
 
 /* ----------ESPACIOS---------- */
@@ -372,32 +497,32 @@ body {
 .espacios-container {
     display: flex;
     flex-direction: row;
-    /* justify-content: center; */
-    /* align-items: center; */
-    gap: 2rem;
+    justify-content: space-between;
+    gap: 3rem;
     width: 100vw;
     height: calc(100vh - 65.1px);
     padding: 40px;
     background-color: var(--color-crema);
-    
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
-/* ---------- Slideshow (Columna Izquierda con Flexbox) ---------- */
+/* ---------- Slideshow (Columna Izquierda) ---------- */
 .slideshow {
-    flex: 1; /* Ancho fijo para el carrusel */
-    max-height: 100%;
+    /* El ancho de la columna lo marca la altura disponible menos el padding y la barra de puntos, manteniendo proporción 4:5 */
+    width: calc((100vh - 65.1px - 80px - 48px) * 0.8);
+    max-width: 50%; /* Nunca ocupa más de la mitad de la pantalla */
+    height: 100%;
     display: flex;
     flex-direction: column;
-    align-self: center;
-    justify-self: center;
-    
+    justify-content: center;
 }
 
 .slideshow__pantalla {
     position: relative;
-    aspect-ratio: 4/ 5;
+    width: 100%;
+    aspect-ratio: 4 / 5;
     overflow: hidden;
-    /* background-color: var(--primary-color); */
 }
 
 /* Diapositivas superpuestas */
@@ -406,36 +531,20 @@ body {
     inset: 0;
     width: 100%;
     height: 100%;
-    display: none; /* Ocultas por defecto */
+    display: none;
 }
 
 .slide:first-child {
-    display: block; /* Solo la primera se ve al cargar */
+    display: block;
 }
 
 .slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* filter: brightness(0.8); */
-}
-
-/* Overlay distribuido con Flexbox (Título a la izq, Descripción a la der) */
-.slide__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    pointer-events: none;
 }
 
 /* ---------- Título con rectángulo translúcido ---------- */
-/* Bloque translúcido único que contiene el título y la descripción usando tu variable */
 .slide__overlay {
     position: absolute;
     top: 0;
@@ -444,19 +553,15 @@ body {
     height: 7rem;
     padding: 1.2rem 1.5rem;
     
-    /* Distribución interna con Flexbox */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
     
-    /* Fondo translúcido utilizando la variable --color-rosa */
-    /* Nota: Si --color-rosa es un valor hexadecimal o RGB, puedes usar rgba() o ajustar la opacidad según prefieras */
-   background-color: color-mix(in srgb, var(--color-rosa) 70%, transparent);
+    background-color: color-mix(in srgb, var(--color-rosa) 70%, transparent);
     backdrop-filter: blur(4px);
     
-    /* Estado inicial: oculto mediante opacidad y desplazamiento sutil */
     opacity: 0;
     transform: translateY(-5px);
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -476,18 +581,20 @@ body {
     flex: 2;
 }
 
-/* Al hacer hover sobre la pantalla del carrusel, ambos elementos aparecen a la vez */
 .slideshow__pantalla:hover .slide__overlay {
     opacity: 1;
     transform: translateY(0);
 }
-/* ---------- Controles (Barra inferior con Puntos usando Flexbox) ---------- */
+
+/* ---------- Controles (Barra inferior con Puntos) ---------- */
 .slideshow__controles {
+    width: 100%; /* Mide exactamente lo mismo que la imagen de arriba */
     background-color: var(--color-vino);
     padding: 1.2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .puntos {
@@ -510,44 +617,13 @@ body {
     transform: scale(1.2);
 }
 
-/* ---------- Sección Informativa (Columna Derecha con Flexbox) ---------- */
+/* ---------- Sección Informativa (Columna Derecha) ---------- */
 .espacios__info {
     flex: 1;
     display: flex;
     flex-direction: column;
-    /* flex-wrap: wrap-reverse; */
     justify-content: space-between;
-    min-height: 100%;
-}
-
-.brand-logo {
-    font-family: Beth Ellen;
-    font-size: 3rem;
-    color: var(--color-vino);
-    line-height: 1;
-    /* margin-bottom: 1rem; */
-    /* align-self: center; */
-}
-
-.brand-description {
-    font-family: Fragment Mono;
-    font-size: 1.2rem;
-    color: var(--color-vino);
-    /* line-height: 1.6; */
-    max-width: 442px;
-    margin-bottom: auto;
-}
-
-.brand-heading {
-    font-family: Alga;
-    font-size: 5rem;
-    font-weight: 400;
-    line-height: 0.95;
-    letter-spacing: -1px;
-    color: var(--color-vino);
-    margin-top: 4rem;
-    /* align-self: flex-end; */
-    /* justify-self: flex-start; */
+    height: 100%;
 }
 
 .brand-info {
@@ -557,21 +633,62 @@ body {
     align-self: flex-end;
 }
 
-/* Responsive para pantallas pequeñas */
+.brand-logo {
+    font-family: Beth Ellen;
+    font-size: 3rem;
+    color: var(--color-vino);
+    line-height: 1;
+}
+
+.brand-description {
+    font-family: Fragment Mono;
+    font-size: 1.2rem;
+    color: var(--color-vino);
+    max-width: 442px;
+}
+
+.brand-heading {
+    font-family: Alga;
+    font-size: clamp(3rem, 5vw, 5rem); /* Escala suavemente si estrechas la ventana */
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: -1px;
+    color: var(--color-vino);
+    margin-top: auto;
+}
+
+/* ---------- Responsive para pantallas pequeñas / tablets ---------- */
 @media (max-width: 900px) {
     .espacios-container {
         flex-direction: column-reverse;
+        height: auto;
+        overflow: visible;
         gap: 2rem;
     }
+
     .slideshow {
-        /* flex: none; */
         width: 100%;
+        max-width: 100%;
+        height: auto;
     }
 
     .espacios__info {
-        flex-direction: row-reverse;
+        height: auto;
+        flex-direction: column-reverse;
+        gap: 2rem;
+        /* align-items: center; */
+    }
+
+    .brand-info {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .brand-heading {
+        align-self: self-start;
     }
 }
+
 
 /* ----------HISTORIA NOMBRE---------- */
 
@@ -1010,6 +1127,100 @@ body {
     }
 }
 
+
+/* ---------- SEGUNDO SLIDESHOW (SEPARADOR) ---------- */
+
+.slideshow-separador {
+    position: relative;
+    width: 100vw;
+    height: calc(100vh - 65.1px); /* O 100dvh para adaptarse perfecto en móviles */
+    overflow: hidden;
+    background-color: #000; /* Fondo de respaldo mientras carga la foto */
+}
+
+/* Pantalla que cubre todo el espacio */
+.slideshow-separador__pantalla {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Diapositivas superpuestas */
+.slide-sep {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: none; /* Ocultas por defecto */
+}
+
+.slide-sep:first-child {
+    display: block; /* La primera visible al cargar */
+}
+
+.slide-sep img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(1.05); /* Estilo en blanco y negro de la foto de referencia */
+}
+
+/* Botón superior centrado */
+.slideshow-separador__cta {
+    position: absolute;
+    top: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    
+    font-family: Fragment Mono; 
+    font-size: 1.5rem;
+    /* letter-spacing: 0.08em; */
+    color: var(--color-rosa);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.slideshow-separador__cta:hover {
+    color: var(--color-naranja);
+}
+
+/* Controles inferiores flotando sobre la imagen */
+.slideshow-separador__controles {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    
+    background-color: transparent;
+    padding: 0;
+}
+
+.puntos-sep {
+    display: flex;
+    flex-direction: row;
+    gap: 0.65rem;
+}
+
+/* Estilo de los puntos (reutilizando tus variables) */
+.slideshow-separador__controles .punto {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: var(--color-rosa);
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.slideshow-separador__controles .punto.activo {
+    background-color: var(--color-naranja);
+    transform: scale(1.15);
+}
+
+
 /* ---------- FOOTER ---------- */
 
 footer {
@@ -1074,10 +1285,61 @@ footer h1 {
 }
 
 
-
-
-
-
 /* ---------------MEDIA QUERYS --------------- */
 
+/* ---------- RESPONSIVE PARA TABLET Y MÓVIL (<= 900px) Centrado ---------- */
+@media (max-width: 900px) {
+    
+    footer {
+        height: auto;
+        gap: 4rem;
+        align-items: center; /* Centra horizontalmente el contenido principal de la sección */
+        text-align: center;
+    }
 
+    /* El contenido pasa a una columna centrada */
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 3.5rem;
+        width: 100%;
+    }
+
+    /* Bloque izquierdo centrado */
+    .footer-izq {
+        gap: 2.5rem;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Bloque derecho centrado */
+    .footer-drch {
+        gap: 2.5rem;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Alineamos al centro el teléfono y el email */
+    .footer-drch > div:first-child > p {
+        text-align: center;
+    }
+
+    /* Reducción de tamaños para pantallas medianas/pequeñas */
+    .footer-horario > div > p,
+    .footer-drch > div:first-child > p {
+        font-size: 1.4rem;
+    }
+
+    .footer-izq > p {
+        font-size: 1.6rem;
+    }
+
+    /* Iconos de redes sociales centrados y con espacio equilibrado */
+    .footer-drch > div:last-child {
+        gap: 2.5rem;
+        justify-content: center;
+    }
+}
