@@ -1748,3 +1748,50 @@ footer h1 {
         margin-bottom: 20px;
     }
 }
+
+/* ------------------CARTA------------------------  */
+
+.body-carta {
+    background-color: var(--color-rosa);
+}
+
+/* -----------MENÚ------------ */
+
+.carta {    
+    background-color: var(--color-rosa);
+}
+
+.menu a {
+    font-family: Fragment Mono;
+    font-size: 1.2rem;
+    color: var(--color-rosa);
+    display: block;
+    padding: 0.8rem 0;
+    font-weight: 600;
+    text-decoration: none;
+    border-top: 1px solid var(--color-rosa);
+    transition: color var(--transicion);
+}
+
+
+.menu-carta > a {
+     font-family: Fragment Mono;
+    font-size: 1.2rem;
+    color: var(--var-naranja);
+    display: block;
+    padding: 0.8rem 0;
+    font-weight: 600;
+    text-decoration: none;
+    border-top: 1px solid var(--color-rosa);
+    transition: color var(--transicion);
+}
+
+.menu-carta > a:hover {
+    color: var(--color-vino);
+}
+
+.menu-carta > .carta-activa {
+    color: var(--color-vino);
+}
+
+
