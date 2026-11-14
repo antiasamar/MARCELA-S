@@ -98,7 +98,6 @@ body {
     padding: 0.8rem 0;
     font-weight: 600;
     text-decoration: none;
-    border-top: 1px solid var(--color-rosa);
     transition: color var(--transicion);
 }
 
@@ -1775,14 +1774,13 @@ footer h1 {
 
 
 .menu-carta > a {
-     font-family: Fragment Mono;
+    font-family: Fragment Mono;
     font-size: 1.2rem;
     color: var(--var-naranja);
     display: block;
     padding: 0.8rem 0;
     font-weight: 600;
     text-decoration: none;
-    border-top: 1px solid var(--color-rosa);
     transition: color var(--transicion);
 }
 
@@ -1794,4 +1792,207 @@ footer h1 {
     color: var(--color-vino);
 }
 
+/* ACORDEÓN  */
 
+/* 1. Ocupa el 100% de la anchura del viewport */
+.acordeon-carta {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 10px 40px;
+}
+
+.acordeon-carta__titulo-seccion {
+    font-family: Alga;
+    color: var(--color-vino);
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+    /* border-bottom: 2px solid var(--color-texto); */
+    padding-bottom: 0.5rem;
+}
+
+/* ---------- Acordeón y Líneas ---------- */
+.acordeon {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-top: 3px solid var(--color-vino);
+}
+
+.acordeon__item {
+    border-bottom: 3px solid var(--color-vino);
+    width: 100%;
+}
+
+.acordeon__titulo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1.2rem 0;
+    font-family: Alga;
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: left;
+    color: var(--color-vino);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Signo + a la derecha */
+.acordeon__titulo::after {
+    content: "+";
+    margin-left: auto;
+    font-family: Fragmen Mono;
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--color-vino);
+    transition: transform var(--transicion);
+}
+
+/* Al abrirse, rota 45deg para convertirse en X */
+.acordeon__titulo.abierto::after {
+    transform: rotate(45deg);
+}
+
+/* Contenido desplegable */
+.acordeon__contenido {
+    display: none;
+    padding: 1.5rem 0 2.5rem 0;
+    width: 100%;
+}
+
+/* ---------- Grid Interior: 2/3 Platos y 1/3 Foto ---------- */
+.acordeon-carta__grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Dos tercios y un tercio */
+    gap: 4rem;
+    align-items: stretch; /* 'stretch' hace que ambas columnas midan exactamente lo mismo de alto */
+    width: 100%;
+}
+
+/* Columna izquierda: Platos */
+.acordeon-carta__lista {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye los platos para ocupar todo el alto de forma natural */
+    gap: 2rem;
+    width: 100%;
+    /* height: 40vh; */
+}
+
+.plato {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px dashed var(--color-vino); 
+    cursor: pointer;
+    width: 100%;
+    transition: var(--transicion);
+    color: var(--color-vino);
+}
+
+.plato:hover {
+    border-bottom-color: var(--color-naranja);
+}
+
+.plato:hover,
+.plato:hover .plato__nombre,
+.plato:hover .plato__desc,
+.plato:hover .plato__precio {
+    color: var(--color-naranja) !important;
+}
+
+.plato__info {
+    flex: 1;
+}
+
+
+
+.plato__nombre {
+    font-family: Beth Ellen;
+    font-size: 2.1rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+    color: inherit;
+}
+
+.plato__desc {
+    font-family: Fragment Mono;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    color: inherit;
+}s
+
+.plato__precio {
+    font-family: Fragment Mono;
+    font-size: 8rem;
+    /* font-weight: 600; */
+    white-space: nowrap;
+    color: inherit;
+}
+
+/* Estado Hover del plato */
+.plato:hover,
+.plato.activo {
+    color: var(--color-acento);
+    border-bottom-color: var(--color-acento);
+}
+
+/* Columna derecha: Marco en forma de arco sincronizado con la lista */
+.acordeon-carta__visor {
+    position: relative;
+    width: 80%;
+    height: 100%; /* Ocupa el 100% de la altura para terminar en la misma base */
+    min-height: 380px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    overflow: hidden;
+    justify-self: center; /* Centra el visor horizontalmente en su columna de Grid */
+    align-self: center;
+}
+
+.acordeon-carta__foto {
+    display: none; /* Ocultas por defecto hasta hacer hover */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* ---------- Botón inferior ---------- */
+.acordeon-carta__cta {
+    margin-top: 3rem;
+    text-align: center;
+    width: 100%;
+}
+
+.btn-reserva {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-acento);
+    font-size: 1.1rem;
+    letter-spacing: 0.08em;
+    transition: opacity var(--transicion);
+}
+
+.btn-reserva:hover {
+    opacity: 0.7;
+}
+
+/* Adaptación a móvil */
+@media (max-width: 768px) {
+    .acordeon-carta__grid {
+        grid-template-columns: 1fr;
+    }
+    .acordeon-carta__visor {
+        display: none;
+    }
+}
