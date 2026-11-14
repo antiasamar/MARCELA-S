@@ -238,7 +238,7 @@ body {
 }
 
 .hero-right {
-    padding-right: 16px;
+    /* padding-right: 16px; */
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -275,6 +275,40 @@ body {
     .hero-right > p,
     .hero-right > div > p   {
         font-size: 1rem;
+    }
+
+    
+
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+
+    }
+
+    .hero-img-container {
+        max-width: 400px;
+    }
+
+    .hero-center > h1 {
+        font-size: 4rem;
+    }
+
+    .hero-center > h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-left,
+    .hero-right {
+        flex: unset;
+    }
+
+    .hero-center {
+        flex: unset;
     }
 
 }
@@ -321,6 +355,12 @@ body {
         min-height: 50vh;
     }
    
+}
+
+@media (max-width: 480px) {
+     .separador {
+        min-height: 30vh;
+    }
 }
 
 /* ----------PROPUESTA---------- */
@@ -563,6 +603,30 @@ body {
     }
 }
 
+@media (max-width: 480px) {
+
+    .propuesta {
+        padding: 20px 10px;
+    }
+
+   .propuesta-text > h3 {
+        font-size: 1.8rem;
+   }
+   
+   .propuesta-text > p {
+    font-size: 0.9rem;
+   }
+
+   .propuesta-newsletter > p {
+    font-size: 1rem;
+   }
+
+   .propuesta-newsletter > a {
+    font-size: 1rem;
+   }
+
+}
+
 /* ----------ESPACIOS---------- */
 
 /* ---------- Layout General con Flexbox (2 Columnas) ---------- */
@@ -765,6 +829,7 @@ body {
         align-self: center;
         max-width: none;
         text-align: center;
+        font-size: 1rem;
     }
 
     .brand-heading {
@@ -788,6 +853,34 @@ body {
         font-size: 1rem;
     }
 
+    
+}
+
+@media (max-width: 480px) {
+
+    .espacios-container {
+        padding: 20px 10px;
+    }
+
+    .brand-heading {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .slide__overlay {
+        align-items: center;
+        height: 3rem;
+    }
+
+    .slide__titulo {
+        font-size: 1.8rem;
+        align-self: center;
+        text-align: center;
+    }
+
+    .slide__descripcion {
+       display: none;
+    }
     
 }
 
@@ -918,6 +1011,42 @@ body {
     right: 80px;
     }
     
+}
+
+@media (max-width: 480px) {
+   .nombre {
+     padding: 20px 10px;
+   }
+
+   .nombre-container {
+    margin-top: 20px;
+   }
+
+   .nombre-titulo {
+    top: 5px; 
+    font-size: 1.2rem;
+   }
+
+   .nombre-fecha {
+    bottom: 22px;
+    right: 30px;
+    font-size: 1.2rem;
+   }
+
+   .nombre-historia {
+    gap: 1rem;
+   }
+
+   .nombre-subtitulo {
+    font-size: 1.8rem;
+   }
+
+   .nombre-descripcion {
+    font-size: 0.9rem;
+    padding-bottom: 20px;
+   }
+
+
 }
 
 /* ---------- ESPECIALIDADES ---------- */
@@ -1053,6 +1182,21 @@ body {
 
     .especialidades > a {
         align-self: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .especialidades {
+        padding: 10px 20px;
+    }
+
+    .especialidades > h2 {
+        margin-top: 20px;
+        font-size: 2rem;
+    }
+
+    .especialidades > a {
+        margin-bottom: 20px;
     }
 }
 
@@ -1287,6 +1431,23 @@ body {
     }
 }
 
+@media (max-width: 480px) {
+    .prox-eventos {
+        padding: 10px;
+    }
+
+    .prox-eventos-header > h2 {
+        font-size: 2rem;
+        padding-top: 20px;
+    }
+
+    .eventos-container {
+        padding-bottom: 20px;
+    }
+}
+
+
+
 
 /* ---------- SEGUNDO SLIDESHOW (SEPARADOR) ---------- */
 
@@ -1395,9 +1556,21 @@ body {
         bottom: 1.5rem;
     }
 
-    
+}
 
+@media (max-width: 480px) {
+    .slideshow-separador {
+        height: 30vh;
+    }
 
+    .slideshow-separador__cta {
+        font-size: 1rem;
+        top: 10px;
+    }
+
+    .slideshow-separador__controles {
+        bottom: 10px;
+    }
 }
 
 
@@ -1519,5 +1692,33 @@ footer h1 {
     .footer-drch > div:last-child {
         gap: 2.5rem;
         justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 10px 20px;
+    }
+
+    footer > h1 {
+        margin-top: 20px;
+    }
+
+    .footer-horario > div > p {
+        font-size: 1rem;
+    }
+
+    .footer-izq > p {
+        font-size: 1.2rem;
+    }
+
+    .footer-drch > div:first-child > p {
+        font-size: 1rem;
+    }
+
+    .footer-drch > div:last-child > a > img {
+        width: 24px;
+        height: auto;
+        margin-bottom: 20px;
     }
 }
