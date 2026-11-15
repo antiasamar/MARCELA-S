@@ -2166,13 +2166,33 @@ footer h1 {
 }
 
 @media (max-width: 900px) {
+
+    
+
     .info-eventos {
         flex-direction: column;
+        gap: 2rem;
+    }
+
+    .muestra-eventos { 
+        height: auto;
+        min-height: auto;
+        padding: 20px;
+        padding-bottom: 40px;
         gap: 2rem;
     }
 }
 
 @media (max-width: 480px) {
+
+    .muestra-eventos { 
+        height: auto;
+        min-height: auto;
+        padding: 10px;
+        padding-bottom: 0px;
+        gap: 2rem;
+    }
+
     .info-eventos > h2 {
         font-size: 1.5rem;
     }
@@ -2185,8 +2205,193 @@ footer h1 {
         font-size: 0.8rem;
     }
 
-    .eventos-container {
-        
+}
+
+/* ------------------EVENTOS ANTERIORES----------------------  */
+
+
+/* .eventos-anteriores {
+    height: calc(100vh - 65.1px);
+} */
+
+/* SECCIÓN COMPLETA 100% VIEWPORT */
+.eventos-pasados {
+    background-color: var(--color-vino);
+    width: 100%;
+    height: 100vh;
+    padding: 35px 0; /* Sin padding lateral para que el carrusel vaya de lado a lado */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+/* TÍTULO SUPERIOR */
+.eventos-pasados > h2 {
+    font-family: 'Alga', serif;
+    color: var(--color-naranja);
+    font-size: clamp(2rem, 3vw, 3.2rem);
+    font-weight: 400;
+    margin: 0;
+    padding-left: 40px;
+}
+
+/* ENLACE INFERIOR */
+.btn-newsletter {
+    align-self: center;
+    text-decoration: none;
+    font-family: Fragment Mono;
+    color: var(--color-naranja);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    transition: color 0.2s ease;
+    padding: 20px;
+}
+
+.btn-newsletter:hover {
+    color: var(--color-rosa);
+}
+
+/* VENTANA QUE RECORTA EL CARRUSEL */
+.carrusel-viewport {
+    width: 100%;
+    flex: 1; /* Ocupa todo el espacio vertical entre el título y el enlace */
+    margin: 1.8rem 0;
+    overflow: hidden;
+    display: flex;
+}
+
+/* PISTA EN MOVIMIENTO INFINITO */
+.carrusel-pista {
+    display: flex;
+    gap: 1.2rem;
+    height: 100%;
+    width: max-content;
+    padding-left: 40px; /* Alineado con el título */
+    animation: scrollInfinito 35s linear infinite;
+}
+
+/* PAUSA EL MOVIMIENTO AL HACER HOVER EN CUALQUIER PARTE DE LA PISTA */
+.carrusel-pista:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scrollInfinito {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
     }
 }
 
+/* CADA COLUMNA VERTICAL (CONTENEDOR DE 2 FOTOS) */
+.carrusel-columna {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    height: 100%;
+    width: 38vw;
+    max-width: 520px;
+    min-width: 320px;
+    flex-shrink: 0;
+}
+
+/* DISTRIBUCIÓN ASIMÉTRICA (Foto superior e inferior) */
+.item-alta {
+    flex: 68; /* Ocupa el 68% de la altura de la columna */
+}
+
+.item-baja {
+    flex: 32; /* Ocupa el 32% de la altura de la columna */
+}
+
+/* TARJETA DE CADA FOTO */
+.galeria-item {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* OVERLAY CON COLOR VINO Y OPACIDAD */
+.galeria-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-vino);
+    opacity: 0; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    transition: var(--transicion);
+}
+
+.galeria-item:hover .galeria-overlay {
+    opacity: 0.7; 
+}
+
+/* .galeria-item:hover img {
+    transform: scale(1.04); 
+} */
+
+/* TIPOGRAFÍA DENTRO DEL OVERLAY */
+.galeria-overlay h3 {
+    font-family: Beth Ellen; 
+    color: var(--color-rosa);
+    font-size: clamp(1.6rem, 2.2vw, 2.4rem);
+    font-weight: normal;
+    margin: 0 0 0.3rem 0;
+    line-height: 1.2;
+    padding-bottom: 0.5rem;
+}
+
+.galeria-overlay p {
+    font-family: Fragment Mono;
+    color: var(--color-rosa);
+    font-size: 1rem;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+body.modal-abierto .carrusel-pista {
+    animation-play-state: paused !important;
+}
+
+/* RESPONSIVE MÓVIL */
+@media (max-width: 768px) {
+    .eventos-pasados {
+        padding: 25px 0;
+    }
+
+    .eventos-pasados > h2 {
+        padding-left: 20px;
+    }
+
+    .carrusel-pista {
+        padding-left: 20px;
+        gap: 0.8rem;
+        animation-duration: 25s;
+    }
+
+    .carrusel-columna {
+        width: 78vw;
+        min-width: 260px;
+        gap: 0.8rem;
+    }
+
+    .btn-newsletter {
+        font-size: 0.8rem;
+    }
+}

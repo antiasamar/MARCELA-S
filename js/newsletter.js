@@ -28,6 +28,9 @@ function abrirModal(evento) {
 
     // Bloquea el scroll de la página de abajo
     document.body.style.overflow = "hidden";
+
+    // Pausa el carrusel al abrir la modal
+    document.body.classList.add("modal-abierto");
 }
 
 
@@ -37,6 +40,9 @@ function modalCerrar() {
 
     // Restaura el scroll de la página de abajo
     document.body.style.overflow = "";
+
+    // Reanuda el carrusel al cerrar la modal
+    document.body.classList.remove("modal-abierto");
 }
 
 

@@ -41,3 +41,12 @@ function filtrarEventos(filtro) {
         }
     }
 }
+
+// CARRUSEL 
+
+var pistaPasados = document.getElementById("carruselPasados");
+
+if (pistaPasados) {
+    // Duplica las columnas para crear la continuidad infinita
+    pistaPasados.innerHTML += pistaPasados.innerHTML;
+}
