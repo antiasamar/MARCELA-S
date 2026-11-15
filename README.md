@@ -42,10 +42,11 @@ https://api.jquery.com/animate/
 ## HOME Y CARTA: 
 - Dar último repaso al responsive
 - AÑADIR ANIMACIONES
+* Si da tiempo hacer tarjetas con foto para la carta en tablet y mobile. 
 
 ## FALTA: 
-- PÁGINA EVENTOS (FILTROS JQUERY)
-- PÁGINA EVENTO INDIVIDUAL. 
+- PÁGINA EVENTOS (FILTROS JQUERY) (carrusel)
+- PÁGINA EVENTO INDIVIDUAL. (animaciones + carrusel)
 - FORMULARIO COMPRA EVENTO. 
 - FORMULARIO RESERVA.
 - MODAL CONFIRMACIÓN RESERVA. 
