@@ -1307,7 +1307,7 @@ body {
     }
 
     .eventos-tarjeta > img {
-        max-width: 300px;
+        max-width: 350px;
         margin: 0;
     }
 
@@ -1323,6 +1323,11 @@ body {
 @media (max-width: 480px) {
     .prox-eventos {
         padding: 10px;
+    }
+
+      .eventos-tarjeta > img {
+        max-width: 300px;
+        
     }
 
     .prox-eventos-header > h2 {
