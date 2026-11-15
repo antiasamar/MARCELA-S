@@ -2238,7 +2238,7 @@ footer h1 {
 }
 
 /* ENLACE INFERIOR */
-.btn-newsletter {
+.btn-newsletter-evento {
     align-self: center;
     text-decoration: none;
     font-family: Fragment Mono;
@@ -2249,7 +2249,7 @@ footer h1 {
     padding: 20px;
 }
 
-.btn-newsletter:hover {
+.btn-newsletter-evento:hover {
     color: var(--color-rosa);
 }
 
