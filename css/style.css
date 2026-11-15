@@ -4,10 +4,7 @@
     --color-naranja: #D34736; 
     --color-rosa: #F6C9E0; 
     --color-crema: #F6F2EF; 
-
     --transicion: 0.25s ease;
-
-
 }
 
 /* -----------RESET BÁSICO---------- */
@@ -85,7 +82,7 @@ body {
     transform: translateY(-8px) rotate(-45deg);
 }
 
-/* En móvil el menú empieza oculto: jQuery lo despliega */
+/* BOTONES */
 .menu {
     display: none;
 }
@@ -101,10 +98,9 @@ body {
     transition: color var(--transicion);
 }
 
-/* ---------- ESCRITORIO ---------- */
+/*  MENÚ ESCRITORIO */
 @media (min-width: 900px) {
 
-    /* MENÚ */
     .cabecera {
         display: flex;
         justify-content: space-between;
@@ -137,6 +133,7 @@ body {
     }
 }
 
+/* MENÚ MOVIL  */
 @media (max-width: 480px) {
     .cabecera {
         padding: 12px 12px;
@@ -243,11 +240,12 @@ body {
 }
 
 .hero-right {
-    /* padding-right: 16px; */
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
+
+/* HERO RESPONSIVE  */
 
 @media (max-width: 900px) {
     .hero {
@@ -282,8 +280,6 @@ body {
         font-size: 1rem;
     }
 
-    
-
 }
 
 @media (max-width: 480px) {
@@ -315,14 +311,6 @@ body {
     .hero-center {
         flex: unset;
     }
-
-}
-
-@media (min-width: 1440px) {
-
-    
-
-    
 
 }
 
@@ -363,6 +351,8 @@ body {
     color: var(--color-rosa);
 }
 
+/* SEPARADOR RESPONSIVE  */
+
 @media (max-width: 900px) {
     .separador {
         min-height: 50vh;
@@ -378,90 +368,6 @@ body {
 
 /* ----------PROPUESTA---------- */
 
-/* .propuesta {
-    background-color: var(--color-naranja);
-    width: 100vw;
-    min-height: calc(100vh - 65.1px);
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 6rem;
-}
-
-.propuesta-text {
-    display: flex;
-}
-
-.propuesta-text > h3 {
-    font-size: 3rem;
-    color: var(--color-vino);
-    flex: 1;
-}
-
-.propuesta-text > p {
-    font-family: Fragment Mono;
-    color: var(--color-vino);
-    font-size: 1.2rem;
-    flex: 1;
-}
-
-.propuesta-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6rem; 
-}
-
-.propuesta-tarjeta {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 400px;
-}
-
-.propuesta-tarjeta > p {
-    text-align: center;
-    font-family: Fragment Mono;
-    color: var(--color-vino);
-    font-size: 1.2rem;
-}
-
-.propuesta-tarjeta > h2 {
-    font-family: Beth Ellen;
-    color: var(--color-vino);
-    font-size: 2rem;
-    padding-bottom: 1.5rem;
-}
-
-.propuesta-newsletter {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.propuesta-newsletter > p {
-    font-family: Fragment Mono;
-    color: var(--color-vino);
-    font-size: 1.2rem;
-    align-items: center;
-    justify-content: center;
-}
-
-.btn-newsletter {
-    text-decoration: none;
-    color: var(--color-rosa);
-    font-family: Fragment Mono;
-    font-size: 1.5rem;
-    transition: var(--transicion);
-}
-
-.btn-newsletter:hover {
-    color: var(--color-vino);
-} */
-
 .propuesta {
     background-color: var(--color-naranja);
     width: 100vw;
@@ -469,8 +375,8 @@ body {
     padding: 40px;
     display: flex;
     flex-direction: column;
-    gap: 4rem; /* Reducido ligeramente para pantallas medianas */
-    box-sizing: border-box; /* Vital para que el padding no genere scroll horizontal */
+    gap: 4rem; 
+    box-sizing: border-box; 
 }
 
 .propuesta-text {
@@ -491,27 +397,24 @@ body {
     flex: 1;
 }
 
-/* Contenedor de las tarjetas */
 .propuesta-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3rem; /* Espacio más manejable */
-    flex-wrap: wrap; /* Permite que bajen si no caben */
+    gap: 3rem; 
+    flex-wrap: wrap; 
 }
 
-/* Tarjetas individuales adaptables */
 .propuesta-tarjeta {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     flex: 1;
-    min-width: 280px; /* Ancho mínimo antes de saltar */
-    max-width: 380px;  /* Ancho máximo para pantallas grandes */
+    min-width: 280px; 
+    max-width: 380px;  
 }
 
-/* Hacemos que la imagen sea 100% responsive dentro de su tarjeta */
 .propuesta-tarjeta > img {
     width: 100%;
     height: auto;
@@ -537,7 +440,7 @@ body {
     gap: 2rem;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap; /* Para que en pantallas pequeñas el botón baje de línea ordenadamente */
+    flex-wrap: wrap; 
     text-align: center;
 }
 
@@ -560,20 +463,18 @@ body {
 }
 
 
-/* ---------- MEDIA QUERY PARA TABLET Y MÓVIL (<= 900px) ---------- */
+/* PROPUESTA RESPONSIVE */
 @media (max-width: 900px) {
 
     .propuesta {
         gap: 1.5rem;
     }
     
-    /* El texto superior pasa a una sola columna para que no se apretujen */
     .propuesta-text {
         flex-direction: column;
         gap: 1.5rem;
     }
 
-    /* Las tarjetas pasan a una única columna vertical centrada */
     .propuesta-container {
         flex-direction: column;
         gap: 4rem;
@@ -581,10 +482,9 @@ body {
 
     .propuesta-tarjeta {
         width: 100%;
-        max-width: 450px; /* Ancho cómodo en tablet para la tarjeta */
+        max-width: 450px; 
     }
 
-    /* Ajuste del bloque de newsletter inferior para pantallas estrechas */
     .propuesta-newsletter {
         flex-direction: column;
         gap: 1rem;
@@ -648,7 +548,6 @@ body {
 
 /* ----------ESPACIOS---------- */
 
-/* ---------- Layout General con Flexbox (2 Columnas) ---------- */
 .espacios-container {
     display: flex;
     flex-direction: row;
@@ -662,11 +561,10 @@ body {
     overflow: hidden;
 }
 
-/* ---------- Slideshow (Columna Izquierda) ---------- */
+/* SLIDESHOW (IZQUIERDA) */
 .slideshow {
-    /* El ancho de la columna lo marca la altura disponible menos el padding y la barra de puntos, manteniendo proporción 4:5 */
     width: calc((100vh - 65.1px - 80px - 48px) * 0.8);
-    max-width: 50%; /* Nunca ocupa más de la mitad de la pantalla */
+    max-width: 50%; 
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -680,7 +578,6 @@ body {
     overflow: hidden;
 }
 
-/* Diapositivas superpuestas */
 .slide {
     position: absolute;
     inset: 0;
@@ -699,7 +596,6 @@ body {
     object-fit: cover;
 }
 
-/* ---------- Título con rectángulo translúcido ---------- */
 .slide__overlay {
     position: absolute;
     top: 0;
@@ -741,9 +637,10 @@ body {
     transform: translateY(0);
 }
 
-/* ---------- Controles (Barra inferior con Puntos) ---------- */
+/* CONTROLES */
+
 .slideshow__controles {
-    width: 100%; /* Mide exactamente lo mismo que la imagen de arriba */
+    width: 100%; 
     background-color: var(--color-vino);
     padding: 1.2rem;
     display: flex;
@@ -772,7 +669,7 @@ body {
     transform: scale(1.2);
 }
 
-/* ---------- Sección Informativa (Columna Derecha) ---------- */
+/* TEXTO SLIDESHOW (DERECHA) */
 .espacios__info {
     flex: 1;
     display: flex;
@@ -804,7 +701,7 @@ body {
 
 .brand-heading {
     font-family: Alga;
-    font-size: clamp(3rem, 5vw, 5rem); /* Escala suavemente si estrechas la ventana */
+    font-size: clamp(3rem, 5vw, 5rem); 
     font-weight: 400;
     line-height: 0.95;
     letter-spacing: -1px;
@@ -812,7 +709,8 @@ body {
     margin-top: auto;
 }
 
-/* ---------- Responsive para pantallas pequeñas / tablets ---------- */
+/* ESPACIOS RESPONSIVE  */
+
 @media (max-width: 900px) {
     .espacios-container {
         flex-direction: column-reverse;
@@ -969,11 +867,9 @@ body {
 
 .nombre-historia {
     display: flex;
-    /* align-items: end; */
     justify-content: flex-end;
     align-items: end;
     gap: 30px;
-    /* margin-top: 80px; */
 }
 
 .nombre-subtitulo {
@@ -993,11 +889,11 @@ body {
     margin: 0;
 }
 
+/* HISTORIA NOMBRE RESPONSIVE  */
+
 @media (max-width: 900px) {
 
     .nombre {
-        /* padding: 50px 5% 30px; */
-        /* height: 50vh; */
         min-height: 50vh;
         gap: 1rem;
     }
@@ -1096,7 +992,6 @@ body {
     line-height: 1;
 }
 
-/* Retícula de 8 columnas exactas */
 .especialidades-container {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
@@ -1106,12 +1001,10 @@ body {
     align-items: start;
 }
 
-/* Laterales: 3 columnas cada una */
 .columna-grande {
     grid-column: span 3;
 }
 
-/* Central: 2 columnas */
 .columna-pequena {
     grid-column: span 2;
 }
@@ -1129,22 +1022,19 @@ body {
     display: block;
 }
 
-/* 1ª Tarjeta (Ostras): Vertical alta */
 .especialidades-tarjeta:nth-child(1) > img {
     aspect-ratio: 3 / 4;
     max-height: calc(100vh - 300px);
 }
 
-/* 2ª Tarjeta (Cóctel): Vertical media */
 .especialidades-tarjeta:nth-child(2) > img {
     aspect-ratio: 3 / 3.3;
     max-height: calc(100vh - 300px);
 }
 
-/* 3ª Tarjeta (Tiramisú): Horizontal real (sin aspect-ratio forzado, la altura la da su propia forma) */
 .especialidades-tarjeta:nth-child(3) > img {
     height: auto;
-    max-height: calc(100vh - 350px); /* Límite para que no baje demasiado, manteniendo su formato apaisado */
+    max-height: calc(100vh - 350px); 
 }
 
 .especialidades-tarjeta > h3 {
@@ -1176,7 +1066,8 @@ body {
     color: var(--color-rosa);
 }
 
-/* ---------- RESPONSIVE (Tablet y Móvil) ---------- */
+/* ESPECIALIDADES RESPONSIVE */
+
 @media (max-width: 900px) {
     .especialidades {
         height: auto;
@@ -1225,22 +1116,19 @@ body {
     }
 }
 
-/* ==========================================
-   SECCIÓN PRÓXIMOS EVENTOS (100% Viewport)
-   ========================================== */
+/* ---------- PRÓXIMOS EVENTOS ---------- */
+
 .prox-eventos {
-    background-color: var(--color-vino); /* Tono burdeos oscuro de fondo */
+    background-color: var(--color-vino); 
     width: 100%;
     min-height: calc(100vh - 65.1px);
-    /* box-sizing: border-box; */
     padding: 40px;
     display: flex;
     flex-direction: column;
-    gap: 3rem; /* Controla el espacio natural entre el header y las tarjetas sin huecos raros */
+    gap: 3rem; 
     justify-content: space-between;
 }
 
-/* Cabecera de la sección */
 .prox-eventos-header {
     display: flex;
     justify-content: space-between;
@@ -1271,17 +1159,14 @@ body {
     color: var(--color-naranja);
 }
 
-/* ==========================================
-   CONTENEDOR DE TARJETAS (Grid de 3 columnas)
-   ========================================== */
 .eventos-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales exactas */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 2rem;
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
-    align-items: start; /* Evita que las tarjetas se estiren verticalmente a la fuerza */
+    align-items: start; 
     height: 90%;
 }
 
@@ -1289,15 +1174,13 @@ body {
     text-decoration: none;
 }
 
-/* Tarjeta individual con forma de arco superior */
 .eventos-tarjeta {
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    justify-content: space-between; /* Mantiene el contenido ordenado desde arriba */
+    justify-content: space-between; 
     padding: 2rem;
     box-sizing: border-box;
-    /* Efecto de arco superior limpio y proporcionado */
     border-top-left-radius: 300px;
     border-top-right-radius: 300px;
     position: relative;
@@ -1307,9 +1190,6 @@ body {
     height: 100%;
 }
 
-/* ==========================================
-   COLORES SEGÚN EL TIPO DE EVENTO (CLASES)
-   ========================================== */
 .espectaculo {
     background-color: var(--color-rosa); /* Rosa pastel */
     color: var(--color-vino);
@@ -1325,11 +1205,6 @@ body {
     color: var(--color-vino);
 }
 
-/* ==========================================
-   ESTRUCTURA INTERNA DE LA TARJETA
-   ========================================== */
-
-/* Imagen de la tarjeta (Círculo perfecto fijo que nunca se achata) */
 .eventos-tarjeta img {
     max-width: 350px;
     max-height: 350px;
@@ -1340,7 +1215,6 @@ body {
     flex-shrink: 0;
 }
 
-/* Bloque de descripción intermedia */
 .eventos-descripcion {
     display: flex;
     flex-direction: column;
@@ -1365,11 +1239,9 @@ body {
     margin: 0 0 0.6rem 0;
 }
 
-/* Pie de la tarjeta (Horario, precio y título) */
 .eventos-info {
     padding-top: 1.2rem;
-    margin-top: auto; /* Empuja el bloque de info siempre al fondo de forma limpia */
-    /* opacity: 0.9; */
+    margin-top: auto; 
 }
 
 .eventos-info div {
@@ -1393,13 +1265,7 @@ body {
     font-size: 0.8rem;
 }
 
-
-
-/* ==========================================
-   ADAPTACIÓN RESPONSIVE (Móviles y Tablets)
-   ========================================== */
-
-
+/* PRÓXIMOS EVENTOS RESPONSIVE  */
 
 @media (max-width: 900px) {
     .prox-eventos {
@@ -1407,7 +1273,6 @@ body {
         min-height: auto;
         padding: 20px;
         padding-bottom: 40px;
-        /* width: 600px; */
         gap: 2rem;
     }
 
@@ -1422,7 +1287,7 @@ body {
     }
 
     .eventos-container {
-        grid-template-columns: 1fr; /* 1 columna en móviles */
+        grid-template-columns: 1fr; 
         justify-items: center;
     }
 
@@ -1452,7 +1317,6 @@ body {
 
     .eventos-info > h2 {
         font-size: 2.4rem;
-        
     }
 }
 
@@ -1477,57 +1341,49 @@ body {
     }
 }
 
-
-
-
 /* ---------- SEGUNDO SLIDESHOW (SEPARADOR) ---------- */
 
 .slideshow-separador {
     position: relative;
     width: 100vw;
-    height: calc(100vh - 65.1px); /* O 100dvh para adaptarse perfecto en móviles */
+    height: calc(100vh - 65.1px); 
     overflow: hidden;
-    background-color: #000; /* Fondo de respaldo mientras carga la foto */
+    background-color: var(--color-vino); 
 }
 
-/* Pantalla que cubre todo el espacio */
 .slideshow-separador__pantalla {
     position: relative;
     width: 100%;
     height: 100%;
 }
 
-/* Diapositivas superpuestas */
 .slide-sep {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
-    display: none; /* Ocultas por defecto */
+    display: none; 
 }
 
 .slide-sep:first-child {
-    display: block; /* La primera visible al cargar */
+    display: block; 
 }
 
 .slide-sep img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: grayscale(100%) contrast(1.05); /* Estilo en blanco y negro de la foto de referencia */
+    filter: grayscale(100%) contrast(1.05); 
 }
 
-/* Botón superior centrado */
 .slideshow-separador__cta {
     position: absolute;
     top: 2.5rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
-    
     font-family: Fragment Mono; 
     font-size: 1.5rem;
-    /* letter-spacing: 0.08em; */
     color: var(--color-rosa);
     text-decoration: none;
     white-space: nowrap;
@@ -1538,7 +1394,6 @@ body {
     color: var(--color-naranja);
 }
 
-/* Controles inferiores flotando sobre la imagen */
 .slideshow-separador__controles {
     position: absolute;
     bottom: 2.5rem;
@@ -1556,7 +1411,6 @@ body {
     gap: 0.65rem;
 }
 
-/* Estilo de los puntos (reutilizando tus variables) */
 .slideshow-separador__controles .punto {
     width: 11px;
     height: 11px;
@@ -1572,6 +1426,8 @@ body {
     transform: scale(1.15);
 }
 
+/* SEPARADOR RESPONSIVE  */
+
 @media (max-width: 900px) {
     .slideshow-separador {
         height: 50vh;
@@ -1579,7 +1435,6 @@ body {
 
     .slideshow-separador__cta {
         top: 1.5rem;
-        /* color: var(--color-naranja); */
         font-size: 1.2rem;
     }
 
@@ -1669,17 +1524,16 @@ footer h1 {
     align-items: center;
 }
 
-/* ---------- RESPONSIVE PARA TABLET Y MÓVIL (<= 900px) Centrado ---------- */
+/* FOOTER RESPONSIVE */
 @media (max-width: 900px) {
     
     footer {
         height: auto;
         gap: 4rem;
-        align-items: center; /* Centra horizontalmente el contenido principal de la sección */
+        align-items: center; 
         text-align: center;
     }
 
-    /* El contenido pasa a una columna centrada */
     .footer-content {
         flex-direction: column;
         align-items: center;
@@ -1688,7 +1542,6 @@ footer h1 {
         width: 100%;
     }
 
-    /* Bloque izquierdo centrado */
     .footer-izq {
         gap: 2.5rem;
         align-items: center;
@@ -1696,7 +1549,6 @@ footer h1 {
         width: 100%;
     }
 
-    /* Bloque derecho centrado */
     .footer-drch {
         gap: 2.5rem;
         align-items: center;
@@ -1704,12 +1556,10 @@ footer h1 {
         width: 100%;
     }
 
-    /* Alineamos al centro el teléfono y el email */
     .footer-drch > div:first-child > p {
         text-align: center;
     }
 
-    /* Reducción de tamaños para pantallas medianas/pequeñas */
     .footer-horario > div > p,
     .footer-drch > div:first-child > p {
         font-size: 1.4rem;
@@ -1719,7 +1569,6 @@ footer h1 {
         font-size: 1.6rem;
     }
 
-    /* Iconos de redes sociales centrados y con espacio equilibrado */
     .footer-drch > div:last-child {
         gap: 2.5rem;
         justify-content: center;
@@ -1754,8 +1603,8 @@ footer h1 {
     }
 }
 
-/* VENTANA MODAL  */
-/* OVERLAY DE LA VENTANA MODAL */
+/* --------------VENTANA MODAL-------------  */
+/* OVERLAY*/
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -1875,7 +1724,7 @@ footer h1 {
   color: var(--color-rosa);
 }
 
-/* BOTÓN SUSCRIBIRME */
+/* BOTÓN */
 .modal-btn-submit {
   background: none;
   border: none;
@@ -1887,7 +1736,6 @@ footer h1 {
   transition: opacity 0.3s ease, transform 0.2s ease;
 }
 
-/* Estado deshabilitado hasta que todo esté relleno */
 .modal-btn-submit:disabled {
   opacity: 50%;
   cursor: not-allowed;
@@ -1898,7 +1746,7 @@ footer h1 {
   color: var(--color-rosa);
 }
 
-/* VISTA DE ÉXITO / BIENVENIDA */
+/* BIENVENIDA */
 .is-oculto {
   display: none;
 }
@@ -1911,7 +1759,7 @@ footer h1 {
   margin-top: 24px;
 }
 
-/* RESPONSIVE PARA MÓVIL */
+/* MODAL RESPONSIVE */
 @media (max-width: 600px) {
   .modal-caja {
     padding: 36px 24px;
@@ -1952,8 +1800,8 @@ footer h1 {
 .modal-input:-webkit-autofill,
 .modal-input:-webkit-autofill:hover,
 .modal-input:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0 1000px var(--color-vino) inset !important; /* Fuerza el fondo del color de tu caja (burdeos) */
-  -webkit-text-fill-color: #F5DADF !important; /* Mantiene el color de texto rosa claro */
+  -webkit-box-shadow: 0 0 0 1000px var(--color-vino) inset !important; 
+  -webkit-text-fill-color: #F5DADF !important; 
   transition: background-color 5000s ease-in-out 0s;
 }
 
@@ -1997,7 +1845,6 @@ footer h1 {
 
 /* ACORDEÓN  */
 
-/* 1. Ocupa el 100% de la anchura del viewport */
 .acordeon-carta {
     width: 100%;
     max-width: 100%;
@@ -2012,11 +1859,9 @@ footer h1 {
     font-weight: 600;
     margin-bottom: 1.5rem;
     letter-spacing: -0.02em;
-    /* border-bottom: 2px solid var(--color-texto); */
     padding-bottom: 0.5rem;
 }
 
-/* ---------- Acordeón y Líneas ---------- */
 .acordeon {
     width: 100%;
     display: flex;
@@ -2044,7 +1889,7 @@ footer h1 {
     cursor: pointer;
 }
 
-/* Signo + a la derecha */
+/* BOTÓN + */
 .acordeon__titulo::after {
     content: "+";
     margin-left: auto;
@@ -2056,35 +1901,31 @@ footer h1 {
     transition: transform var(--transicion);
 }
 
-/* Al abrirse, rota 45deg para convertirse en X */
 .acordeon__titulo.abierto::after {
     transform: rotate(45deg);
 }
 
-/* Contenido desplegable */
+/* CONTENIDO ACORDEÓN */
 .acordeon__contenido {
     display: none;
     padding: 1.5rem 0 2.5rem 0;
     width: 100%;
 }
 
-/* ---------- Grid Interior: 2/3 Platos y 1/3 Foto ---------- */
 .acordeon-carta__grid {
     display: grid;
-    grid-template-columns: 2fr 1fr; /* Dos tercios y un tercio */
+    grid-template-columns: 2fr 1fr; 
     gap: 4rem;
-    align-items: stretch; /* 'stretch' hace que ambas columnas midan exactamente lo mismo de alto */
+    align-items: stretch; 
     width: 100%;
 }
 
-/* Columna izquierda: Platos */
 .acordeon-carta__lista {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Distribuye los platos para ocupar todo el alto de forma natural */
+    justify-content: space-between; 
     gap: 2rem;
     width: 100%;
-    /* height: 40vh; */
 }
 
 .plato {
@@ -2138,28 +1979,27 @@ footer h1 {
     color: inherit;
 }
 
-/* Estado Hover del plato */
 .plato:hover,
 .plato.activo {
     color: var(--color-acento);
     border-bottom-color: var(--color-acento);
 }
 
-/* Columna derecha: Marco en forma de arco sincronizado con la lista */
+/* IMAGENES HOVER  */
 .acordeon-carta__visor {
     position: relative;
     width: 80%;
-    height: 100%; /* Ocupa el 100% de la altura para terminar en la misma base */
+    height: 100%; 
     min-height: 380px;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
     overflow: hidden;
-    justify-self: center; /* Centra el visor horizontalmente en su columna de Grid */
+    justify-self: center; 
     align-self: center;
 }
 
 .acordeon-carta__foto {
-    display: none; /* Ocultas por defecto hasta hacer hover */
+    display: none; 
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -2168,7 +2008,7 @@ footer h1 {
     left: 0;
 }
 
-/* ---------- Botón inferior ---------- */
+/* BOTÓN */
 .acordeon-carta__cta {
     margin-top: 3rem;
     margin-bottom: 3rem;
@@ -2190,6 +2030,8 @@ footer h1 {
     color: var(--color-vino);
 }
 
+/* ACORDEÓN RESPONSIVE  */
+
 @media (max-width: 900px) {
 
     .acordeon-carta {
@@ -2208,9 +2050,6 @@ footer h1 {
     .plato__desc {
         font-size: 1rem;
     }
-
-
-    
 }
 
 @media (max-width: 480px) {
@@ -2248,9 +2087,7 @@ footer h1 {
     }
 }
 
-
-
-/* FOOTER  */
+/* -------------FOOTER CARTA--------------- */
 
 .footer-carta {
     background-color: var(--color-vino);

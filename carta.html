@@ -38,7 +38,7 @@
         <div class="cabecera__barra">
             <a href="index.html" class="logo">Marcela's</a>
 
-            <!-- Solo se ve en móvil -->
+            <!-- ICONO HAMBURGUESA Y X -->
             <button type="button" class="menu-btn" aria-label="Abrir menú">
                 <span></span>
                 <span></span>
@@ -46,7 +46,7 @@
             </button>
         </div>
 
-        <!-- En móvil está oculto hasta pulsar el botón -->
+        <!-- BOTONES-->
         <nav class="menu menu-carta">
             <a class="carta-activa" href="carta.html">[Carta]</a>
             <a href="eventos.html">[Eventos]</a>
@@ -55,32 +55,22 @@
     </header>
 
     <!-- ACORDEÓN CARTA -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:wght@500;600&family=Space+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="estilos.css">
-</head>
-<body>
 
     <section class="acordeon-carta" id="esteticas-carta">
         <h2 class="acordeon-carta__titulo-seccion">Nuestra carta</h2>
 
-        <!-- ============ ACORDEÓN ============ -->
         <div class="acordeon">
 
-            <!-- APARTADO 1: ENTRANTES -->
+            <!-- ENTRANTES -->
             <div class="acordeon__item">
                 <button type="button" class="acordeon__titulo">
                     Entrantes
                 </button>
-                
                 <div class="acordeon__contenido">
-                    <!-- Grid interno de 2 columnas (2/3 platos + 1/3 foto) -->
                     <div class="acordeon-carta__grid">
                         
-                        <!-- Columna izquierda (2/3): Lista de 4 platos -->
+                        <!-- LISTA PLATOS (COLUMNA IZQUIERDA) -->
                         <div class="acordeon-carta__lista">
-                            
                             <article class="plato" data-foto="#foto-ostras">
                                 <div class="plato__info">
                                     <h3 class="plato__nombre">Malas Lenguas</h3>
@@ -88,7 +78,6 @@
                                 </div>
                                 <span class="plato__precio">24€</span>
                             </article>
-
                             <article class="plato" data-foto="#foto-croquetas">
                                 <div class="plato__info">
                                     <h3 class="plato__nombre">Perlas de Safo</h3>
@@ -96,7 +85,6 @@
                                 </div>
                                 <span class="plato__precio">12€</span>
                             </article>
-
                             <article class="plato" data-foto="#foto-burrata">
                                 <div class="plato__info">
                                     <h3 class="plato__nombre">La italiana</h3>
@@ -104,7 +92,6 @@
                                 </div>
                                 <span class="plato__precio">13€</span>
                             </article>
-
                             <article class="plato" data-foto="#foto-quesos">
                                 <div class="plato__info">
                                     <h3 class="plato__nombre">El secreto de Elisa</h3>
@@ -112,10 +99,9 @@
                                 </div>
                                 <span class="plato__precio">16€</span>
                             </article>
-
                         </div>
 
-                        <!-- Columna derecha (1/3): Contenedor en arco con las 4 fotos ocultas -->
+                        <!-- VISOR FOTOS (COLUMNA DERECHA)-->
                         <div class="acordeon-carta__visor">
                             <img src="media/img/ostrascarta.png" alt="Malas Lenguas" class="acordeon-carta__foto" id="foto-ostras">
                             <img src="media/img/croquetascarta.png" alt="Perlas de Safo" class="acordeon-carta__foto" id="foto-croquetas">
@@ -127,13 +113,15 @@
                 </div>
             </div>
 
-            <!-- APARTADO 2: PRINCIPALES -->
+            <!-- PRINCIPALES -->
             <div class="acordeon__item">
                 <button type="button" class="acordeon__titulo">
                     Principales
                 </button>
                 <div class="acordeon__contenido">
                     <div class="acordeon-carta__grid">
+
+                        <!-- LISTA PLATOS (COLUMNA IZQUIERDA) -->
                         <div class="acordeon-carta__lista">
                             <article class="plato" data-foto="#foto-brioche">
                                 <div class="plato__info">
@@ -164,6 +152,8 @@
                                 <span class="plato__precio">18€</span>
                             </article>
                         </div>
+
+                        <!-- VISOR FOTOS (COLUMNA DERECHA)-->
                         <div class="acordeon-carta__visor">
                             <img src="media/img/briochecarta.png" alt="La Favorita" class="acordeon-carta__foto" id="foto-brioche">
                             <img src="media/img/pastacarta.png" alt="La Dolce Vita" class="acordeon-carta__foto" id="foto-pasta">
@@ -175,13 +165,14 @@
                 
             </div>
 
-            <!-- APARTADO 3: POSTRES -->
+            <!-- POSTRES -->
             <div class="acordeon__item">
                 <button type="button" class="acordeon__titulo">
                     Postres
                 </button>
                 <div class="acordeon__contenido">
-                    <!-- Misma estructura acordeon-carta__grid -->
+                    
+                    <!-- LISTA PLATOS (COLUMNA IZQUIERDA) -->
                     <div class="acordeon-carta__grid">
                         <div class="acordeon-carta__lista">
                             <article class="plato" data-foto="#foto-tiramisu">
@@ -213,6 +204,8 @@
                                 <span class="plato__precio">6'5€</span>
                             </article>
                         </div>
+
+                        <!-- VISOR FOTOS (COLUMNA DERECHA)-->
                         <div class="acordeon-carta__visor">
                             <img src="media/img/tiramisucarta.png" alt="La Favorita" class="acordeon-carta__foto" id="foto-tiramisu">
                             <img src="media/img/tartacarta.png" alt="La Dolce Vita" class="acordeon-carta__foto" id="foto-tarta">
@@ -230,7 +223,8 @@
                     Cócteles
                 </button>
                 <div class="acordeon__contenido">
-                    <!-- Misma estructura acordeon-carta__grid -->
+                    
+                    <!-- LISTA PLATOS (COLUMNA IZQUIERDA) -->
                     <div class="acordeon-carta__grid">
                         <div class="acordeon-carta__lista">
                             <article class="plato" data-foto="#foto-bloody">
@@ -262,6 +256,8 @@
                                 <span class="plato__precio">16€</span>
                             </article>
                         </div>
+
+                        <!-- VISOR FOTOS (COLUMNA DERECHA)-->
                         <div class="acordeon-carta__visor">
                             <img src="media/img/coctel1.png" alt="La Favorita" class="acordeon-carta__foto" id="foto-bloody">
                             <img src="media/img/coctel2.png" alt="La Dolce Vita" class="acordeon-carta__foto" id="foto-baby">
@@ -321,14 +317,8 @@
         </div>
     </footer>
 
-
-
-
     <!-- ENLACES JS  -->
-
-
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    
     <script src="js/menu.js"></script>
     <script src="js/carta.js"></script>
     

@@ -38,7 +38,7 @@
         <div class="cabecera__barra">
             <a href="index.html" class="logo">Marcela's</a>
 
-            <!-- Solo se ve en móvil -->
+            <!-- ICONO HAMBURGUESA Y X -->
             <button type="button" class="menu-btn" aria-label="Abrir menú">
                 <span></span>
                 <span></span>
@@ -46,7 +46,7 @@
             </button>
         </div>
 
-        <!-- En móvil está oculto hasta pulsar el botón -->
+        <!-- BOTONES -->
         <nav class="menu">
             <a href="carta.html">[Carta]</a>
             <a href="eventos.html">[Eventos]</a>
@@ -83,14 +83,12 @@
     </section>
 
     <!-- SEPARADOR -->
-
     <section class="separador">
         <img src="media/img/hero-img.png" alt="">
         <h1>Marcela's</h1>
     </section>
 
-     <!-- PROPUESTA  -->
-
+    <!-- PROPUESTA  -->
     <section class="propuesta">
         <div class="propuesta-text">
             <h3>Mucho más que un bar</h3>
@@ -122,9 +120,10 @@
     <!-- ESPACIOS -->
     <section class="espacios-container">
         
-        <!-- Bloque izquierdo: Slideshow -->
+        <!-- SLIDESHOW (COLUMNA IZQUIERDA)-->
         <div class="slideshow">
             <div class="slideshow__pantalla">
+
                 <!-- Diapositiva 1 -->
                 <div class="slide">
                     <img src="media/img/barra.png" alt="La Barra">
@@ -171,7 +170,7 @@
                 </div>
             </div>
 
-            <!-- Controles (Puntos indicadores generados por JS) -->
+            <!-- CONTROLES (GENERADOS POR JS) -->
             <div class="slideshow__controles">
                 <div class="puntos" id="puntos-container"></div>
                 <button type="button" class="boton" id="anterior" style="display:none;"></button>
@@ -180,7 +179,7 @@
             </div>
         </div>
 
-        <!-- Bloque derecho: Textos del diseño -->
+        <!-- TEXTO SLIDESHOW (DERECHA) -->
         <div class="espacios__info">
 
             <div class="brand-info">
@@ -199,7 +198,6 @@
     </section>
 
     <!-- HISTORIA NOMBRE -->
-
     <section class="nombre">
         <div class="nombre-container">
             <img class="nombre-foto" src="media/img/elisaymarcela.png" alt="Elisa y Marcela">
@@ -214,7 +212,6 @@
     </section>
 
     <!-- ESPECIALIDADES  -->
-
     <section class="especialidades">
         <h2>Nuestras especialidades</h2>
         <div class="especialidades-container">
@@ -238,7 +235,6 @@
     </section>
 
     <!-- PRÓXIMOS EVENTOS  -->
-
     <section class="prox-eventos">
         <div class="prox-eventos-header">
             <h2>Próximos eventos</h2>
@@ -304,14 +300,12 @@
     </section>
 
     <!-- SLIDESHOW SEPARADOR  -->
-
     <section class="slideshow-separador">
-        <!-- Botón / enlace superior -->
+        
         <a href="#newsletter" class="slideshow-separador__cta btn-trigger">[SUSCRÍBETE A NUESTRA NEWSLETTER]</a>
 
-        <!-- Pantalla 100% Viewport -->
         <div class="slideshow-separador__pantalla">
-            <!-- Reemplaza o añade tus 15 diapositivas aquí -->
+           
             <div class="slide-sep"><img src="media/img/slide1.png" alt="Foto 1"></div>
             <div class="slide-sep"><img src="media/img/slide2.png" alt="Foto 2"></div>
             <div class="slide-sep"><img src="media/img/slide3.png" alt="Foto 3"></div>
@@ -325,17 +319,16 @@
             <div class="slide-sep"><img src="media/img/slide11.png" alt="Foto 3"></div>
             <div class="slide-sep"><img src="media/img/slide12.png" alt="Foto 3"></div>
             <div class="slide-sep"><img src="media/img/slide13.png" alt="Foto 3"></div>
-            <!-- ... añade el resto hasta la 15 ... -->
+            
         </div>
 
-        <!-- Puntos indicadores inferiores -->
+        <!-- CONTROLES (GEENRADOS POR JS) -->
         <div class="slideshow-separador__controles">
             <div class="puntos-sep" id="puntos-separador"></div>
         </div>
     </section>
 
     <!-- FOOTER  -->
-
     <footer>
         <h1>Marcela's</h1>
         <div class="footer-content">
@@ -376,49 +369,48 @@
     </footer>
 
     <!-- VENTANA MODAL  -->
+    <div id="modal-newsletter" class="modal-overlay">
+    <div class="modal-caja">
+        
+        <!-- BOTÓN X -->
+        <button id="modal-cerrar" class="modal-cerrar" aria-label="Cerrar ventana">✕</button>
 
-    <!-- VENTANA MODAL (Colocar antes de cerrar </body>) -->
-<div id="modal-newsletter" class="modal-overlay">
-  <div class="modal-caja">
-    
-    <!-- Botón de cierre (X) -->
-    <button id="modal-cerrar" class="modal-cerrar" aria-label="Cerrar ventana">✕</button>
+        <!-- FORMULARIO -->
+        <div id="modal-vista-form">
+            <div class="modal-cabecera">
+                <h2 class="modal-titulo">Marcela’s newsletter</h2>
+                <p class="modal-descripcion">
+                Suscríbete a nuestra newsletter y recibe novedades, eventos exclusivos, promociones y contenido especial directamente en tu correo.
+                </p>
+            </div>
 
-    <!-- ESTADO 1: FORMULARIO -->
-    <div id="modal-vista-form">
-      <div class="modal-cabecera">
-        <h2 class="modal-titulo">Marcela’s newsletter</h2>
-        <p class="modal-descripcion">
-          Suscríbete a nuestra newsletter y recibe novedades, eventos exclusivos, promociones y contenido especial directamente en tu correo.
-        </p>
-      </div>
+            <form id="form-newsletter" class="modal-form" novalidate>
+                <input type="text" id="input-nombre" class="modal-input" placeholder="Nombre" required>
+                <input type="text" id="input-apellidos" class="modal-input" placeholder="Apellidos" required>
+                <input type="email" id="input-email" class="modal-input" placeholder="Email" required>
+                <input type="email" id="input-confirmar" class="modal-input" placeholder="Confirmar correo electrónico" required>
 
-      <form id="form-newsletter" class="modal-form" novalidate>
-        <input type="text" id="input-nombre" class="modal-input" placeholder="Nombre" required>
-        <input type="text" id="input-apellidos" class="modal-input" placeholder="Apellidos" required>
-        <input type="email" id="input-email" class="modal-input" placeholder="Email" required>
-        <input type="email" id="input-confirmar" class="modal-input" placeholder="Confirmar correo electrónico" required>
-
-        <div class="modal-pie">
-          <span class="modal-handwriting">¡No te pierdas nada!</span>
-          <button type="submit" id="btn-suscribir" class="modal-btn-submit" disabled>[SUSCRIBIRME]</button>
+                <div class="modal-pie">
+                <span class="modal-handwriting">¡No te pierdas nada!</span>
+                <button type="submit" id="btn-suscribir" class="modal-btn-submit" disabled>[SUSCRIBIRME]</button>
+                </div>
+            </form>
         </div>
-      </form>
-    </div>
 
-    <!-- ESTADO 2: MENSAJE DE BIENVENIDA (Oculto inicialmente) -->
-    <div id="modal-vista-exito" class="modal-exito is-oculto">
-      <h2 class="modal-titulo">Bienvenida</h2>
-      <p class="modal-descripcion">
-        Gracias por suscribirte, en breves recibirás un correo.
-      </p>
-      <div class="modal-pie-exito">
-        <span class="modal-handwriting">¡Nos vemos pronto!</span>
-      </div>
-    </div>
+        <!-- MENSAJE DE BIENVENIDA -->
+        <div id="modal-vista-exito" class="modal-exito is-oculto">
+            <h2 class="modal-titulo">Bienvenida</h2>
+            <p class="modal-descripcion">
+                Gracias por suscribirte, en breves recibirás un correo.
+            </p>
+            <div class="modal-pie-exito">
+                <span class="modal-handwriting">¡Nos vemos pronto!</span>
+            </div>
+        </div>
 
-  </div>
-</div>
+    </div>
+    
+    </div>
      
     <!----------ENLACES JS---------->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
