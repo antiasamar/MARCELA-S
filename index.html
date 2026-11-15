@@ -115,7 +115,7 @@
         </div>
         <div class="propuesta-newsletter">
             <p>Si quieres estar al tanto de todo:</p>
-            <a class="btn-newsletter" href="#">[SUSCRÍBETE A NUESTRA NEWS LETTER]</a>
+            <a class="btn-newsletter btn-trigger" href="#">[SUSCRÍBETE A NUESTRA NEWS LETTER]</a>
         </div>
     </section>
 
@@ -307,7 +307,7 @@
 
     <section class="slideshow-separador">
         <!-- Botón / enlace superior -->
-        <a href="#newsletter" class="slideshow-separador__cta">[SUSCRÍBETE A NUESTRA NEWSLETTER]</a>
+        <a href="#newsletter" class="slideshow-separador__cta btn-trigger">[SUSCRÍBETE A NUESTRA NEWSLETTER]</a>
 
         <!-- Pantalla 100% Viewport -->
         <div class="slideshow-separador__pantalla">
@@ -374,12 +374,58 @@
             </div>
         </div>
     </footer>
+
+    <!-- VENTANA MODAL  -->
+
+    <!-- VENTANA MODAL (Colocar antes de cerrar </body>) -->
+<div id="modal-newsletter" class="modal-overlay">
+  <div class="modal-caja">
+    
+    <!-- Botón de cierre (X) -->
+    <button id="modal-cerrar" class="modal-cerrar" aria-label="Cerrar ventana">✕</button>
+
+    <!-- ESTADO 1: FORMULARIO -->
+    <div id="modal-vista-form">
+      <div class="modal-cabecera">
+        <h2 class="modal-titulo">Marcela’s newsletter</h2>
+        <p class="modal-descripcion">
+          Suscríbete a nuestra newsletter y recibe novedades, eventos exclusivos, promociones y contenido especial directamente en tu correo.
+        </p>
+      </div>
+
+      <form id="form-newsletter" class="modal-form" novalidate>
+        <input type="text" id="input-nombre" class="modal-input" placeholder="Nombre" required>
+        <input type="text" id="input-apellidos" class="modal-input" placeholder="Apellidos" required>
+        <input type="email" id="input-email" class="modal-input" placeholder="Email" required>
+        <input type="email" id="input-confirmar" class="modal-input" placeholder="Confirmar correo electrónico" required>
+
+        <div class="modal-pie">
+          <span class="modal-handwriting">¡No te pierdas nada!</span>
+          <button type="submit" id="btn-suscribir" class="modal-btn-submit" disabled>[SUSCRIBIRME]</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- ESTADO 2: MENSAJE DE BIENVENIDA (Oculto inicialmente) -->
+    <div id="modal-vista-exito" class="modal-exito is-oculto">
+      <h2 class="modal-titulo">Bienvenida</h2>
+      <p class="modal-descripcion">
+        Gracias por suscribirte, en breves recibirás un correo.
+      </p>
+      <div class="modal-pie-exito">
+        <span class="modal-handwriting">¡Nos vemos pronto!</span>
+      </div>
+    </div>
+
+  </div>
+</div>
      
     <!----------ENLACES JS---------->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/slideshow.js"></script>
     <script src="js/slideshowdos.js"></script>
+    <script src="js/newsletter.js"></script>
     
 </body>
 

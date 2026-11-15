@@ -1754,6 +1754,216 @@ footer h1 {
     }
 }
 
+/* VENTANA MODAL  */
+/* OVERLAY DE LA VENTANA MODAL */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: color-mix(in srgb, var(--color-rosa) 70%, transparent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 1000;
+  
+  /* Oculta por defecto */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Clase que activa el JS */
+.modal-overlay.is-abierta {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* CAJA PRINCIPAL DEL MODAL */
+.modal-caja {
+  background-color: var(--color-vino);
+  color: var(--color-rosa);
+  width: 100%;
+  max-width: 640px;
+  border-radius: 16px;
+  padding: 48px 54px;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  box-sizing: border-box;
+}
+
+/* BOTÓN CERRAR (X) */
+.modal-cerrar {
+  position: absolute;
+  top: 32px;
+  right: 36px;
+  background: none;
+  border: none;
+  color: var(--color-rosa);
+  font-size: 1.6rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.modal-cerrar:hover {
+  color: var(--color-naranja);
+  transform: scale(1.1);
+}
+
+/* TEXTOS CABECERA */
+.modal-titulo {
+  font-family: Alga;
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 1.15;
+  margin-top: 0;
+  margin-bottom: 12px;
+  padding-right: 30px;
+}
+
+.modal-descripcion {
+  font-family: Fragment Mono;
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 32px;
+  color: var(--color-rosa);
+}
+
+/* FORMULARIO E INPUTS */
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.modal-input {
+  width: 100%;
+  background-color: transparent;
+  border: 1.5px solid var(--color-rosa);
+  padding: 15px 18px;
+  font-family: 'Space Mono', monospace;
+  font-size: 1rem;
+  color: var(--color-rosa);
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.modal-input::placeholder {
+  color: var(--color-rosa);
+}
+
+.modal-input:focus {
+  border-color: var(--color-naranja);
+}
+
+/* PIE DEL FORMULARIO */
+.modal-pie {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 18px;
+  gap: 15px;
+}
+
+.modal-handwriting {
+  font-family: Beth Ellen;
+  font-size: 1.5rem;
+  color: var(--color-rosa);
+}
+
+/* BOTÓN SUSCRIBIRME */
+.modal-btn-submit {
+  background: none;
+  border: none;
+  font-family: 'Space Mono', monospace;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  color: var(--color-naranja);
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+/* Estado deshabilitado hasta que todo esté relleno */
+.modal-btn-submit:disabled {
+  opacity: 50%;
+  cursor: not-allowed;
+}
+
+.modal-btn-submit:not(:disabled):hover {
+  scale: 1.2;
+  color: var(--color-rosa);
+}
+
+/* VISTA DE ÉXITO / BIENVENIDA */
+.is-oculto {
+  display: none;
+}
+
+.modal-exito {
+  padding: 30px 0 10px 0;
+}
+
+.modal-pie-exito {
+  margin-top: 24px;
+}
+
+/* RESPONSIVE PARA MÓVIL */
+@media (max-width: 600px) {
+  .modal-caja {
+    padding: 36px 24px;
+  }
+
+  .modal-cerrar {
+    top: 22px;
+    right: 22px;
+    font-size: 1.4rem;
+  }
+
+  .modal-titulo {
+    font-size: 1.9rem;
+  }
+
+  .modal-descripcion {
+    font-size: 0.82rem;
+    margin-bottom: 24px;
+  }
+
+  .modal-input {
+    padding: 12px 14px;
+    font-size: 0.85rem;
+  }
+
+  .modal-pie {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .modal-btn-submit {
+    align-self: center;
+  }
+}
+
+/* 1. Evita que el navegador ponga fondo blanco al autocompletar */
+.modal-input:-webkit-autofill,
+.modal-input:-webkit-autofill:hover,
+.modal-input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px var(--color-vino) inset !important; /* Fuerza el fondo del color de tu caja (burdeos) */
+  -webkit-text-fill-color: #F5DADF !important; /* Mantiene el color de texto rosa claro */
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* 2. Asegura que al escribir o estar activos no cojan fondo blanco por defecto */
+.modal-input:focus,
+.modal-input:active {
+  background-color: transparent !important;
+  color: var(--color-rosa)!important;
+}
+
 /* ------------------CARTA------------------------  */
 
 .body-carta {
