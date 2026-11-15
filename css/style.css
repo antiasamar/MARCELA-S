@@ -2120,6 +2120,13 @@ footer h1 {
 
 /* MENÚ EVENTOS  */
 
+.menu-eventos > .eventos-activo {
+    color: var(--color-naranja);
+}
+
+
+/* TARJETAS Y FILTROS  */
+
 .muestra-eventos {
     padding: 10px 40px;
 }
@@ -2393,5 +2400,371 @@ body.modal-abierto .carrusel-pista {
 
     .btn-newsletter {
         font-size: 0.8rem;
+    }
+}
+
+/* ------------------EVENTO INDIVIDUAL----------------------  */
+
+.cabaret-hero {
+    padding: 10px 40px;
+    width: 100%;
+    min-height: calc(100vh - 65.1px);
+}
+
+.cabaret-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 3px solid var(--color-naranja);
+    border-bottom: 3px solid var(--color-naranja);
+    margin-right: -40px;
+    margin-left: -40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.cabaret-header > div:first-child {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding-left: 40px;
+}
+
+.cabaret-header > div:first-child > a {
+    font-size: 2rem;
+    color: var(--color-naranja) !important;
+    align-self: center;
+}
+
+.cabaret-header > div:first-child > h2 {
+    font-family: Alga;
+    font-size: 2rem;
+    color: var(--color-naranja);
+    align-self: center;
+}
+
+.cabaret-header > p {
+    font-family: Fragment Mono;
+    color: var(--color-naranja);
+    font-size: 1.2rem;
+}
+
+.cabaret-header > h2 {
+    font-family: Alga;
+    font-size: 2rem;
+    color: var(--color-naranja);
+    padding-right: 40px;
+}
+
+.cabaret-hero-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr);
+    gap: 1.5rem;
+    min-height: calc(100vh - 200px);
+    padding-top: 20px;
+}
+
+.cabaret-hero-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+
+.cabaret-hero-img > img {
+    align-self: center;
+    max-width: 100%;
+    height: auto;
+}
+
+.cabaret-hero-titulo {
+    color: var(--color-naranja);
+    font-family: Alga;
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    line-height: clamp(3rem, 5.5vw, 5.5rem);
+    align-self: flex-end;
+}
+
+.cabaret-hero-text {
+    font-family: Fragment Mono;
+    font-size: 1.2rem;
+    text-align: right;
+    color: var(--color-naranja);
+    align-self: flex-start;
+}
+
+/* Adaptación al estrechar la pantalla */
+@media (max-width: 900px) {
+    .cabaret-hero-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .cabaret-hero-img {
+        order: -1;
+    }
+
+    .cabaret-hero-titulo {
+        align-self: flex-start;
+    }
+
+    .cabaret-hero-text {
+        text-align: left;
+    }
+
+    .cabaret-hero-titulo > h1 > br {
+        display: none;
+    }
+
+    .cabaret-hero-titulo > h1 {
+        text-align: center;
+    }
+}
+
+/* @media (max-width: 480px) {
+
+    .cabaret-hero {
+        padding: 0 10px;
+    }
+
+    .cabaret-header {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    .cabaret-header > p {
+        display: none;
+    }
+
+    .cabaret-header > div:first-child {
+        gap: 0.5rem;
+    }
+
+    .cabaret-header > div:first-child > h2 {
+        font-size: 1.5rem;
+    }
+
+    .cabaret-header > div:first-child > a {
+        font-size: 1.5rem;
+    }
+
+    .cabaret-header > h2 {
+        font-size: 1.5rem;
+    }
+
+    .cabaret-hero-titulo > h1 {
+        font-size: 2.5rem;
+    }
+
+    .cabaret-hero-text > p {
+        font-size: 1rem;
+        text-align: center;
+    }
+} */
+
+@media (max-width: 480px) {
+
+    .cabaret-hero {
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .cabaret-header {
+        margin-right: -10px;
+        margin-left: -10px;
+    }
+
+    .cabaret-header > p {
+        display: none;
+    }
+
+    .cabaret-header > div:first-child {
+        gap: 0.5rem;
+        padding-left: 10px;
+    }
+
+    .cabaret-header > div:first-child > h2 {
+        font-size: 1.5rem;
+    }
+
+    .cabaret-header > div:first-child > a {
+        font-size: 1.5rem;
+    }
+
+    .cabaret-header > h2 {
+        font-size: 1.5rem;
+        padding-right: 10px;
+    }
+
+    .cabaret-hero-titulo > h1 {
+        font-size: 2.5rem;
+    }
+
+    .cabaret-hero-text > p {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+/* SEPARADOR CABARET  */
+
+.cabaret-separador {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Beth Ellen;
+    font-size: 3rem;
+    color: var(--color-naranja);
+    text-align: center;
+    line-height: 4rem;
+}
+
+.cabaret-separador > p {
+    max-width: 600px;
+}
+
+/* ARTISTAS INVITADAS  */
+
+.cabaret-artistas {
+    background-color: var(--color-vino); /* Fondo burdeos de la captura */
+    min-height: 60vh;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.cabaret-artistas > h2 {
+    font-family: Alga;
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    color: var(--color-naranja);
+    padding-left: 40px;
+    /* margin-bottom: 1.5rem; */
+}
+
+/* Contenedor que recorta el desbordamiento horizontal */
+.artistas-marquee {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Pista que se desplaza de forma infinita */
+.artistas-track {
+    display: flex;
+    width: max-content;
+    gap: 3.5rem;
+    padding-left: 40px;
+    animation: bucleInfinito 28s linear infinite;
+}
+
+/* Pausa suave si el usuario pasa el ratón por encima */
+.artistas-marquee:hover .artistas-track {
+    animation-play-state: paused;
+}
+
+.artista-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    width: 240px;
+    transition: var(--transicion);
+}
+
+.artista-marco {
+    width: 230px;
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.artista-marco img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.artista-card h3 {
+    font-family: 'Beth Ellen', cursive;
+    font-size: 1.45rem;
+    font-weight: 400;
+    color: var(--color-naranja);
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Botón inferior */
+.artistas-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+
+.artistas-cta a {
+    font-family: Fragment Mono;
+    font-size: 1.5rem;
+    color: var(--color-rosa);
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.artistas-cta a:hover {
+    color: var(--color-naranja);
+}
+
+/* Animación exacta al 50% porque JS duplica el bloque de 6 tarjetas */
+@keyframes bucleInfinito {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Ajuste responsive */
+@media (max-width: 768px) {
+    .cabaret-artistas {
+        min-height: 55vh;
+        padding: 30px 0;
+    }
+
+    .cabaret-artistas > h2 {
+        padding-left: 20px;
+    }
+
+    .artistas-track {
+        gap: 2rem;
+        padding-left: 20px;
+    }
+
+    .artista-card {
+        width: 180px;
+    }
+
+    .artista-marco {
+        width: 170px;
+        height: 170px;
+    }
+
+    .artista-card h3 {
+        font-size: 1.2rem;
+    }
+
+   .cabaret-separador {
+        font-size: 1.5rem;
+        line-height: 2.2rem;
+        height: 30vh;
+    }
+
+    .cabaret-separador > p {
+        max-width: 300px;
     }
 }
