@@ -2165,3 +2165,24 @@ footer h1 {
     display: none !important;
 }
 
+@media (max-width: 900px) {
+    .info-eventos {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-eventos > h2 {
+        font-size: 1.5rem;
+    }
+
+    .filtros {
+        gap: 1rem;
+    }
+
+    .filtros > button {
+        font-size: 0.8rem;
+    }
+}
+
