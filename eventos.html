@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Marcela's</title>
+
+    <!-- FAVICON  -->
+    <link rel="shortcut icon" href="media/icon/faviconM.svg" type="image/x-icon">
+
+    <!------------ FUENTES E ICONOS ------------->
+
+    <!-- ALGA -->
+    <link rel="stylesheet" href="https://use.typekit.net/odo1agg.css">
+
+    <!-- BETH ELLEN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Beth+Ellen&family=Fragment+Mono:ital@0;1&family=Instrument+Serif:ital@0;1&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Oranienbaum&family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- FRAGMENT MONO -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Beth+Ellen&family=Fragment+Mono:ital@0;1&family=Instrument+Serif:ital@0;1&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Oranienbaum&family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- ICONOS -->
+    <script src="https://kit.fontawesome.com/e981b7c045.js" crossorigin="anonymous"></script>
+
+    <!------------- CSS ------------>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="body-eventos">
+
+    
+    <!-- MENÚ RESPONSIVE -->
+    <header class="cabecera">
+        <div class="cabecera__barra">
+            <a href="index.html" class="logo">Marcela's</a>
+
+            <!-- ICONO HAMBURGUESA Y X -->
+            <button type="button" class="menu-btn" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- BOTONES -->
+        <nav class="menu">
+            <a href="carta.html">[Carta]</a>
+            <a href="eventos.html">[Eventos]</a>
+            <a href="reservas.html">[Reservas]</a>
+        </nav>
+    </header>
+
+    <!-- EVENTOS FILTROS Y TARJETAS  -->
+
+    <section class="muestra-eventos">
+
+        <!-- TÍTULO Y FILTROS  -->
+
+        <div class="info-eventos">
+            <h2>Próximos eventos</h2>
+            <nav class="filtros" aria-label="Filtrar por día">
+                <button type="button" class="filtro is-activo" data-dia="Todos">[Todos]</button>
+                <button type="button" class="filtro" data-dia="Cultura">[Cultura]</button>
+                <button type="button" class="filtro" data-dia="Espectaculo">[Espectáculo]</button>
+                <button type="button" class="filtro" data-dia="Fiesta">[Fiesta]</button>
+            </nav>
+        </div>
+
+        <!-- CONTENEDOR TARJETAS -->
+
+        <div class="eventos-container">
+
+            <a href="">
+                <div class="eventos-tarjeta espectaculo">
+                    <img src="media/img/cabaret.png" alt="">
+                    <div class="eventos-descripcion">
+                        <h3>espectáculo</h3>
+                        <p>Drag, performances y mucho descaro en una noche dedicada al talento femenino y queer.</p>
+                        <p>21/11/2026</p>
+                    </div>
+                    <div class="eventos-info">
+                        <div>
+                            <p>SÁBADO·21:00H</p>
+                            <p>ENTRADA 12€</p>
+                        </div>
+                        <h2>The Girl’s Cabaret</h2>
+                    </div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="eventos-tarjeta cultura">
+                    <img src="media/img/cartasmujeres.png" alt="">
+                    <div class="eventos-descripcion">
+                        <h3>cultura</h3>
+                        <p>Un encuentro de poesía y lectura de cartas para descubrir historias de amor entre mujeres.</p>
+                        <p>26/11/2026</p>
+                    </div>
+                    <div class="eventos-info">
+                        <div>
+                            <p>JUEVES·19:00H</p>
+                            <p>INSCRIPCIÓN PREVIA</p>
+                        </div>
+                        <h2>Cartas de Mujeres</h2>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="">
+                <div class="eventos-tarjeta fiesta">
+                    <img src="media/img/malascompanias.png" alt="">
+                    <div class="eventos-descripcion">
+                        <h3>fiesta</h3>
+                        <p>Una noche de DJs, pop, electrónica y temazos para bailar entre nosotras.</p>
+                        <p>27/11/2026</p>
+                    </div>
+                    <div class="eventos-info">
+                        <div>
+                            <p>VIERNES·00:00H</p>
+                            <p>ENTRADA LIBRE</p>
+                        </div>
+                        <h2>Malas Compañías</h2>
+                    </div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="eventos-tarjeta cultura">
+                    <img src="media/img/escritura.png" alt="">
+                    <div class="eventos-descripcion">
+                        <h3>cultura</h3>
+                        <p>Encontraremos nuevas formas de poner en palabras aquello que merece ser contado.</p>
+                        <p>01/12/2026</p>
+                    </div>
+                    <div class="eventos-info">
+                        <div>
+                            <p>MARTES·19:00H</p>
+                            <p>INSCRIPCIÓN PREVIA</p>
+                        </div>
+                        <h2>Taller escritura</h2>
+                    </div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="eventos-tarjeta fiesta">
+                    <img src="media/img/bingo.png" alt="">
+                    <div class="eventos-descripcion">
+                        <h3>fiesta</h3>
+                        <p>Una noche de bingo, música y diversión en Marcela’s. Una fiesta llena de sorpresas.</p>
+                        <p>05/12/2026</p>
+                    </div>
+                    <div class="eventos-info">
+                        <div>
+                            <p>SÁBADO·00:00H</p>
+                            <p>ENTRADA 16€</p>
+                        </div>
+                        <h2>Bingo Bingo Bingo</h2>
+                    </div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="eventos-tarjeta espectaculo">
+                    <img src="media/img/malascompanias.png" alt="">
+                    <div class="eventos-descripcion">
+                        <h3>espectáculo</h3>
+                        <p>Una noche de micro abierto para <br>las más cómicas y atrevidas. </p>
+                        <p>13/12/2026</p>
+                    </div>
+                    <div class="eventos-info">
+                        <div>
+                            <p>MIÉRCOLES·21:00H</p>
+                            <p>ENTRADA 12€</p>
+                        </div>
+                        <h2>The Sapphic Show</h2>
+                    </div>
+                </div>
+            </a>
+            <a href="">
+                <div class="eventos-tarjeta cultura">
+                    <img src="media/img/escritura.png" alt="">
+                    <div class="eventos-descripcion">
+                        <h3>cultura</h3>
+                        <p>Encontraremos nuevas formas de poner en palabras aquello que merece ser contado.</p>
+                        <p>01/12/2026</p>
+                    </div>
+                    <div class="eventos-info">
+                        <div>
+                            <p>MARTES·19:00H</p>
+                            <p>INSCRIPCIÓN PREVIA</p>
+                        </div>
+                        <h2>Taller escritura</h2>
+                    </div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="eventos-tarjeta fiesta">
+                    <img src="media/img/bingo.png" alt="">
+                    <div class="eventos-descripcion">
+                        <h3>fiesta</h3>
+                        <p>Una noche de bingo, música y diversión en Marcela’s. Una fiesta llena de sorpresas.</p>
+                        <p>05/12/2026</p>
+                    </div>
+                    <div class="eventos-info">
+                        <div>
+                            <p>SÁBADO·00:00H</p>
+                            <p>ENTRADA 16€</p>
+                        </div>
+                        <h2>Bingo Bingo Bingo</h2>
+                    </div>
+                </div>
+            </a>
+
+            <a href="">
+                <div class="eventos-tarjeta espectaculo">
+                    <img src="media/img/malascompanias.png" alt="">
+                    <div class="eventos-descripcion">
+                        <h3>espectáculo</h3>
+                        <p>Una noche de micro abierto para <br>las más cómicas y atrevidas. </p>
+                        <p>13/12/2026</p>
+                    </div>
+                    <div class="eventos-info">
+                        <div>
+                            <p>MIÉRCOLES·21:00H</p>
+                            <p>ENTRADA 12€</p>
+                        </div>
+                        <h2>The Sapphic Show</h2>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+
+    </section>
+
+
+
+
+    <!----------ENLACES JS---------->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/filtros.js"></script>
+    
+</body>
+</html>

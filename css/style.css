@@ -131,6 +131,7 @@ body {
     color: var(--color-naranja);
     scale: 1.2;
     }
+
 }
 
 /* MENÚ MOVIL  */
@@ -2115,7 +2116,52 @@ footer h1 {
 }
 
 
+/* ------------------EVENTOS----------------------  */
 
+/* MENÚ EVENTOS  */
 
+.muestra-eventos {
+    padding: 10px 40px;
+}
 
+.info-eventos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+.info-eventos > h2 {
+    font-family: Alga;
+    font-size: 3rem;
+    color: var(--color-naranja);
+}
+
+.filtros {
+    display: flex;
+    gap: 2rem;
+}
+
+.filtros > button {
+    background: none;       
+  border: none;           
+  padding: 0;            
+  font-family: Fragment Mono;         
+  color: var(--color-naranja); 
+  font-size: 1.2rem;       
+  cursor: pointer;     
+  outline: inherit;
+}
+
+.filtros > button:hover {
+    color: var(--color-rosa);
+}
+
+.filtro.is-activo {
+    color: var(--color-rosa) !important;
+}
+
+.oculto {
+    display: none !important;
+}
 
