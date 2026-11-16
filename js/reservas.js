@@ -1,4 +1,6 @@
+//EL JS ESPERA A QUE HAYA CARGADO TODO EL HTML
 document.addEventListener("DOMContentLoaded", () => {
+  // VARIABLES 
   const form = document.getElementById("reservaForm");
   const submitBtn = document.getElementById("submitBtn");
   
@@ -11,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const confirmEmailInput = document.getElementById("confirm-email");
 
   const dayCells = document.querySelectorAll(".day-cell:not(.disabled)");
-  let selectedDate = ""; // Inicia vacío obligando al usuario a seleccionar un día
+  let selectedDate = ""; // VACÍO HASTA QUE EL USUARIO SELECCIONE UN DÍA
 
   const modal = document.getElementById("confirmation-modal");
   const closeModalBtn = document.getElementById("close-modal");
@@ -21,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const resComensales = document.getElementById("resumen-comensales");
   const resEmail = document.getElementById("resumen-email");
 
-  // Selección de fecha en calendario de forma interactiva
+  // SELECCIÓN FECHA EN CALENDARIO
   dayCells.forEach(cell => {
     cell.addEventListener("click", (e) => {
       e.preventDefault();
@@ -34,12 +36,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Escuchar cambios para la validación estricta
+  // CAMBIOS EN INPUTS
   const inputsToWatch = [
     comensalesSelect, horaSelect, zonaSelect, 
     nombreInput, apellidosInput, emailInput, confirmEmailInput
   ];
 
+  // COMPROBAR QUE LOS CAMPOS ESTÉN RELLENADOS CORRECTAMENTE
   inputsToWatch.forEach(input => {
     input.addEventListener("input", validateForm);
     input.addEventListener("change", validateForm);
@@ -65,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Enviar formulario y abrir modal con datos volcados
+  // ENVIAR FORMNULARIO Y ABRIR MODAL
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -78,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.setAttribute("aria-hidden", "false");
   });
 
-  // Cerrar modal
+  // CERRAR MODAL
   closeModalBtn.addEventListener("click", () => {
     modal.classList.remove("active");
     modal.setAttribute("aria-hidden", "true");

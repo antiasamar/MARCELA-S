@@ -1,15 +1,15 @@
 
 
-    // 1. ACORDEÓN (Lógica de clase explicada en clase)
+    // 1. ACORDEÓN 
     $(".acordeon__titulo").on("click", function() {
 
         var contenido = $(this).next();
 
-        // Cerrar los demás apartados
+        // CERRAR LOS DEMÁS APARTADOS
         $(".acordeon__contenido").not(contenido).slideUp();
         $(".acordeon__titulo").not(this).removeClass("abierto");
 
-        // Abrir o cerrar el actual
+        // ABRIR APARTADOS
         contenido.slideToggle();
         $(this).toggleClass("abierto");
     });
@@ -17,12 +17,14 @@
 
     // 2. HOVER IN Y HOVER OUT PARA LAS FOTOS DE LOS PLATOS
     $(".plato").hover(
-        // Hover In
+        
+        // HOVER IN
         function() {
             var idFoto = $(this).attr("data-foto");
             $(idFoto).stop(true, true).fadeIn(200);
         }, 
-        // Hover Out
+
+        // HOVE ROUT
         function() {
             var idFoto = $(this).attr("data-foto");
             $(idFoto).stop(true, true).fadeOut(200);

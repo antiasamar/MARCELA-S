@@ -1,11 +1,11 @@
-// PASO 1
+// VARIABLES 
 var slides = $(".slide"); 
 var botonNext = $("#siguiente"); 
 var botonPrev = $("#anterior"); 
 var total = slides.length; 
 var actual = 0; 
 
-// GENERACIÓN DINÁMICA DE LOS PUNTOS INDICADORES
+// GENERACIÓN DINÁMICA LOS PUNTOS 
 function generarPuntos() {
     var contenedorPuntos = $("#puntos-container");
     contenedorPuntos.empty();
@@ -19,7 +19,7 @@ generarPuntos();
 
 var puntos = $(".punto");
 
-// PASO 2
+// SLIDESHOW
 $("#contador").text((actual + 1) + " / " + total);
 
 function mostrar(indiceSlide){
@@ -79,12 +79,14 @@ puntos.on("click", function(){
 // PAUSAR EL CARRUSEL AL HACER HOVER SOBRE LA PANTALLA
 var pantallaSlideshow = $(".slideshow__pantalla");
 
+// DETIENE EL CARRUSEL
 pantallaSlideshow.on("mouseenter", function() {
-    clearInterval(automatico); // Detiene el cambio automático
-    clearTimeout(espera);     // Limpia temporizadores pendientes por si acaso
+    clearInterval(automatico); 
+    clearTimeout(espera);     
 });
 
+// VUELVE A FUNCIONAR EL CARRRUSEL 
 pantallaSlideshow.on("mouseleave", function() {
-    clearInterval(automatico); // Nos aseguramos de limpiar cualquier intervalo previo
-    automatico = setInterval(siguiente, 3000); // Vuelve a arrancar los 3 segundos
+    clearInterval(automatico); 
+    automatico = setInterval(siguiente, 3000); 
 });

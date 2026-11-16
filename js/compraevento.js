@@ -1,7 +1,5 @@
-/* =========================================================
-   Cálculo del precio de las entradas (Completo y Corregido)
-   ========================================================= */
 
+//JS ESPERA A QUE SE CARGUE TODO EL HTML
 document.addEventListener('DOMContentLoaded', function () {
     var MAXIMO_POR_TIPO = 6;
 
@@ -20,13 +18,14 @@ document.addEventListener('DOMContentLoaded', function () {
     var termsCheck = document.querySelector('#terms-check');
     var mensaje = document.querySelector('#mensaje');
 
-    // Elementos del Modal
+    // VARIABLES MODAL
     var modal = document.getElementById('confirmation-modal');
     var closeModalBtn = document.getElementById('close-modal');
     var modalBuyerEmail = document.getElementById('modal-buyer-email');
     var modalEntriesEl = document.getElementById('modal-summary-entries');
     var modalTotalPriceEl = document.getElementById('modal-total-price');
 
+    // CÁLCULO DE PRECIO 
     function formatearPrecio(numero) {
         return numero + '€';
     }
@@ -52,7 +51,6 @@ document.addEventListener('DOMContentLoaded', function () {
             if (btnMas) btnMas.disabled = (cantidad >= MAXIMO_POR_TIPO);
 
             if (cantidad > 0) {
-                // Genera cada línea en formato flex horizontal para separar nombre y precio
                 lineasResumen += '<div style="display: flex; justify-content: space-between; width: 100%;"><span>x' + cantidad + ' ' + nombre + '</span><strong>' + formatearPrecio(subtotalEntrada) + '</strong></div>';
             }
 
@@ -75,6 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
         validarFormularioCompleto(totalEntradas);
     }
 
+    // BOTONES + Y - 
     function conectarContador(entrada) {
         var btnMenos = entrada.querySelector('.btn-minus') || entrada.querySelector('.contador__boton--menos');
         var btnMas = entrada.querySelector('.btn-plus') || entrada.querySelector('.contador__boton--mas');
@@ -107,6 +106,7 @@ document.addEventListener('DOMContentLoaded', function () {
         conectarContador(entradas[i]);
     }
 
+    // FORMULARIO Y COMPROBAR QUE LOS CAMPOS ESTÉN RELLENOS CORRECTAMENTE ANTES DE VALIDAR
     function validarFormularioCompleto(totalEntradasForzado) {
         var totalEntradas = totalEntradasForzado;
         if (totalEntradas === undefined) {
@@ -189,17 +189,18 @@ document.addEventListener('DOMContentLoaded', function () {
             if (modal) {
                 modal.classList.add('active');
                 modal.setAttribute('aria-hidden', 'false');
-                // Desactiva el scroll de la página al abrir la modal
+                // DESACTIVAR SCROLL CON MODAL ABIERTA
                 document.body.style.overflow = 'hidden';
             }
         });
     }
 
+    // MODAL DE CONFIRMACIÓN DE COMPRA
     function cerrarModal() {
         if (modal) {
             modal.classList.remove('active');
             modal.setAttribute('aria-hidden', 'true');
-            // Restaura el scroll de la página al cerrar la modal
+            // RESTAURAR SCROLL AL CERRAR MODAL
             document.body.style.overflow = '';
         }
         for (var l = 0; l < entradas.length; l++) {

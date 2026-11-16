@@ -1,10 +1,13 @@
+// CARRUSEL ARTISTAS INVITADAS 
+
+//JS ESPERA A QUE SE CARGE TODO EL HTML
 document.addEventListener("DOMContentLoaded", function () {
     const track = document.getElementById("artistasTrack");
     if (track) {
-        // Guardamos el contenido original
+        // CONTENIDO ORIGINAL
         const contenidoOriginal = track.innerHTML;
         
-        // Duplicamos el contenido varias veces para garantizar que cubra pantallas 2K / ultra-anchas
+        // DUPLICAR CONTENIDO PARA EFECTO LOOP INFINITO
         track.innerHTML = contenidoOriginal + contenidoOriginal + contenidoOriginal;
     }
 });

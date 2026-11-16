@@ -1,8 +1,9 @@
-// --- CARRUSEL 2: SEPARADOR (PANTALLA COMPLETA) ---
+// VARIABLES 
 var slidesSep = $(".slideshow-separador .slide-sep"); 
 var totalSep = slidesSep.length; 
 var actualSep = 0; 
 
+// GENERACIÓN DE LOS PUNTOS 
 function generarPuntosSeparador() {
     var contenedorPuntosSep = $("#puntos-separador");
     contenedorPuntosSep.empty();
@@ -29,19 +30,19 @@ function mostrarSeparador(indiceSlide){
     puntosSep.eq(actualSep).addClass("activo");
 }
 
-// Movimiento automático continuo (sin pausa por hover)
+// MOVIMIENTO AUTOMÁTICO 
 var automaticoSep = setInterval(function() {
     var n = actualSep + 1;
     if (n === totalSep) { n = 0; }
     mostrarSeparador(n);
 }, 3000); 
 
-// Permitir saltar a una foto concreta haciendo clic en los puntos inferiores
+// CAMBIAR AL PULSAR LOS PUNTOS
 puntosSep.on("click", function(){
     var indice = $(this).data("indice");
     mostrarSeparador(indice);
     
-    // Reinicia el ciclo de los 3 segundos al hacer clic manualmente
+    // REINICIO DE MOVIMIENTO AUTOMÁTICO
     clearInterval(automaticoSep);
     automaticoSep = setInterval(function() {
         var n = actualSep + 1;
