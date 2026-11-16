@@ -1,11 +1,12 @@
 /* -----------VARIABLES----------- */
 :root {
+    /* Colores  */
     --color-vino: #481229; 
     --color-naranja: #D34736; 
     --color-rosa: #F6C9E0; 
     --color-crema: #F6F2EF; 
 
-
+    /* transición  */
     --transicion: 0.25s ease;
 
     /* Variables tipográficas */
@@ -20,12 +21,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* overflow-x: hidden; */
 }
 
 html {
     scroll-behavior: smooth;
-    /* overflow-x: hidden; */
 }
 
 body {
@@ -78,7 +77,7 @@ body {
     transition: transform var(--transicion);
 }
 
-/* ANIMACIÓN BOTÓN  */
+/* ANIMACIÓN BOTÓN HAMBURGUESA */
 
 .menu-btn.abierto span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
@@ -151,7 +150,7 @@ body {
     }
 }
 
-/* ----------HERO---------- */
+/* ----------HERO HOME---------- */
 
 .hero {
     display: flex;
@@ -160,7 +159,6 @@ body {
     background-color: var(--color-vino);
     gap: 1rem;
     width: 100vw;
-    /* height: 100vh; */
     min-height: calc(100vh - 65.1px);
     flex-wrap: wrap-reverse;
     overflow: hidden;
@@ -256,8 +254,9 @@ body {
     gap: 1rem;
 }
 
-/* HERO RESPONSIVE  */
+/* HERO HOME RESPONSIVE  */
 
+/* TABLET  */
 @media (max-width: 900px) {
     .hero {
         flex-direction: column-reverse;
@@ -290,9 +289,9 @@ body {
     .hero-right > div > p   {
         font-size: 1rem;
     }
-
 }
 
+/* MOBILE  */
 @media (max-width: 480px) {
     .hero {
         padding: 10px;
@@ -322,10 +321,9 @@ body {
     .hero-center {
         flex: unset;
     }
-
 }
 
-/* ----------SEPARADOR---------- */
+/* ----------SEPARADOR HOME---------- */
 
 .separador {
     position: relative;
@@ -364,6 +362,7 @@ body {
 
 /* SEPARADOR RESPONSIVE  */
 
+/* TABLET  */
 @media (max-width: 900px) {
     .separador {
         min-height: 50vh;
@@ -371,6 +370,7 @@ body {
    
 }
 
+/* MOBILE  */
 @media (max-width: 480px) {
      .separador {
         min-height: 30vh;
@@ -475,6 +475,8 @@ body {
 
 
 /* PROPUESTA RESPONSIVE */
+
+/* TABLET  */
 @media (max-width: 900px) {
 
     .propuesta {
@@ -527,6 +529,7 @@ body {
     }
 }
 
+/* MOBILE  */
 @media (max-width: 480px) {
 
     .propuesta {
@@ -548,9 +551,9 @@ body {
    .propuesta-newsletter > a {
     font-size: 1rem;
    }
-
 }
 
+/* 2k  */
 @media (min-width: 1440px) {
     .propuesta {
         min-height: 70vh;
@@ -722,6 +725,7 @@ body {
 
 /* ESPACIOS RESPONSIVE  */
 
+/* TABLET  */
 @media (max-width: 900px) {
     .espacios-container {
         flex-direction: column-reverse;
@@ -780,10 +784,9 @@ body {
     .slide__descripcion {
         font-size: 1rem;
     }
-
-    
 }
 
+/* MOBILE  */
 @media (max-width: 480px) {
 
     .espacios-container {
@@ -809,9 +812,7 @@ body {
     .slide__descripcion {
        display: none;
     }
-    
 }
-
 
 /* ----------HISTORIA NOMBRE---------- */
 
@@ -902,6 +903,7 @@ body {
 
 /* HISTORIA NOMBRE RESPONSIVE  */
 
+/* TABLET  */
 @media (max-width: 900px) {
 
     .nombre {
@@ -936,9 +938,9 @@ body {
     bottom: 30px;
     right: 80px;
     }
-    
 }
 
+/* MOBILE  */
 @media (max-width: 480px) {
    .nombre {
      padding: 20px 10px;
@@ -971,10 +973,9 @@ body {
     font-size: 0.9rem;
     padding-bottom: 20px;
    }
-
-
 }
 
+/* 2K  */
 @media (min-width: 1440px) {
    .nombre {
     min-height: 60vh;
