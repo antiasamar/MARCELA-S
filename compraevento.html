@@ -74,127 +74,127 @@
 
     <!-- FORMULARIO  -->
      <main class="checkout-wrapper">
-    <form id="ticket-form" novalidate>
-      
-      <!-- SECCIÓN SUPERIOR -->
-      <section class="top-section">
-        <!-- Columna Izquierda: Selector de entradas -->
-        <div class="tickets-column">
+        <form id="ticket-form" novalidate>
           
-          <!-- Entrada 1 -->
-          <div class="ticket-pill pill-crema" data-id="standart" data-name="Entrada Standart" data-price="12">
-            <span class="ticket-title">Entrada Standart · 12€</span>
-            <div class="counter">
-              <button type="button" class="btn-qty btn-minus" aria-label="Restar entrada">-</button>
-              <span class="qty-value">0</span>
-              <button type="button" class="btn-qty btn-plus" aria-label="Sumar entrada">+</button>
+          <!-- SECCIÓN SUPERIOR -->
+          <section class="top-section">
+            <!-- Columna Izquierda: Selector de entradas -->
+            <div class="tickets-column">
+              
+              <!-- Entrada 1 -->
+              <div class="ticket-pill pill-crema" data-id="standart" data-name="Entrada Standart" data-price="12">
+                <span class="ticket-title">Entrada Standart · 12€</span>
+                <div class="counter">
+                  <button type="button" class="btn-qty btn-minus" aria-label="Restar entrada">-</button>
+                  <span class="qty-value">0</span>
+                  <button type="button" class="btn-qty btn-plus" aria-label="Sumar entrada">+</button>
+                </div>
+              </div>
+
+              <!-- Entrada 2 -->
+              <div class="ticket-pill pill-rosa" data-id="consumicion1" data-name="Entrada + 1 consumición" data-price="18">
+                <span class="ticket-title">Entrada + 1 consumición · 18€</span>
+                <div class="counter">
+                  <button type="button" class="btn-qty btn-minus" aria-label="Restar entrada">-</button>
+                  <span class="qty-value">0</span>
+                  <button type="button" class="btn-qty btn-plus" aria-label="Sumar entrada">+</button>
+                </div>
+              </div>
+
+              <!-- Entrada 3 -->
+              <div class="ticket-pill pill-naranja" data-id="consumicion2" data-name="Entrada + 2 consumiciones" data-price="24">
+                <span class="ticket-title">Entrada + 2 consumiciones · 24€</span>
+                <div class="counter">
+                  <button type="button" class="btn-qty btn-minus" aria-label="Restar entrada">-</button>
+                  <span class="qty-value">0</span>
+                  <button type="button" class="btn-qty btn-plus" aria-label="Sumar entrada">+</button>
+                </div>
+              </div>
+
             </div>
-          </div>
 
-          <!-- Entrada 2 -->
-          <div class="ticket-pill pill-rosa" data-id="consumicion1" data-name="Entrada + 1 consumición" data-price="18">
-            <span class="ticket-title">Entrada + 1 consumición · 18€</span>
-            <div class="counter">
-              <button type="button" class="btn-qty btn-minus" aria-label="Restar entrada">-</button>
-              <span class="qty-value">0</span>
-              <button type="button" class="btn-qty btn-plus" aria-label="Sumar entrada">+</button>
+            <!-- Columna Derecha: Datos de la compradora -->
+            <div class="buyer-column">
+              <h2 class="section-heading">Datos de la compradora</h2>
+              
+              <div class="input-group">
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+              </div>
+              
+              <div class="input-group">
+                <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
+              </div>
+              
+              <div class="input-group">
+                <input type="email" id="email" name="email" placeholder="Email" required>
+              </div>
+              
+              <div class="input-group">
+                <input type="email" id="confirm-email" name="confirm-email" placeholder="Confirmar correo electrónico" required>
+                <span id="email-error" class="error-msg" aria-live="polite">Los correos electrónicos no coinciden</span>
+              </div>
             </div>
-          </div>
+          </section>
 
-          <!-- Entrada 3 -->
-          <div class="ticket-pill pill-naranja" data-id="consumicion2" data-name="Entrada + 2 consumiciones" data-price="24">
-            <span class="ticket-title">Entrada + 2 consumiciones · 24€</span>
-            <div class="counter">
-              <button type="button" class="btn-qty btn-minus" aria-label="Restar entrada">-</button>
-              <span class="qty-value">0</span>
-              <button type="button" class="btn-qty btn-plus" aria-label="Sumar entrada">+</button>
+          <!-- LÍNEA DIVISORIA HORIZONTAL -->
+          <hr class="main-divider">
+
+          <!-- SECCIÓN INFERIOR -->
+          <section class="bottom-section">
+            <!-- Columna Izquierda: Resumen del pedido -->
+            <div class="summary-column">
+              <div id="summary-items" class="summary-items">
+                <div class="summary-row empty-summary">
+                  <span>Ninguna entrada seleccionada</span>
+                  <span>0€</span>
+                </div>
+              </div>
+
+              <hr class="dashed-line">
+
+              <div class="summary-row fee-row">
+                <span>Gastos de gestión</span>
+                <span id="management-fee">--</span>
+              </div>
+
+              <hr class="solid-line">
+
+              <div class="summary-row total-row">
+                <div class="total-label">
+                  <span class="total-title">Total</span>
+                  <span class="total-subtitle">Tasas e impuestos incluidos</span>
+                </div>
+                <span id="total-price" class="total-amount">0€</span>
+              </div>
+
+              <hr class="dashed-line">
             </div>
-          </div>
 
-        </div>
+            <!-- Columna Derecha: Checkboxes y botón Continuar -->
+            <div class="actions-column">
+              <div class="checkboxes-group">
+                <label class="custom-checkbox">
+                  <input type="checkbox" id="promo-check">
+                  <span class="checkmark"></span>
+                  <span class="checkbox-text">Deseo recibir correos publicitarios.</span>
+                </label>
 
-        <!-- Columna Derecha: Datos de la compradora -->
-        <div class="buyer-column">
-          <h2 class="section-heading">Datos de la compradora</h2>
-          
-          <div class="input-group">
-            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-          </div>
-          
-          <div class="input-group">
-            <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
-          </div>
-          
-          <div class="input-group">
-            <input type="email" id="email" name="email" placeholder="Email" required>
-          </div>
-          
-          <div class="input-group">
-            <input type="email" id="confirm-email" name="confirm-email" placeholder="Confirmar correo electrónico" required>
-            <span id="email-error" class="error-msg" aria-live="polite">Los correos electrónicos no coinciden</span>
-          </div>
-        </div>
-      </section>
+                <label class="custom-checkbox">
+                  <input type="checkbox" id="terms-check" required>
+                  <span class="checkmark"></span>
+                  <span class="checkbox-text">Acepto los términos y condiciones.</span>
+                </label>
+              </div>
 
-      <!-- LÍNEA DIVISORIA HORIZONTAL -->
-      <hr class="main-divider">
-
-      <!-- SECCIÓN INFERIOR -->
-      <section class="bottom-section">
-        <!-- Columna Izquierda: Resumen del pedido -->
-        <div class="summary-column">
-          <div id="summary-items" class="summary-items">
-            <div class="summary-row empty-summary">
-              <span>Ninguna entrada seleccionada</span>
-              <span>0€</span>
+              <div class="submit-wrapper">
+                <button type="submit" id="btn-continue" class="btn-continue" disabled>
+                  [CONTINUAR]
+                </button>
+              </div>
             </div>
-          </div>
+          </section>
 
-          <hr class="dashed-line">
-
-          <div class="summary-row fee-row">
-            <span>Gastos de gestión</span>
-            <span id="management-fee">--</span>
-          </div>
-
-          <hr class="solid-line">
-
-          <div class="summary-row total-row">
-            <div class="total-label">
-              <span class="total-title">Total</span>
-              <span class="total-subtitle">Tasas e impuestos incluidos</span>
-            </div>
-            <span id="total-price" class="total-amount">0€</span>
-          </div>
-
-          <hr class="dashed-line">
-        </div>
-
-        <!-- Columna Derecha: Checkboxes y botón Continuar -->
-        <div class="actions-column">
-          <div class="checkboxes-group">
-            <label class="custom-checkbox">
-              <input type="checkbox" id="promo-check">
-              <span class="checkmark"></span>
-              <span class="checkbox-text">Deseo recibir correos publicitarios.</span>
-            </label>
-
-            <label class="custom-checkbox">
-              <input type="checkbox" id="terms-check" required>
-              <span class="checkmark"></span>
-              <span class="checkbox-text">Acepto los términos y condiciones.</span>
-            </label>
-          </div>
-
-          <div class="submit-wrapper">
-            <button type="submit" id="btn-continue" class="btn-continue" disabled>
-              [CONTINUAR]
-            </button>
-          </div>
-        </div>
-      </section>
-
-    </form>
+        </form>
   </main>
 
   <!-- VENTANA MODAL DE CONFIRMACIÓN (Estilo Ticket) -->

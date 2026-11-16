@@ -61,5 +61,6 @@ https://api.jquery.com/animate/
 - Repasar funcionamiento y responsive antes de hacer merge. 
 - tipografía checkboxs (cambiar a fragment)
 - ¡¡¡¡pensar como añadir el cta de compra antes!!! (página evento individual)
+- Revisar overflow en página de formulario de compra de evento
 
 

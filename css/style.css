@@ -18,7 +18,7 @@
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 body {
@@ -2770,6 +2770,7 @@ body.modal-abierto .carrusel-pista {
 .checkout-wrapper {
   width: 100%;
   margin: 0 0 40px 0;
+  overflow-x: hidden;
 }
 
 /* SECCIÓN SUPERIOR */
