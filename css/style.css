@@ -1080,6 +1080,7 @@ body {
 
 /* ESPECIALIDADES RESPONSIVE */
 
+/* TABLET  */
 @media (max-width: 900px) {
     .especialidades {
         height: auto;
@@ -1113,6 +1114,7 @@ body {
     }
 }
 
+/* MOBILE  */
 @media (max-width: 480px) {
     .especialidades {
         padding: 10px 20px;
@@ -1203,17 +1205,17 @@ body {
 }
 
 .espectaculo {
-    background-color: var(--color-rosa); /* Rosa pastel */
+    background-color: var(--color-rosa); 
     color: var(--color-vino);
 }
 
 .cultura {
-    background-color: var(--color-naranja); /* Rojo teja / coral */
+    background-color: var(--color-naranja); 
     color: var(--color-vino);
 }
 
 .fiesta {
-    background-color: var(--color-crema); /* Beige claro / blanco roto */
+    background-color: var(--color-crema); 
     color: var(--color-vino);
 }
 
@@ -1279,6 +1281,7 @@ body {
 
 /* PRÓXIMOS EVENTOS RESPONSIVE  */
 
+/* TABLET  */
 @media (max-width: 900px) {
     .prox-eventos {
         height: auto;
@@ -1332,6 +1335,7 @@ body {
     }
 }
 
+/* MOBILE  */
 @media (max-width: 480px) {
     .prox-eventos {
         padding: 10px;
@@ -1352,6 +1356,7 @@ body {
     }
 }
 
+/* 2K  */
 @media (min-width: 1440px) {
     .prox-eventos {
         min-height: 70vh;
@@ -1445,6 +1450,7 @@ body {
 
 /* SEPARADOR RESPONSIVE  */
 
+/* TABLET  */
 @media (max-width: 900px) {
     .slideshow-separador {
         height: 50vh;
@@ -1458,9 +1464,9 @@ body {
     .slideshow-separador__controles {
         bottom: 1.5rem;
     }
-
 }
 
+/* MOBILE  */
 @media (max-width: 480px) {
     .slideshow-separador {
         height: 30vh;
@@ -1475,8 +1481,6 @@ body {
         bottom: 10px;
     }
 }
-
-
 
 /* ---------- FOOTER ---------- */
 
@@ -1543,6 +1547,8 @@ footer h1 {
 }
 
 /* FOOTER RESPONSIVE */
+
+/* TABLET  */
 @media (max-width: 900px) {
     
     footer {
@@ -1593,6 +1599,7 @@ footer h1 {
     }
 }
 
+/* MOBILE  */
 @media (max-width: 480px) {
     footer {
         padding: 10px 20px;
@@ -1818,11 +1825,9 @@ footer h1 {
   .modal-btn-submit {
     align-self: center;
   }
-
-  
 }
 
-/* 1. Evita que el navegador ponga fondo blanco al autocompletar */
+/* ELIMINAR ESTILO DEL NAVEGAR EN INPUTS  */
 .modal-input:-webkit-autofill,
 .modal-input:-webkit-autofill:hover,
 .modal-input:-webkit-autofill:focus {
@@ -1831,7 +1836,6 @@ footer h1 {
   transition: background-color 5000s ease-in-out 0s;
 }
 
-/* 2. Asegura que al escribir o estar activos no cojan fondo blanco por defecto */
 .modal-input:focus,
 .modal-input:active {
   background-color: transparent !important;
@@ -1844,7 +1848,7 @@ footer h1 {
     background-color: var(--color-rosa);
 }
 
-/* -----------MENÚ------------ */
+/* -----------MENÚ CARTA------------ */
 
 .carta {    
     background-color: var(--color-rosa);
@@ -1869,7 +1873,7 @@ footer h1 {
     color: var(--color-vino);
 }
 
-/* ACORDEÓN  */
+/* ACORDEÓN */
 
 .acordeon-carta {
     width: 100%;
@@ -2058,6 +2062,7 @@ footer h1 {
 
 /* ACORDEÓN RESPONSIVE  */
 
+/* TABLET  */
 @media (max-width: 900px) {
 
     .acordeon-carta {
@@ -2078,6 +2083,7 @@ footer h1 {
     }
 }
 
+/* MOBILE  */
 @media (max-width: 480px) {
 
     .acordeon-carta {
@@ -2139,14 +2145,11 @@ footer h1 {
 /* ------------------EVENTOS----------------------  */
 
 /* MENÚ EVENTOS  */
-
 .menu-eventos > .eventos-activo {
     color: var(--color-naranja);
 }
 
-
 /* TARJETAS Y FILTROS  */
-
 .muestra-eventos {
     padding: 10px 40px;
 }
@@ -2192,9 +2195,10 @@ footer h1 {
     display: none !important;
 }
 
-@media (max-width: 900px) {
+/* RESPONSIVE PRÓXIMOS EVENTOS  */
 
-    
+/* TABLET  */
+@media (max-width: 900px) {
 
     .info-eventos {
         flex-direction: column;
@@ -2210,6 +2214,7 @@ footer h1 {
     }
 }
 
+/* MOBILE  */
 @media (max-width: 480px) {
 
     .muestra-eventos { 
@@ -2231,22 +2236,15 @@ footer h1 {
     .filtros > button {
         font-size: 0.8rem;
     }
-
 }
 
 /* ------------------EVENTOS ANTERIORES----------------------  */
 
-
-/* .eventos-anteriores {
-    height: calc(100vh - 65.1px);
-} */
-
-/* SECCIÓN COMPLETA 100% VIEWPORT */
 .eventos-pasados {
     background-color: var(--color-vino);
     width: 100%;
     height: 100vh;
-    padding: 35px 0; /* Sin padding lateral para que el carrusel vaya de lado a lado */
+    padding: 35px 0; 
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -2283,7 +2281,7 @@ footer h1 {
 /* VENTANA QUE RECORTA EL CARRUSEL */
 .carrusel-viewport {
     width: 100%;
-    flex: 1; /* Ocupa todo el espacio vertical entre el título y el enlace */
+    flex: 1; 
     margin: 1.8rem 0;
     overflow: hidden;
     display: flex;
@@ -2295,11 +2293,11 @@ footer h1 {
     gap: 1.2rem;
     height: 100%;
     width: max-content;
-    padding-left: 40px; /* Alineado con el título */
+    padding-left: 40px; 
     animation: scrollInfinito 35s linear infinite;
 }
 
-/* PAUSA EL MOVIMIENTO AL HACER HOVER EN CUALQUIER PARTE DE LA PISTA */
+/* PAUSA EL MOVIMIENTO AL HACER HOVER */
 .carrusel-pista:hover {
     animation-play-state: paused;
 }
@@ -2325,13 +2323,13 @@ footer h1 {
     flex-shrink: 0;
 }
 
-/* DISTRIBUCIÓN ASIMÉTRICA (Foto superior e inferior) */
+/* DISTRIBUCIÓN ASIMÉTRICA */
 .item-alta {
-    flex: 68; /* Ocupa el 68% de la altura de la columna */
+    flex: 68; 
 }
 
 .item-baja {
-    flex: 32; /* Ocupa el 32% de la altura de la columna */
+    flex: 32; 
 }
 
 /* TARJETA DE CADA FOTO */
@@ -2350,7 +2348,7 @@ footer h1 {
     transition: transform 0.5s ease;
 }
 
-/* OVERLAY CON COLOR VINO Y OPACIDAD */
+/* OVERLAY FOTOS */
 .galeria-overlay {
     position: absolute;
     inset: 0;
@@ -2368,10 +2366,6 @@ footer h1 {
 .galeria-item:hover .galeria-overlay {
     opacity: 0.7; 
 }
-
-/* .galeria-item:hover img {
-    transform: scale(1.04); 
-} */
 
 /* TIPOGRAFÍA DENTRO DEL OVERLAY */
 .galeria-overlay h3 {
@@ -2396,7 +2390,7 @@ body.modal-abierto .carrusel-pista {
     animation-play-state: paused !important;
 }
 
-/* RESPONSIVE MÓVIL */
+/* RESPONSIVE MÓVIL CARRUSEL */
 @media (max-width: 768px) {
     .eventos-pasados {
         padding: 25px 0;
@@ -2511,7 +2505,6 @@ body.modal-abierto .carrusel-pista {
     font-size: 1.2rem;
     text-align: right;
     color: var(--color-naranja);
-    /* align-self: flex-start; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -2522,7 +2515,9 @@ body.modal-abierto .carrusel-pista {
 }
 
 
-/* Adaptación al estrechar la pantalla */
+/* RESPONSIVE HERO EVENTO INDIVIDUAL  */
+
+/* TABLET  */
 @media (max-width: 900px) {
     .cabaret-hero-container {
         grid-template-columns: 1fr;
@@ -2578,13 +2573,10 @@ body.modal-abierto .carrusel-pista {
     .cabaret-hero-img > img {
         max-width: 600px;
     }
-
-   
-
 }
 
 
-
+/* MOBILE  */
 @media (max-width: 480px) {
 
     .cabaret-hero {
@@ -2635,9 +2627,6 @@ body.modal-abierto .carrusel-pista {
      .cabaret-hero-text > div > a  {
         font-size: 1.2rem;
     }
-
-
-
 }
 
 /* SEPARADOR CABARET  */
@@ -2658,10 +2647,10 @@ body.modal-abierto .carrusel-pista {
     max-width: 600px;
 }
 
-/* ARTISTAS INVITADAS  */
+/* CARRUSEL ARTISTAS INVITADAS  */
 
 .cabaret-artistas {
-    background-color: var(--color-vino); /* Fondo burdeos de la captura */
+    background-color: var(--color-vino); 
     min-height: 60vh;
     padding: 40px 0;
     display: flex;
@@ -2675,17 +2664,14 @@ body.modal-abierto .carrusel-pista {
     font-size: clamp(2rem, 3vw, 2.8rem);
     color: var(--color-naranja);
     padding-left: 40px;
-    /* margin-bottom: 1.5rem; */
 }
 
-/* Contenedor que recorta el desbordamiento horizontal */
 .artistas-marquee {
     width: 100%;
     overflow: hidden;
     position: relative;
 }
 
-/* Pista que se desplaza de forma infinita */
 .artistas-track {
     display: flex;
     width: max-content;
@@ -2694,7 +2680,6 @@ body.modal-abierto .carrusel-pista {
     animation: bucleInfinito 28s linear infinite;
 }
 
-/* Pausa suave si el usuario pasa el ratón por encima */
 .artistas-marquee:hover .artistas-track {
     animation-play-state: paused;
 }
@@ -2732,7 +2717,6 @@ body.modal-abierto .carrusel-pista {
     white-space: nowrap;
 }
 
-/* Botón inferior */
 .artistas-cta {
     display: flex;
     justify-content: center;
@@ -2752,7 +2736,7 @@ body.modal-abierto .carrusel-pista {
     color: var(--color-naranja);
 }
 
-/* Animación exacta al 50% porque JS duplica el bloque de 6 tarjetas */
+/* ANIMACIÓN CARRUSEL  */
 @keyframes bucleInfinito {
     0% {
         transform: translateX(0);
@@ -2762,7 +2746,7 @@ body.modal-abierto .carrusel-pista {
     }
 }
 
-/* Ajuste responsive */
+/* RESPONSIVE CARRUSEL ARTISTAS  */
 @media (max-width: 768px) {
     .cabaret-artistas {
         min-height: 55vh;
@@ -2804,7 +2788,6 @@ body.modal-abierto .carrusel-pista {
     .cabaret-artistas > .artistas-cta > a {
         font-size: 1.2rem;
     }
-
 }
 
 /* ------------------COMPRA EVENTO----------------------  */
@@ -2815,7 +2798,6 @@ body.modal-abierto .carrusel-pista {
     margin-bottom: 20px;
 }
 
-/* ------------------------------- */
 .checkout-wrapper {
   width: 100%;
   margin: 0 0 40px 0;
@@ -2827,7 +2809,6 @@ body.modal-abierto .carrusel-pista {
   display: grid;
   grid-template-columns: 1.35fr 1fr;
   gap: 4.5rem;
-  /* padding-right: 40px; */
   align-items: start;
   align-items: stretch;
 }
@@ -2901,7 +2882,6 @@ body.modal-abierto .carrusel-pista {
 .qty-value {
   font-family: var(--fuente-principal);
   font-size: 1.5rem;
-  /* font-weight: 700; */
   min-width: 1.4rem;
   text-align: center;
   color: var(--color-vino);
@@ -2945,7 +2925,6 @@ body.modal-abierto .carrusel-pista {
 
 .input-group input:focus {
     color: var(--color-naranja);
-  /* box-shadow: 0 0 0 1px var(--color-naranja); */
 }
 
 .input-group input.input-invalid {
@@ -2991,7 +2970,6 @@ body.modal-abierto .carrusel-pista {
   min-height: 1.5rem;
 }
 
-/* Asegura que cada elemento de la lista del resumen se distribuya en una sola línea horizontal */
 .summary-items li,
 .summary-items div,
 #summary-items li,
@@ -3052,7 +3030,7 @@ body.modal-abierto .carrusel-pista {
   font-weight: 700;
 }
 
-/* ACCIONES (Checkboxes y Botón) */
+/* CHECKBOX Y CONTINUAR */
 .actions-column {
   display: flex;
   flex-direction: column;
@@ -3136,7 +3114,6 @@ body.modal-abierto .carrusel-pista {
 
 .btn-continue:hover:not(:disabled) {
   color: var(--color-naranja);
-  /* transform: translateX(4px); */
 }
 
 .btn-continue:disabled {
@@ -3144,11 +3121,7 @@ body.modal-abierto .carrusel-pista {
   cursor: not-allowed;
 }
 
-/* VENTANA MODAL  */
-
-/* =========================================================
-   ESTILOS VENTANA MODAL (TICKET ESTILO FOTO)
-   ========================================================= */
+/* VENTANA MODAL CONFIRMACIÓN COMPRA  */
 
 .modal-overlay {
   position: fixed;
@@ -3173,7 +3146,6 @@ body.modal-abierto .carrusel-pista {
 .modal-box {
   background-color: var(--color-rosa);
   color: var(--color-vino);
-  /* border: 2px solid var(--color-vino); */
   border-radius: 20px;
   max-width: 540px;
   width: 100%;
@@ -3211,7 +3183,6 @@ body.modal-abierto .carrusel-pista {
   transform: scale(1.1);
 }
 
-/* Recibo / Ticket interior */
 .ticket-receipt {
   display: flex;
   flex-direction: column;
@@ -3263,14 +3234,13 @@ body.modal-abierto .carrusel-pista {
 }
 
 .modal-goodbye {
-  font-family: var(--fuente-script); /* O puedes cambiarlo a tu fuente de estilo script si la tienes */
-  /* font-style: italic; */
+  font-family: var(--fuente-script); 
   font-size: 1.85rem;
   color: var(--color-vino);
   font-weight: 600;
 }
 
-/* 1. Evita que el navegador ponga fondo blanco al autocompletar en los inputs del formulario */
+/* QUITAR ESTILO DE INPUTS DEL NAVEGADOR  */
 .input-group-compra input:-webkit-autofill,
 .input-group-compra input:-webkit-autofill:hover,
 .input-group-compra input:-webkit-autofill:focus {
@@ -3279,7 +3249,6 @@ body.modal-abierto .carrusel-pista {
   transition: background-color 5000s ease-in-out 0s;
 }
 
-/* 2. Asegura que al escribir o estar activos no cojan fondo blanco por defecto */
 .input-group-compra input:focus,
 .input-group-compra input:active,
 .input-group-compra input:not(:placeholder-shown) {
@@ -3287,7 +3256,9 @@ body.modal-abierto .carrusel-pista {
   color: var(--color-rosa) !important;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE VENTANA MODAL CONFIRMACIÓN COMPRA */
+
+/* TABLET  */
 @media (max-width: 900px) {
   .top-section,
   .bottom-section {
@@ -3319,6 +3290,7 @@ body.modal-abierto .carrusel-pista {
   }
 }
 
+/* MOBILE  */
 @media (max-width: 480px) {
 
     .ticket-pill {
@@ -3383,13 +3355,7 @@ s
     background-color: var(--color-rosa);
 }
 
-
-
-
 /* FORMULARIO  */
-/* FORMULARIO  */
-
-/* Contenedor Principal */
 .reserva-wrapper {
   padding: 4rem 2rem;
   display: flex;
@@ -3408,7 +3374,7 @@ s
   box-sizing: border-box;
 }
 
-/* Columna Izquierda: Calendario y Bandeja */
+/* COLUMNA IZQ*/
 .calendar-column {
   background-color: var(--color-vino);
   border-radius: 16px;
@@ -3419,7 +3385,6 @@ s
   box-sizing: border-box;
 }
 
-/* Contenedor que alinea los botones FUERA y la bandeja centrada */
 .calendar-month-nav {
   display: flex;
   align-items: center;
@@ -3446,7 +3411,6 @@ s
   object-fit: contain;
 }
 
-/* El texto se superpone encima de la bandeja limpiamente */
 .plate-text {
   position: absolute;
   inset: 0;
@@ -3472,7 +3436,6 @@ s
   font-size: 1.3rem;
 }
 
-/* Botones de navegación situados FUERA de la bandeja */
 .cal-nav-btn {
   background: none;
   border: none;
@@ -3489,7 +3452,6 @@ s
   color: var(--color-rosa);
 }
 
-/* Cuadrícula de días */
 .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -3539,7 +3501,7 @@ s
   background: transparent;
 }
 
-/* Columna Derecha: Formulario */
+/* COLUMNA DRCH */
 .form-column {
   display: flex;
   flex-direction: column;
@@ -3566,7 +3528,6 @@ s
     width: 100%;
   background-color: var(--color-vino);
   border: 2px solid var(--color-vino);
-  /* border-radius: 8px; */
   padding: 1rem 1.2rem;
   color: var(--color-naranja);
   font-family: var(--fuente-principal);
@@ -3586,7 +3547,6 @@ s
   width: 100%;
   background-color: var(--color-naranja);
   border: 2px solid var(--color-vino);
-  /* border-radius: 8px; */
   padding: 1rem 1.2rem;
   color: var(--color-vino);
   font-family: var(--fuente-mono);
@@ -3623,7 +3583,6 @@ s
 .fieldset-legend {
   font-family: var(--fuente-mono);
   font-size: 1.2rem;
-  /* font-weight: 500; */
   margin-bottom: 0.5rem;
   color: var(--color-vino);
 }
@@ -3636,10 +3595,9 @@ s
 .custom-select-wrapper select:focus {
   outline: none;
   border-color: var(--color-rosa);
-  /* background-color: rgba(60, 18, 34, 0.8); */
 }
 
-/* Botón Continuar (Bloqueado por defecto) */
+/* BOTÓN */
 .actions-group {
   display: flex;
   justify-content: flex-end;
@@ -3667,14 +3625,13 @@ s
   text-decoration: underline;
 }
 
-/* 1. Asegura que el fieldset y los contenedores sean siempre transparentes */
+/* QUITAR ESTILO DEL NAVEGADOR DE LOS INPUTS  */
 .host-fieldset,
 .host-fieldset:focus-within,
 .host-fieldset .input-group {
     background-color: transparent !important;
 }
 
-/* 2. Mantiene los inputs transparentes al escribir, enfocar o validar */
 .host-fieldset input,
 .host-fieldset input:focus,
 .host-fieldset input:valid,
@@ -3682,20 +3639,17 @@ s
     background-color: transparent !important;
 }
 
-/* 3. Evita el fondo blanco/azul del autocompletado (Chrome, Safari, Edge) */
 .host-fieldset input:-webkit-autofill,
 .host-fieldset input:-webkit-autofill:hover,
 .host-fieldset input:-webkit-autofill:focus,
 .host-fieldset input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
     box-shadow: 0 0 0 1000px transparent inset !important;
-    -webkit-text-fill-color: var(--color-rosa) !important; /* Cambia 'inherit' por el color de tu texto si se ve oscuro, ej: #ffffff */
+    -webkit-text-fill-color: var(--color-rosa) !important; 
     transition: background-color 9999s ease-in-out 0s;
 }
 
-/* =========================================================
-   ESTILOS VENTANA MODAL (TICKET)
-   ========================================================= */
+/* VENTANA MODAL CONFIRMACIÓN RESERVA  */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -3808,9 +3762,9 @@ s
   color: var(--color-vino);
 }
 
-/* =========================================================
-   MEDIA QUERIES RESPONSIVE (MÓVIL)
-   ========================================================= */
+/* RESPONSIVE VENTANA MODAL CONFIRMACIÓN RESERVA  */
+
+/* TABLET  */
 @media (max-width: 900px) {
   .site-header {
     padding: 1.5rem;
@@ -3835,6 +3789,7 @@ s
     }
 }
 
+/* MOBILE  */
 @media (max-width: 480px) {
     .plate-month {
         font-size: 1.2rem;
