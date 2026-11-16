@@ -40,21 +40,26 @@ https://api.jquery.com/animate/
 ---------------------------------------------
 
 ## HOME Y CARTA: 
-- Dar último repaso al responsive
+- Dar último repaso al responsive. 
 - AÑADIR ANIMACIONES
 * Si da tiempo hacer tarjetas con foto para la carta en tablet y mobile.
 - # revisar fotos de tarjetas eventos 
 
 ## FALTA: 
-- PÁGINA EVENTOS (FILTROS JQUERY) (carrusel)
-- PÁGINA EVENTO INDIVIDUAL. (animaciones + carrusel)
-- FORMULARIO COMPRA EVENTO. 
+- # PÁGINA EVENTOS (FILTROS JQUERY) (carrusel)
+- # PÁGINA EVENTO INDIVIDUAL. (animaciones + carrusel)
+- # FORMULARIO COMPRA EVENTO. 
 - FORMULARIO RESERVA.
 - MODAL CONFIRMACIÓN RESERVA. 
 
 
 
 ## EVENTOS: 
-- ACTUALIZAR LAS TRES ÚLTIMAS TARJETAS A EVENTOS DIFERENTES. 
-- AÑADIR CARRUSEL DE EVENTOS PASADOS (GRID + CARRUSEL)
-- AÑADIR FOOTER
+- # ACTUALIZAR LAS TRES ÚLTIMAS TARJETAS A EVENTOS DIFERENTES. 
+- # AÑADIR CARRUSEL DE EVENTOS PASADOS (GRID + CARRUSEL)
+- # AÑADIR FOOTER
+- Repasar funcionamiento y responsive antes de hacer merge. 
+- tipografía checkboxs (cambiar a fragment)
+- ¡¡¡¡pensar como añadir el cta de compra antes!!! (página evento individual)
+
+
