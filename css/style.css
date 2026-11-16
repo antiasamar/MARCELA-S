@@ -4,7 +4,14 @@
     --color-naranja: #D34736; 
     --color-rosa: #F6C9E0; 
     --color-crema: #F6F2EF; 
+
+
     --transicion: 0.25s ease;
+
+    /* Variables tipográficas */
+    --fuente-principal: 'Alga', serif;
+    --fuente-mono: 'Fragment Mono', monospace;
+    --fuente-script: 'Beth Ellen', cursive;
 }
 
 /* -----------RESET BÁSICO---------- */
@@ -44,6 +51,7 @@ body {
 }
 
 .logo {
+    font-family: var(--fuente-principal);
     font-size: 2.2rem;
     font-weight: 500;
     text-decoration: none;
@@ -90,7 +98,7 @@ body {
 }
 
 .menu a {
-    font-family: Fragment Mono;
+    font-family: var(--fuente-mono);
     font-size: 1.2rem;
     color: var(--color-rosa);
     display: block;
@@ -124,7 +132,7 @@ body {
     .menu a {
         padding: 0;
         border-top: none;
-        font-family: Fragment Mono;
+        font-family: var(--fuente-mono);
         font-size: 1.2rem;
         color: var(--color-rosa);
     }
@@ -208,27 +216,27 @@ body {
 }
 
 .hero-center > h1 {
-    font-family: Alga;
+    font-family: var(--fuente-principal);
     font-size: 7rem;
     font-weight: 500;
     color: var(--color-naranja);
 }
 
 .hero-center > h2 {
-    font-family: Beth Ellen;
+    font-family: var(--fuente-script);
     color: var(--color-naranja);
     font-size: 2rem;
 }
 
 .hero-left > p, 
 .hero-right > p {
-    font-family: Fragment Mono;
+    font-family: var(--fuente-mono);
     color: var(--color-naranja);
     font-size: 1.2rem;
 }
 
 .hero-right > div > p {
-    font-family: Fragment Mono;
+    font-family: var(--fuente-mono);
     color: var(--color-naranja);
     font-size: 1.2rem;
     text-align: right;
@@ -394,7 +402,7 @@ body {
 }
 
 .propuesta-text > p {
-    font-family: Fragment Mono;
+    font-family: var(--fuente-mono);
     color: var(--color-vino);
     font-size: 1.2rem;
     flex: 1;
@@ -426,13 +434,13 @@ body {
 
 .propuesta-tarjeta > p {
     text-align: center;
-    font-family: Fragment Mono;
+    font-family: var(--fuente-mono);
     color: var(--color-vino);
     font-size: 1.2rem;
 }
 
 .propuesta-tarjeta > h2 {
-    font-family: Beth Ellen;
+    font-family: var(--fuente-script);
     color: var(--color-vino);
     font-size: 2rem;
     padding-bottom: 1.5rem;
@@ -448,7 +456,7 @@ body {
 }
 
 .propuesta-newsletter > p {
-    font-family: Fragment Mono;
+    font-family: var(--fuente-mono);
     color: var(--color-vino);
     font-size: 1.2rem;
 }
@@ -456,7 +464,7 @@ body {
 .btn-newsletter {
     text-decoration: none;
     color: var(--color-rosa);
-    font-family: Fragment Mono;
+    font-family: var(--fuente-mono);
     font-size: 1.5rem;
     transition: var(--transicion);
 }
@@ -622,14 +630,14 @@ body {
 }
 
 .slide__titulo {
-    font-family: Alga;
+    font-family: var(--fuente-principal);
     font-size: 2.5rem;
     color: var(--color-vino);
     flex: 1;
 }
 
 .slide__descripcion {
-    font-family: Fragment Mono;
+    font-family: var(--fuente-mono);
     font-size: 1.2rem;
     color: var(--color-vino);
     flex: 2;
@@ -689,21 +697,21 @@ body {
 }
 
 .brand-logo {
-    font-family: Beth Ellen;
+    font-family: var(--fuente-script);
     font-size: 3rem;
     color: var(--color-vino);
     line-height: 1;
 }
 
 .brand-description {
-    font-family: Fragment Mono;
+    font-family: var(--fuente-mono);
     font-size: 1.2rem;
     color: var(--color-vino);
     max-width: 442px;
 }
 
 .brand-heading {
-    font-family: Alga;
+    font-family: var(--fuente-principal);
     font-size: clamp(3rem, 5vw, 5rem); 
     font-weight: 400;
     line-height: 0.95;
@@ -846,7 +854,7 @@ body {
     left: 0;
     margin: 0;
 
-    font-family: Beth Ellen;
+    font-family: var(--fuente-script);
     font-size: clamp(25px, 4vw, 55px);
     color: var(--color-vino);
     transform: rotate(-26deg);
@@ -860,7 +868,7 @@ body {
     right: 110px;
     margin: 0;
 
-    font-family: Beth Ellen;
+    font-family: var(--fuente-script);
     font-size: clamp(25px, 4vw, 40px);
     color: var(--color-vino);
     transform: rotate(-26deg);
@@ -877,7 +885,7 @@ body {
 
 .nombre-subtitulo {
     flex: 1;
-    font-family: Alga;
+    font-family: var(--fuente-principal);
     font-size: clamp(28px, 3.5vw, 48px);
     color: var(--color-vino);
     margin: 0;
@@ -885,7 +893,7 @@ body {
 
 .nombre-descripcion {
     flex: 2;
-    font-family: Fragment Mono;
+    font-family: var(--fuente-mono);
     font-size: clamp(12px, 1.1vw, 16px);
     line-height: 1.3;
     color: var(--color-vino);
@@ -987,7 +995,7 @@ body {
 }
 
 .especialidades > h2 {
-    font-family: 'Alga', serif;
+    font-family: var(--fuente-principal);
     color: var(--color-naranja);
     font-size: 3rem;
     font-weight: 400;
@@ -1041,7 +1049,7 @@ body {
 }
 
 .especialidades-tarjeta > h3 {
-    font-family: 'Beth Ellen', cursive;
+    font-family: var(--fuente-script);
     color: var(--color-naranja);
     font-size: clamp(1rem, 1.3vw, 1.5rem);
     font-weight: 400;
@@ -1050,7 +1058,7 @@ body {
 }
 
 .especialidades-tarjeta > p {
-    font-family: 'Fragment Mono', monospace;
+    font-family: var(--fuente-mono);
     color: var(--color-naranja);
     font-size: clamp(0.75rem, 0.9vw, 0.9rem);
     margin: 0;
@@ -1058,7 +1066,7 @@ body {
 
 .especialidades > a {
     text-decoration: none;
-    font-family: 'Fragment Mono', monospace;
+    font-family: var(--fuente-mono);
     color: var(--color-naranja);
     font-size: clamp(0.9rem, 1.1vw, 2rem);
     align-self: flex-end;
@@ -1142,7 +1150,7 @@ body {
 }
 
 .prox-eventos-header h2 {
-    font-family: 'Alga', serif;
+    font-family: var(--fuente-principal);
     color: var(--color-rosa);
     font-size: clamp(1.8rem, 2.5vw, 3rem);
     font-weight: 400;
@@ -1152,7 +1160,7 @@ body {
 
 .prox-eventos-header a {
    text-decoration: none;
-   font-family: Fragment Mono;
+   font-family: var(--fuente-mono);
    color: var(--color-rosa);
    font-size: clamp(0.9rem, 1.1vw, 2rem);
    transition: color 0.2s ease;
@@ -1229,14 +1237,14 @@ body {
 }
 
 .eventos-descripcion h3 {
-    font-family: Beth Ellen;
+    font-family: var(--fuente-script);
     font-size: 2.2rem;
     margin: 0 0 0.8rem 0;
     font-weight: normal;
 }
 
 .eventos-descripcion p {
-    font-family: Fragment Mono;
+    font-family: var(--fuente-mono);
     font-size: 1.2rem;
     line-height: 1.4;
     margin: 0 0 0.6rem 0;
@@ -1258,13 +1266,13 @@ body {
 }
 
 .eventos-info h2 {
-    font-family: Alga;
+    font-family: var(--fuente-principal);
     font-size: 3rem;
     margin: 0;
 }
 
 .eventos-info p {
-    font-family: Fragment Mono;
+    font-family: var(--fuente-mono);
     font-size: 0.8rem;
 }
 
@@ -1390,7 +1398,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
-    font-family: Fragment Mono; 
+    font-family: var(--fuente-mono); 
     font-size: 1.5rem;
     color: var(--color-rosa);
     text-decoration: none;
@@ -1501,13 +1509,13 @@ footer h1 {
 }
 
 .footer-horario > div > p {
-    font-family: Fragment Mono;
+    font-family: var(--fuente-mono);
     color: var(--color-vino);
     font-size: 1.8rem;
 }
 
 .footer-izq > p {
-    font-family: Alga;
+    font-family: var(--fuente-principal);
     font-size: 2rem;
     color: var(--color-vino);
     font-weight: 600;
@@ -1521,7 +1529,7 @@ footer h1 {
 }
 
 .footer-drch > div:first-child > p {
-    font-family: Fragment Mono;
+    font-family: var(--fuente-mono);
     color: var(--color-vino);
     font-size: 1.8rem;
     text-align: right;
@@ -1679,7 +1687,7 @@ footer h1 {
 
 /* TEXTOS CABECERA */
 .modal-titulo {
-  font-family: Alga;
+  font-family: var(--fuente-principal);
   font-weight: 400;
   font-size: 2.5rem;
   line-height: 1.15;
@@ -1689,7 +1697,7 @@ footer h1 {
 }
 
 .modal-descripcion {
-  font-family: Fragment Mono;
+  font-family: var(--fuente-mono);
   font-size: 1rem;
   margin-top: 0;
   margin-bottom: 32px;
@@ -1708,7 +1716,7 @@ footer h1 {
   background-color: transparent;
   border: 1.5px solid var(--color-rosa);
   padding: 15px 18px;
-  font-family: 'Space Mono', monospace;
+  font-family: var(--fuente-mono);
   font-size: 1rem;
   color: var(--color-rosa);
   outline: none;
@@ -1734,7 +1742,7 @@ footer h1 {
 }
 
 .modal-handwriting {
-  font-family: Beth Ellen;
+  font-family: var(--fuente-script);
   font-size: 1.5rem;
   color: var(--color-rosa);
 }
@@ -1743,7 +1751,7 @@ footer h1 {
 .modal-btn-submit {
   background: none;
   border: none;
-  font-family: 'Space Mono', monospace;
+  font-family: var(--fuente-mono);
   font-size: 1.2rem;
   letter-spacing: 2px;
   color: var(--color-naranja);
@@ -1842,7 +1850,7 @@ footer h1 {
 }
 
 .menu-carta > a {
-    font-family: Fragment Mono;
+    font-family: var(--fuente-mono);
     font-size: 1.2rem;
     color: var(--var-naranja);
     display: block;
@@ -1870,7 +1878,7 @@ footer h1 {
 }
 
 .acordeon-carta__titulo-seccion {
-    font-family: Alga;
+    font-family: var(--fuente-principal);
     color: var(--color-vino);
     font-size: 4rem;
     font-weight: 600;
@@ -1896,7 +1904,7 @@ footer h1 {
     display: flex;
     align-items: center;
     padding: 1.2rem 0;
-    font-family: Alga;
+    font-family: var(--fuente-principal);
     font-size: 3rem;
     font-weight: 600;
     text-align: left;
@@ -1910,7 +1918,7 @@ footer h1 {
 .acordeon__titulo::after {
     content: "+";
     margin-left: auto;
-    font-family: Fragmen Mono;
+    font-family: var(--fuente-mono);
     font-size: 3rem;
     font-weight: 400;
     line-height: 1;
@@ -1974,7 +1982,7 @@ footer h1 {
 }
 
 .plato__nombre {
-    font-family: Beth Ellen;
+    font-family: var(--fuente-script);
     font-size: 2.1rem;
     line-height: 1;
     margin-bottom: 1rem;
@@ -1982,14 +1990,14 @@ footer h1 {
 }
 
 .plato__desc {
-    font-family: Fragment Mono;
+    font-family: var(--fuente-mono);
     font-size: 1.2rem;
     line-height: 1.4;
     color: inherit;
 }
 
 .plato__precio {
-    font-family: Alga;
+    font-family: var(--fuente-principal);
     font-size: 2rem;
     font-weight: 600;
     white-space: nowrap;
@@ -2034,7 +2042,7 @@ footer h1 {
 }
 
 .btn-reserva {
-    font-family: Fragment Mono;
+    font-family: var(--fuente-mono);
     display: inline-block;
     text-decoration: none;
     color: var(--color-naranja);
@@ -2150,7 +2158,7 @@ footer h1 {
 }
 
 .info-eventos > h2 {
-    font-family: Alga;
+    font-family: var(--fuente-principal);
     font-size: 3rem;
     color: var(--color-naranja);
 }
@@ -2164,7 +2172,7 @@ footer h1 {
     background: none;       
   border: none;           
   padding: 0;            
-  font-family: Fragment Mono;         
+  font-family: var(--fuente-mono);         
   color: var(--color-naranja); 
   font-size: 1.2rem;       
   cursor: pointer;     
@@ -2247,7 +2255,7 @@ footer h1 {
 
 /* TÍTULO SUPERIOR */
 .eventos-pasados > h2 {
-    font-family: 'Alga', serif;
+    font-family: var(--fuente-principal);
     color: var(--color-naranja);
     font-size: clamp(2rem, 3vw, 3.2rem);
     font-weight: 400;
@@ -2259,7 +2267,7 @@ footer h1 {
 .btn-newsletter-evento {
     align-self: center;
     text-decoration: none;
-    font-family: Fragment Mono;
+    font-family: var(--fuente-mono);
     color: var(--color-naranja);
     font-size: 1.5rem;
     letter-spacing: 1px;
@@ -2366,7 +2374,7 @@ footer h1 {
 
 /* TIPOGRAFÍA DENTRO DEL OVERLAY */
 .galeria-overlay h3 {
-    font-family: Beth Ellen; 
+    font-family: var(--fuente-script); 
     color: var(--color-rosa);
     font-size: clamp(1.6rem, 2.2vw, 2.4rem);
     font-weight: normal;
@@ -2376,7 +2384,7 @@ footer h1 {
 }
 
 .galeria-overlay p {
-    font-family: Fragment Mono;
+    font-family: var(--fuente-mono);
     color: var(--color-rosa);
     font-size: 1rem;
     margin: 0;
@@ -2449,20 +2457,20 @@ body.modal-abierto .carrusel-pista {
 }
 
 .cabaret-header > div:first-child > h2 {
-    font-family: Alga;
+    font-family: var(--fuente-principal);
     font-size: 2rem;
     color: var(--color-naranja);
     align-self: center;
 }
 
 .cabaret-header > p {
-    font-family: Fragment Mono;
+    font-family: var(--fuente-mono);
     color: var(--color-naranja);
     font-size: 1.2rem;
 }
 
 .cabaret-header > h2 {
-    font-family: Alga;
+    font-family: var(--fuente-principal);
     font-size: 2rem;
     color: var(--color-naranja);
     padding-right: 40px;
@@ -2491,14 +2499,14 @@ body.modal-abierto .carrusel-pista {
 
 .cabaret-hero-titulo {
     color: var(--color-naranja);
-    font-family: Alga;
+    font-family: var(--fuente-principal);
     font-size: clamp(2.2rem, 4vw, 3.5rem);
     line-height: clamp(3rem, 5.5vw, 5.5rem);
     align-self: flex-end;
 }
 
 .cabaret-hero-text {
-    font-family: Fragment Mono;
+    font-family: var(--fuente-mono);
     font-size: 1.2rem;
     text-align: right;
     color: var(--color-naranja);
@@ -2638,7 +2646,7 @@ body.modal-abierto .carrusel-pista {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: Beth Ellen;
+    font-family: var(--fuente-script);
     font-size: 3rem;
     color: var(--color-naranja);
     text-align: center;
@@ -2662,7 +2670,7 @@ body.modal-abierto .carrusel-pista {
 }
 
 .cabaret-artistas > h2 {
-    font-family: Alga;
+    font-family: var(--fuente-principal);
     font-size: clamp(2rem, 3vw, 2.8rem);
     color: var(--color-naranja);
     padding-left: 40px;
@@ -2715,7 +2723,7 @@ body.modal-abierto .carrusel-pista {
 }
 
 .artista-card h3 {
-    font-family: 'Beth Ellen', cursive;
+    font-family: var(--fuente-script);
     font-size: 1.45rem;
     font-weight: 400;
     color: var(--color-naranja);
@@ -2731,7 +2739,7 @@ body.modal-abierto .carrusel-pista {
 }
 
 .artistas-cta a {
-    font-family: Fragment Mono;
+    font-family: var(--fuente-mono);
     font-size: 1.5rem;
     color: var(--color-rosa);
     text-decoration: none;
@@ -2846,7 +2854,7 @@ body.modal-abierto .carrusel-pista {
 .pill-naranja { background-color: var(--color-naranja); }
 
 .ticket-title {
-  font-family: Alga;
+  font-family: var(--fuente-principal);
   font-size: clamp(1.2rem, 2vw, 1.75rem);
   font-weight: 600;
   letter-spacing: -0.02em;
@@ -2866,7 +2874,7 @@ body.modal-abierto .carrusel-pista {
   border: none;
   background-color: var(--color-vino);
   color: var(--color-crema);
-  font-family: Fragment Mono;
+  font-family: var(--fuente-mono);
   font-size: 1rem;
   line-height: 1;
   cursor: pointer;
@@ -2890,7 +2898,7 @@ body.modal-abierto .carrusel-pista {
 }
 
 .qty-value {
-  font-family: Alga;
+  font-family: var(--fuente-principal);
   font-size: 1.5rem;
   /* font-weight: 700; */
   min-width: 1.4rem;
@@ -2906,7 +2914,7 @@ body.modal-abierto .carrusel-pista {
 }
 
 .section-heading {
-  font-family: Alga;
+  font-family: var(--fuente-principal);
   color: var(--color-naranja);
   font-size: clamp(1.3rem, 1.8vw, 1.5rem);
   font-weight: 600;
@@ -2924,7 +2932,7 @@ body.modal-abierto .carrusel-pista {
   border: 2px solid var(--color-naranja);
   padding: 0.85rem 1.1rem;
   color: var(--color-crema);
-  font-family: Fragment Mono;
+  font-family: var(--fuente-mono);
   font-size: 1rem;
   outline: none;
   transition: background-color var(--transicion), box-shadow var(--transicion);
@@ -2998,7 +3006,7 @@ body.modal-abierto .carrusel-pista {
   justify-content: space-between;
   align-items: baseline;
   font-size: 1rem;
-  font-family: Fragment Mono;
+  font-family: var(--fuente-mono);
 }
 
 .empty-summary {
@@ -3038,7 +3046,7 @@ body.modal-abierto .carrusel-pista {
 }
 
 .total-amount {
-  font-family: Alga;
+  font-family: var(--fuente-principal);
   font-size: 1.85rem;
   font-weight: 700;
 }
@@ -3117,7 +3125,7 @@ body.modal-abierto .carrusel-pista {
   background: transparent;
   border: none;
   color: var(--color-rosa);
-  font-family: Fragment Mono;
+  font-family: var(--fuente-mono);
   font-size: clamp(1.3rem, 2vw, 1.7rem);
   letter-spacing: 0.04em;
   cursor: pointer;
@@ -3181,7 +3189,7 @@ body.modal-abierto .carrusel-pista {
 }
 
 .modal-title {
-  font-family: Alga;
+  font-family: var(--fuente-principal);
   color: var(--color-vino);
   font-size: clamp(1.6rem, 2.2vw, 2.1rem);
   font-weight: 700;
@@ -3220,7 +3228,7 @@ body.modal-abierto .carrusel-pista {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  font-family: Fragment Mono;
+  font-family: var(--fuente-mono);
   font-size: 1rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -3241,7 +3249,7 @@ body.modal-abierto .carrusel-pista {
 }
 
 .modal-instruction {
-  font-family: Fragment Mono;
+  font-family: var(--fuente-mono);
   font-size: 0.8rem;
   opacity: 0.85;
   line-height: 1.4;
@@ -3254,7 +3262,7 @@ body.modal-abierto .carrusel-pista {
 }
 
 .modal-goodbye {
-  font-family: Beth Ellen; /* O puedes cambiarlo a tu fuente de estilo script si la tienes */
+  font-family: var(--fuente-script); /* O puedes cambiarlo a tu fuente de estilo script si la tienes */
   /* font-style: italic; */
   font-size: 1.85rem;
   color: var(--color-vino);
@@ -3446,7 +3454,7 @@ s
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-family: 'Beth Ellen';
+  font-family: var(--fuente-script);
   color: var(--color-vino);
 }
 
@@ -3459,7 +3467,7 @@ s
 }
 
 .plate-year {
-  font-family: Fragment Mono;
+  font-family: var(--fuente-mono);
   font-size: 1.3rem;
 }
 
@@ -3491,7 +3499,7 @@ s
 }
 
 .day-name {
-  font-family: 'Fragment Mono', monospace;
+  font-family: var(--fuente-mono);
   font-size: 0.9rem;
   color: var(--color-rosa);
   margin-bottom: 0.5rem;
@@ -3503,7 +3511,7 @@ s
   color: var(--color-rosa);
   border-radius: 10px;
   aspect-ratio: 1;
-  font-family: Alga; 
+  font-family: var(--fuente-principal); 
   font-size: 0.95rem;
   cursor: pointer;
   display: flex;
@@ -3538,7 +3546,7 @@ s
 }
 
 .section-title {
-  font-family: Alga;
+  font-family: var(--fuente-principal);
   font-size: clamp(2rem, 3vw, 2.8rem);
   margin-top: 0;
   margin-bottom: 2rem;
@@ -3560,7 +3568,7 @@ s
   /* border-radius: 8px; */
   padding: 1rem 1.2rem;
   color: var(--color-naranja);
-  font-family: Alga;
+  font-family: var(--fuente-principal);
   font-size: 1.5rem;
   box-sizing: border-box;
   appearance: none;
@@ -3580,7 +3588,7 @@ s
   /* border-radius: 8px; */
   padding: 1rem 1.2rem;
   color: var(--color-vino);
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--fuente-mono);
   font-size: 0.95rem;
   box-sizing: border-box;
   appearance: none;
@@ -3612,7 +3620,7 @@ s
 }
 
 .fieldset-legend {
-  font-family: Fragment Mono;
+  font-family: var(--fuente-mono);
   font-size: 1.2rem;
   /* font-weight: 500; */
   margin-bottom: 0.5rem;
@@ -3639,7 +3647,7 @@ s
 .btn-continuar {
   background: none;
   border: none;
-  font-family: Fragment Mono;
+  font-family: var(--fuente-mono);
   font-size: 1.5rem;
   color: var(--color-rosa);
   cursor: pointer;
@@ -3732,7 +3740,7 @@ s
 }
 
 .modal-title {
-  font-family: 'Alga', serif;
+  font-family: var(--fuente-principal);
   color: var(--color-vino);
   font-size: clamp(1.8rem, 2.5vw, 2.2rem);
   font-weight: 700;
@@ -3765,7 +3773,7 @@ s
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  font-family: 'Fragment Mono', monospace;
+  font-family: var(--fuente-mono);
   font-size: 0.95rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -3781,7 +3789,7 @@ s
 }
 
 .modal-instruction {
-  font-family: 'Fragment Mono', monospace;
+  font-family: var(--fuente-mono);
   font-size: 0.75rem;
   opacity: 0.85;
   line-height: 1.4;
@@ -3794,7 +3802,7 @@ s
 }
 
 .modal-goodbye {
-  font-family: Beth Ellen; 
+  font-family: var(--fuente-script); 
   font-size: 1.8rem;
   color: var(--color-vino);
 }
