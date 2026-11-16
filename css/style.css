@@ -3365,10 +3365,17 @@ body.modal-abierto .carrusel-pista {
 .menu-reservas > a:hover {
     color: var(--color-vino);
 }
-
+s
 .menu-reservas .reservas-activa {
     color: var(--color-vino);
 }
+
+.reservas .menu-btn span {
+    background-color: var(--color-rosa);
+}
+
+
+
 
 /* FORMULARIO  */
 /* FORMULARIO  */
@@ -3632,7 +3639,7 @@ body.modal-abierto .carrusel-pista {
 .btn-continuar {
   background: none;
   border: none;
-  font-family: 'Fragment Mono', monospace;
+  font-family: Fragment Mono;
   font-size: 1.5rem;
   color: var(--color-rosa);
   cursor: pointer;
@@ -3801,16 +3808,30 @@ body.modal-abierto .carrusel-pista {
   }
   
   .reserva-wrapper {
-    padding: 1.5rem 1rem;
+    padding: 10px;
   }
 
   .reserva-container {
     grid-template-columns: 1fr;
-    padding: 1.5rem;
+    padding: 10px;
     gap: 2rem;
   }
 
   .select-row-group {
     grid-template-columns: 1fr;
   }
+
+  .actions-group {
+    justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .plate-month {
+        font-size: 1.2rem;
+    }
+
+    .plate-year {
+        font-size: 1rem;
+    }
 }
