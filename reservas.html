@@ -30,6 +30,11 @@
     <!------------- CSS ------------>
     <link rel="stylesheet" href="css/style.css">
 
+    <!------------- LIBRERÍAS JS ------------>
+
+    <!-- AOS  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+
 </head>
 
 <body class="body-reservas">
@@ -56,7 +61,7 @@
     </header>
 
    <!-------- FORMULARIO -------->
-    <main class="reserva-wrapper">
+    <main class="reserva-wrapper" data-aos="fade-up" >
         <section class="reserva-container">
             
             <!-- COLUMNA IZQ (CALENDARIO)-->
@@ -256,7 +261,7 @@
     </div>
 
     <!-------- FOOTER -------->
-    <footer class="footer-carta">
+    <footer class="footer-carta" data-aos="fade-up" data-aos-delay="600"  >
 
         <!-- ROW 1  -->
         <h1>Marcela's</h1>
@@ -304,9 +309,17 @@
     </footer>
 
     <!-- ENLACES JS  -->
+
+    <!-- jQuery  -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- AOS  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- MIS JS  -->
     <script src="js/menu.js"></script>
     <script src="js/reservas.js"></script>
+    <script src="js/animaciones.js"></script>
     
 </body>
 </html>
