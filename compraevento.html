@@ -73,7 +73,7 @@
    
 
     <!-- FORMULARIO  -->
-     <main class="checkout-wrapper">
+    <main class="checkout-wrapper">
         <form id="ticket-form" novalidate>
           
           <!-- SECCIÓN SUPERIOR -->
@@ -198,61 +198,61 @@
   </main>
 
   <!-- VENTANA MODAL DE CONFIRMACIÓN (Estilo Ticket) -->
-<div id="confirmation-modal" class="modal-overlay" aria-hidden="true">
-  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    
-    <!-- Cabecera del ticket -->
-    <div class="modal-header">
-      <h3 id="modal-title" class="modal-title">Reserva confirmada</h3>
-      <button type="button" id="close-modal" class="modal-close" aria-label="Cerrar ventana">&times;</button>
+  <div id="confirmation-modal" class="modal-overlay" aria-hidden="true">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      
+      <!-- Cabecera del ticket -->
+      <div class="modal-header">
+        <h3 id="modal-title" class="modal-title">Reserva confirmada</h3>
+        <button type="button" id="close-modal" class="modal-close" aria-label="Cerrar ventana">&times;</button>
+      </div>
+
+      <!-- Contenido en formato ticket con líneas punteadas -->
+      <div class="ticket-receipt">
+        <div class="ticket-row">
+          <span class="ticket-label">EVENTO:</span>
+          <span class="ticket-value">The Girl's Cabaret</span>
+        </div>
+        <div class="ticket-divider"></div>
+
+        <div class="ticket-row">
+          <span class="ticket-label">FECHA:</span>
+          <span class="ticket-value">06/11/2026</span>
+        </div>
+        <div class="ticket-divider"></div>
+
+        <div class="ticket-row">
+          <span class="ticket-label">ENTRADAS:</span>
+          <span id="modal-summary-entries" class="ticket-value">--</span>
+        </div>
+        <div class="ticket-divider"></div>
+
+        <div class="ticket-row">
+          <span class="ticket-label">EMAIL:</span>
+          <span id="modal-buyer-email" class="ticket-value">--</span>
+        </div>
+        <div class="ticket-divider"></div>
+
+        <div class="ticket-row total-ticket-row">
+          <span class="ticket-label">TOTAL PAGADO:</span>
+          <span id="modal-total-price" class="ticket-value">--</span>
+        </div>
+        <div class="ticket-divider"></div>
+
+        <p class="modal-instruction">
+          *Recibirás un correo electrónico con tu entrada en formato PDF y el código QR de acceso.
+        </p>
+      </div>
+
+      <!-- Pie del ticket -->
+      <div class="modal-footer">
+        <p class="modal-goodbye">¡Nos vemos pronto!</p>
+      </div>
+
     </div>
-
-    <!-- Contenido en formato ticket con líneas punteadas -->
-    <div class="ticket-receipt">
-      <div class="ticket-row">
-        <span class="ticket-label">EVENTO:</span>
-        <span class="ticket-value">The Girl's Cabaret</span>
-      </div>
-      <div class="ticket-divider"></div>
-
-      <div class="ticket-row">
-        <span class="ticket-label">FECHA:</span>
-        <span class="ticket-value">06/11/2026</span>
-      </div>
-      <div class="ticket-divider"></div>
-
-      <div class="ticket-row">
-        <span class="ticket-label">ENTRADAS:</span>
-        <span id="modal-summary-entries" class="ticket-value">--</span>
-      </div>
-      <div class="ticket-divider"></div>
-
-      <div class="ticket-row">
-        <span class="ticket-label">EMAIL:</span>
-        <span id="modal-buyer-email" class="ticket-value">--</span>
-      </div>
-      <div class="ticket-divider"></div>
-
-      <div class="ticket-row total-ticket-row">
-        <span class="ticket-label">TOTAL PAGADO:</span>
-        <span id="modal-total-price" class="ticket-value">--</span>
-      </div>
-      <div class="ticket-divider"></div>
-
-      <p class="modal-instruction">
-        *Recibirás un correo electrónico con tu entrada en formato PDF y el código QR de acceso.
-      </p>
-    </div>
-
-    <!-- Pie del ticket -->
-    <div class="modal-footer">
-      <p class="modal-goodbye">¡Nos vemos pronto!</p>
-    </div>
-
   </div>
-</div>
 
-     <!-- FOOTER  -->
+  <!-- FOOTER  -->
     <footer>
         <h1>Marcela's</h1>
         <div class="footer-content">
