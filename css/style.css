@@ -2496,8 +2496,16 @@ body.modal-abierto .carrusel-pista {
     font-size: 1.2rem;
     text-align: right;
     color: var(--color-naranja);
-    align-self: flex-start;
+    /* align-self: flex-start; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
+.cabaret-hero-text > div {
+    align-self: flex-end;
+}
+
 
 /* Adaptación al estrechar la pantalla */
 @media (max-width: 900px) {
@@ -2548,6 +2556,16 @@ body.modal-abierto .carrusel-pista {
         text-align: center;
     }
 
+    .cabaret-hero-text > div {
+        align-self: center;
+    }
+
+    .cabaret-hero-img > img {
+        max-width: 600px;
+    }
+
+   
+
 }
 
 
@@ -2594,6 +2612,17 @@ body.modal-abierto .carrusel-pista {
         font-size: 1rem;
         text-align: center;
     }
+
+    .cabaret-hero-img > img {
+        max-width: 300px;
+    }
+
+     .cabaret-hero-text > div > a  {
+        font-size: 1.2rem;
+    }
+
+
+
 }
 
 /* SEPARADOR CABARET  */
@@ -2756,6 +2785,11 @@ body.modal-abierto .carrusel-pista {
     .cabaret-separador > p {
         max-width: 300px;
     }
+
+    .cabaret-artistas > .artistas-cta > a {
+        font-size: 1.2rem;
+    }
+
 }
 
 /* ------------------COMPRA EVENTO----------------------  */
@@ -2878,7 +2912,7 @@ body.modal-abierto .carrusel-pista {
   flex-direction: column;
 }
 
-.input-group input {
+.input-group-compra input {
   width: 100%;
   background-color: transparent;
   border: 2px solid var(--color-naranja);
@@ -2890,13 +2924,13 @@ body.modal-abierto .carrusel-pista {
   transition: background-color var(--transicion), box-shadow var(--transicion);
 }
 
-.input-group input::placeholder {
-  color: rgba(246, 242, 239, 0.65);
+.input-group-compra input::placeholder {
+  color: var(--color-naranja);
 }
 
 .input-group input:focus {
-  background-color: rgba(211, 71, 54, 0.08);
-  box-shadow: 0 0 0 1px var(--color-naranja);
+    color: var(--color-naranja);
+  /* box-shadow: 0 0 0 1px var(--color-naranja); */
 }
 
 .input-group input.input-invalid {
@@ -3222,20 +3256,20 @@ body.modal-abierto .carrusel-pista {
 }
 
 /* 1. Evita que el navegador ponga fondo blanco al autocompletar en los inputs del formulario */
-.input-group input:-webkit-autofill,
-.input-group input:-webkit-autofill:hover,
-.input-group input:-webkit-autofill:focus {
+.input-group-compra input:-webkit-autofill,
+.input-group-compra input:-webkit-autofill:hover,
+.input-group-compra input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 1000px var(--color-vino) inset !important; 
-  -webkit-text-fill-color: var(--color-crema) !important; 
+  -webkit-text-fill-color: var(--color-rosa) !important; 
   transition: background-color 5000s ease-in-out 0s;
 }
 
 /* 2. Asegura que al escribir o estar activos no cojan fondo blanco por defecto */
-.input-group input:focus,
-.input-group input:active,
-.input-group input:not(:placeholder-shown) {
+.input-group-compra input:focus,
+.input-group-compra input:active,
+.input-group-compra input:not(:placeholder-shown) {
   background-color: transparent !important;
-  color: var(--color-crema) !important;
+  color: var(--color-rosa) !important;
 }
 
 /* RESPONSIVE */
@@ -3609,6 +3643,32 @@ body.modal-abierto .carrusel-pista {
 
 .btn-continuar:hover {
   text-decoration: underline;
+}
+
+/* 1. Asegura que el fieldset y los contenedores sean siempre transparentes */
+.host-fieldset,
+.host-fieldset:focus-within,
+.host-fieldset .input-group {
+    background-color: transparent !important;
+}
+
+/* 2. Mantiene los inputs transparentes al escribir, enfocar o validar */
+.host-fieldset input,
+.host-fieldset input:focus,
+.host-fieldset input:valid,
+.host-fieldset input:not(:placeholder-shown) {
+    background-color: transparent !important;
+}
+
+/* 3. Evita el fondo blanco/azul del autocompletado (Chrome, Safari, Edge) */
+.host-fieldset input:-webkit-autofill,
+.host-fieldset input:-webkit-autofill:hover,
+.host-fieldset input:-webkit-autofill:focus,
+.host-fieldset input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+    box-shadow: 0 0 0 1000px transparent inset !important;
+    -webkit-text-fill-color: var(--color-rosa) !important; /* Cambia 'inherit' por el color de tu texto si se ve oscuro, ej: #ffffff */
+    transition: background-color 9999s ease-in-out 0s;
 }
 
 /* =========================================================
