@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas Marcela's</title>
+
+
+    <!-- FAVICON  -->
+    <link rel="shortcut icon" href="media/icon/faviconM.svg" type="image/x-icon">
+
+    <!------------ FUENTES E ICONOS ------------->
+
+    <!-- ALGA -->
+    <link rel="stylesheet" href="https://use.typekit.net/odo1agg.css">
+
+    <!-- BETH ELLEN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Beth+Ellen&family=Fragment+Mono:ital@0;1&family=Instrument+Serif:ital@0;1&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Oranienbaum&family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- FRAGMENT MONO -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Beth+Ellen&family=Fragment+Mono:ital@0;1&family=Instrument+Serif:ital@0;1&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Oranienbaum&family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- ICONOS -->
+    <script src="https://kit.fontawesome.com/e981b7c045.js" crossorigin="anonymous"></script>
+
+    <!------------- CSS ------------>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="body-reservas">
+
+    <!-- MENÚ RESPONSIVE -->
+    <header class="cabecera reservas">
+        <div class="cabecera__barra">
+            <a href="index.html" class="logo">Marcela's</a>
+
+            <!-- ICONO HAMBURGUESA Y X -->
+            <button type="button" class="menu-btn" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- BOTONES-->
+        <nav class="menu menu-reservas">
+            <a href="carta.html">[Carta]</a>
+            <a href="eventos.html">[Eventos]</a>
+            <a class="reservas-activa" href="reservas.html">[Reservas]</a>
+        </nav>
+    </header>
+
+    <!-- FORMULARIO  -->
+   <!-- FORMULARIO  -->
+    <main class="reserva-wrapper">
+        <section class="reserva-container">
+            
+            <!-- Columna Izquierda: Calendario y Bandeja -->
+            <div class="calendar-column">
+                
+                <!-- Navegación del mes con los botones FUERA de la bandeja -->
+                <div class="calendar-month-nav">
+                    <button class="cal-nav-btn prev" aria-label="Mes anterior">&#10094;</button>
+                    
+                    <div class="silver-plate-container">
+                        <img src="media/img/hero-bandeja.png" alt="Diciembre 2026" class="silver-plate-img">
+                        <div class="plate-text">
+                            <span class="plate-month">Diciembre</span>
+                            <span class="plate-year">2026</span>
+                        </div>
+                    </div>
+
+                    <button class="cal-nav-btn next" aria-label="Mes siguiente">&#10095;</button>
+                </div>
+
+                <!-- Cuadrícula interactiva de Diciembre (Vacía de inicio) -->
+                <div class="calendar-grid">
+                    <span class="day-name">L</span>
+                    <span class="day-name">M</span>
+                    <span class="day-name">X</span>
+                    <span class="day-name">J</span>
+                    <span class="day-name">V</span>
+                    <span class="day-name">S</span>
+                    <span class="day-name">D</span>
+
+                    <!-- Días del mes -->
+                    <button class="day-cell disabled" data-day=""> </button>
+                    <button class="day-cell disabled" data-day=""> </button>
+                    <button class="day-cell disabled" data-day=""> </button>
+                    <button class="day-cell disabled" data-day=""> </button>
+                    <button class="day-cell" data-day="1">1</button>
+                    <button class="day-cell" data-day="2">2</button>
+                    <button class="day-cell" data-day="3">3</button>
+                    <button class="day-cell" data-day="4">4</button>
+                    <button class="day-cell" data-day="5">5</button>
+                    <button class="day-cell" data-day="6">6</button>
+                    <button class="day-cell" data-day="7">7</button>
+                    <button class="day-cell" data-day="8">8</button>
+                    <button class="day-cell" data-day="9">9</button>
+                    <button class="day-cell" data-day="10">10</button>
+                    <button class="day-cell" data-day="11">11</button>
+                    <button class="day-cell" data-day="12">12</button>
+                    <button class="day-cell" data-day="13">13</button>
+                    <button class="day-cell" data-day="14">14</button>
+                    <button class="day-cell" data-day="15">15</button>
+                    <button class="day-cell" data-day="16">16</button>
+                    <button class="day-cell" data-day="17">17</button>
+                    <button class="day-cell" data-day="18">18</button>
+                    <button class="day-cell" data-day="19">19</button>
+                    <button class="day-cell" data-day="20">20</button>
+                    <button class="day-cell" data-day="21">21</button>
+                    <button class="day-cell" data-day="22">22</button>
+                    <button class="day-cell" data-day="23">23</button>
+                    <button class="day-cell" data-day="24">24</button>
+                    <button class="day-cell" data-day="25">25</button>
+                    <button class="day-cell" data-day="26">26</button>
+                    <button class="day-cell" data-day="27">27</button>
+                    <button class="day-cell" data-day="28">28</button>
+                    <button class="day-cell" data-day="29">29</button>
+                    <button class="day-cell" data-day="30">30</button>
+                    <button class="day-cell" data-day="31">31</button>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Formulario -->
+            <div class="form-column">
+                <h1 class="section-title">Reserva una mesa</h1>
+
+                <form id="reservaForm" novalidate>
+                    <div class="select-row-group">
+                        <div class="custom-select-wrapper">
+                            <select id="comensales" required>
+                                <option value="" disabled selected>Nº de comensales</option>
+                                <option value="1">1 Comensal</option>
+                                <option value="2">2 Comensales</option>
+                                <option value="3">3 Comensales</option>
+                                <option value="4">4 Comensales</option>
+                                <option value="5+">5 Comensales</option>
+                                <option value="5+">6 Comensales</option>
+                            </select>
+                        </div>
+
+                        <div class="custom-select-wrapper">
+                            <select id="hora" required>
+                                <option value="" disabled selected>Hora</option>
+                                <option value="13:30h">13:30h</option>
+                                <option value="14:30h">14:30h</option>
+                                <option value="15:30h">15:30h</option>
+                                <option value="21:00h">21:00h</option>
+                                <option value="21:00h">21:30h</option>
+                                <option value="22:00h">22:00h</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="custom-select-wrapper full-width-select">
+                        <select id="zona" required>
+                            <option value="" disabled selected>Zona</option>
+                            <option value="Salon Principal">La Barra</option>
+                            <option value="Salon Principal">El Comedor</option>
+                            <option value="Barra">El Salón</option>
+                        </select>
+                    </div>
+
+                    <fieldset class="host-fieldset">
+                        <legend class="fieldset-legend">Datos de la anfitriona</legend>
+                        
+                        <div class="input-group">
+                            <input type="text" id="nombre" placeholder="Nombre" required autocomplete="given-name">
+                        </div>
+
+                        <div class="input-group">
+                            <input type="text" id="apellidos" placeholder="Apellidos" required autocomplete="family-name">
+                        </div>
+
+                        <div class="input-group">
+                            <input type="email" id="email" placeholder="Email" required autocomplete="email">
+                        </div>
+
+                        <div class="input-group">
+                            <input type="email" id="confirm-email" placeholder="Confirmar correo electrónico" required autocomplete="email">
+                        </div>
+                    </fieldset>
+
+                    <div class="actions-group">
+                        <button type="submit" id="submitBtn" class="btn-continuar" disabled>[CONTINUAR]</button>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- VENTANA MODAL (TICKET DE CONFIRMACIÓN) -->
+    <div id="confirmation-modal" class="modal-overlay" aria-hidden="true">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h2 class="modal-title">¡Reserva confirmada!</h2>
+                <button type="button" id="close-modal" class="modal-close" aria-label="Cerrar">&times;</button>
+            </div>
+
+            <div class="ticket-receipt">
+                <div class="ticket-divider"></div>
+                
+                <div class="ticket-row">
+                    <span class="ticket-label">FECHA:</span>
+                    <span class="ticket-value" id="resumen-fecha">--/--/2026</span>
+                </div>
+
+                <div class="ticket-divider"></div>
+
+                <div class="ticket-row">
+                    <span class="ticket-label">HORA:</span>
+                    <span class="ticket-value" id="resumen-hora">--</span>
+                </div>
+
+                <div class="ticket-divider"></div>
+
+                <div class="ticket-row">
+                    <span class="ticket-label">Nº DE COMENSALES:</span>
+                    <span class="ticket-value" id="resumen-comensales">--</span>
+                </div>
+
+                <div class="ticket-divider"></div>
+
+                <div class="ticket-row">
+                    <span class="ticket-label">EMAIL:</span>
+                    <span class="ticket-value" id="resumen-email">--</span>
+                </div>
+
+                <div class="ticket-divider"></div>
+
+                <p class="modal-instruction">
+                    *En caso de necesitar cancelar su reserva, le rogamos que lo haga con al menos 24 horas de antelación.
+                </p>
+            </div>
+
+            <div class="modal-footer">
+                <span class="modal-goodbye">Nos vemos pronto</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER  -->
+
+    <footer class="footer-carta">
+        <h1>Marcela's</h1>
+        <div class="footer-content">
+            <div class="footer-izq">
+                <div class="footer-horario">
+                    <div>
+                        <p>Martes - jueves:</p>
+                        <p>13:00 - 01:00</p>
+                    </div>
+                    <div>
+                        <p>Viernes - domingo:</p>
+                        <p>13:00 - 03:00</p>
+                    </div>
+                </div>
+                <p>Calle de Argensola, 2 (Madrid)</p>
+            </div>
+            <div class="footer-drch">
+                <div>
+                    <p>+ 34 654753411</p>
+                    <p>marcelas@gmail.com</p>
+                </div>
+                <div>
+                    <a href="">
+                        <img src="media/img/facebookrosa.png" alt="">
+                    </a>
+                     <a href="">
+                        <img src="media/img/instagramrosa.png" alt="">
+                    </a>
+                     <a href="">
+                        <img src="media/img/twitterrosa.png" alt="">
+                    </a>
+                     <a href="">
+                        <img src="media/img/youtuberosa.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+   
+    
+
+
+
+    <!-- ENLACES JS  -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/reservas.js"></script>
+    
+</body>
+</html>
