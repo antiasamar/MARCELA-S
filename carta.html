@@ -29,6 +29,11 @@
     <!------------- CSS ------------>
     <link rel="stylesheet" href="css/style.css">
 
+    <!------------- LIBRERÍAS JS ------------>
+
+    <!-- AOS  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+
 </head>
 
 <body class="body-carta">
@@ -56,11 +61,11 @@
 
     <!-------- ACORDEÓN CARTA -------->
 
-    <section class="acordeon-carta" id="esteticas-carta">
+    <section class="acordeon-carta" id="esteticas-carta" data-aos="fade-up">
         <h2 class="acordeon-carta__titulo-seccion">Nuestra carta</h2>
 
         <!-- CONTENEDOR ACORDEÓN -->
-        <div class="acordeon">
+        <div class="acordeon" data-aos="fade-up" data-aos-delay="300" >
 
             <!-- ENTRANTES -->
             <div class="acordeon__item">
@@ -288,7 +293,7 @@
         </div>
 
         <!-- CTA RESERVAS -->
-        <div class="acordeon-carta__cta">
+        <div class="acordeon-carta__cta" data-aos="fade-up" data-aos-delay="600" >
             <a href="reservas.html" class="btn-reserva">[RESERVA UNA MESA]</a>
         </div>
     </section>
@@ -296,7 +301,7 @@
 
     <!-------- FOOTER -------->
 
-    <footer class="footer-carta">
+    <footer class="footer-carta" data-aos="fade-up" data-aos-delay="900">
 
         <!-- ROW 1 -->
         <h1>Marcela's</h1>
@@ -344,9 +349,17 @@
     </footer>
 
     <!-- ENLACES JS  -->
+
+    <!-- jQuery  -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- AOS  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- MIS JS  -->
     <script src="js/menu.js"></script>
     <script src="js/carta.js"></script>
+    <script src="js/animaciones.js"></script>
     
 </body>
 
