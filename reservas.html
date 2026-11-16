@@ -34,7 +34,7 @@
 
 <body class="body-reservas">
 
-    <!-- MENÚ RESPONSIVE -->
+    <!-------- MENÚ RESPONSIVE -------->
     <header class="cabecera reservas">
         <div class="cabecera__barra">
             <a href="index.html" class="logo">Marcela's</a>
@@ -55,15 +55,14 @@
         </nav>
     </header>
 
-    <!-- FORMULARIO  -->
-   <!-- FORMULARIO  -->
+   <!-------- FORMULARIO -------->
     <main class="reserva-wrapper">
         <section class="reserva-container">
             
-            <!-- Columna Izquierda: Calendario y Bandeja -->
+            <!-- COLUMNA IZQ (CALENDARIO)-->
             <div class="calendar-column">
                 
-                <!-- Navegación del mes con los botones FUERA de la bandeja -->
+                <!-- HEADER MES-->
                 <div class="calendar-month-nav">
                     <button class="cal-nav-btn prev" aria-label="Mes anterior">&#10094;</button>
                     
@@ -78,7 +77,7 @@
                     <button class="cal-nav-btn next" aria-label="Mes siguiente">&#10095;</button>
                 </div>
 
-                <!-- Cuadrícula interactiva de Diciembre (Vacía de inicio) -->
+                <!-- DÍAS DE LA SEMANA -->
                 <div class="calendar-grid">
                     <span class="day-name">L</span>
                     <span class="day-name">M</span>
@@ -88,7 +87,7 @@
                     <span class="day-name">S</span>
                     <span class="day-name">D</span>
 
-                    <!-- Días del mes -->
+                    <!-- DÍAS DEL MES -->
                     <button class="day-cell disabled" data-day=""> </button>
                     <button class="day-cell disabled" data-day=""> </button>
                     <button class="day-cell disabled" data-day=""> </button>
@@ -127,11 +126,14 @@
                 </div>
             </div>
 
-            <!-- Columna Derecha: Formulario -->
+            <!-- COLUMNA DERECHA (FORMULARIO) -->
             <div class="form-column">
                 <h1 class="section-title">Reserva una mesa</h1>
 
+                <!-- DESPLEGABLES Nº DE COMENSALES, HORA Y ZONA  -->
                 <form id="reservaForm" novalidate>
+
+                    <!-- COMENSALES  -->
                     <div class="select-row-group">
                         <div class="custom-select-wrapper">
                             <select id="comensales" required>
@@ -145,6 +147,7 @@
                             </select>
                         </div>
 
+                        <!-- HORA  -->
                         <div class="custom-select-wrapper">
                             <select id="hora" required>
                                 <option value="" disabled selected>Hora</option>
@@ -158,6 +161,7 @@
                         </div>
                     </div>
 
+                    <!-- ZONA  -->
                     <div class="custom-select-wrapper full-width-select">
                         <select id="zona" required>
                             <option value="" disabled selected>Zona</option>
@@ -167,6 +171,7 @@
                         </select>
                     </div>
 
+                    <!-- DATOS ANFITRIONA  -->
                     <fieldset class="host-fieldset">
                         <legend class="fieldset-legend">Datos de la anfitriona</legend>
                         
@@ -196,14 +201,17 @@
         </section>
     </main>
 
-    <!-- VENTANA MODAL (TICKET DE CONFIRMACIÓN) -->
+    <!-------- VENTANA MODAL CONFIRMACIÓN RESERVA -------->
     <div id="confirmation-modal" class="modal-overlay" aria-hidden="true">
         <div class="modal-box">
+
+            <!-- MODAL HEADER  -->
             <div class="modal-header">
                 <h2 class="modal-title">¡Reserva confirmada!</h2>
                 <button type="button" id="close-modal" class="modal-close" aria-label="Cerrar">&times;</button>
             </div>
 
+            <!-- MODAL CONTENIDO  -->
             <div class="ticket-receipt">
                 <div class="ticket-divider"></div>
                 
@@ -240,17 +248,23 @@
                 </p>
             </div>
 
+            <!-- MODAL PIE  -->
             <div class="modal-footer">
                 <span class="modal-goodbye">¡Nos vemos pronto!</span>
             </div>
         </div>
     </div>
 
-    <!-- FOOTER  -->
-
+    <!-------- FOOTER -------->
     <footer class="footer-carta">
+
+        <!-- ROW 1  -->
         <h1>Marcela's</h1>
+
+        <!-- ROW 2  -->
         <div class="footer-content">
+
+            <!-- COLUMNA IZQ  -->
             <div class="footer-izq">
                 <div class="footer-horario">
                     <div>
@@ -264,6 +278,8 @@
                 </div>
                 <p>Calle de Argensola, 2 (Madrid)</p>
             </div>
+
+            <!-- COLUMNA DRCH  -->
             <div class="footer-drch">
                 <div>
                     <p>+ 34 654753411</p>
@@ -286,12 +302,6 @@
             </div>
         </div>
     </footer>
-
-    
-   
-    
-
-
 
     <!-- ENLACES JS  -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>

@@ -34,7 +34,7 @@
 <body class="body-eventos">
 
     
-    <!-- MENÚ RESPONSIVE -->
+    <!-------- MENÚ RESPONSIVE -------->
     <header class="cabecera">
         <div class="cabecera__barra">
             <a href="index.html" class="logo">Marcela's</a>
@@ -55,14 +55,14 @@
         </nav>
     </header>
 
-    <!-- EVENTOS FILTROS Y TARJETAS  -->
-
+    <!-------- EVENTOS FILTROS Y TARJETAS -------->
     <section class="muestra-eventos">
 
         <!-- TÍTULO Y FILTROS  -->
-
         <div class="info-eventos">
             <h2>Próximos eventos</h2>
+
+            <!-- BOTONES FILTROS -->
             <nav class="filtros" aria-label="Filtrar por día">
                 <button type="button" class="filtro is-activo" data-dia="Todos">[Todos]</button>
                 <button type="button" class="filtro" data-dia="Cultura">[Cultura]</button>
@@ -72,9 +72,9 @@
         </div>
 
         <!-- CONTENEDOR TARJETAS -->
-
         <div class="eventos-container">
 
+            <!-- TARJETA 1  -->
             <a href="eventoindividual.html">
                 <div class="eventos-tarjeta espectaculo">
                     <img src="media/img/cabaret.png" alt="">
@@ -93,6 +93,7 @@
                 </div>
             </a>
 
+             <!-- TARJETA 2  -->
             <a href="">
                 <div class="eventos-tarjeta cultura">
                     <img src="media/img/cartasmujeres.png" alt="">
@@ -111,6 +112,7 @@
                 </div>
             </a>
             
+            <!-- TARJETA 3 -->
             <a href="">
                 <div class="eventos-tarjeta fiesta">
                     <img src="media/img/malascompanias.png" alt="">
@@ -129,6 +131,7 @@
                 </div>
             </a>
 
+            <!-- TARJETA 4  -->
             <a href="">
                 <div class="eventos-tarjeta cultura">
                     <img src="media/img/escritura.png" alt="">
@@ -147,6 +150,7 @@
                 </div>
             </a>
 
+            <!-- TARJETA 5  -->
             <a href="">
                 <div class="eventos-tarjeta fiesta">
                     <img src="media/img/bingo.png" alt="">
@@ -165,6 +169,7 @@
                 </div>
             </a>
 
+            <!-- TARJETA 6  -->
             <a href="">
                 <div class="eventos-tarjeta espectaculo">
                     <img src="media/img/malascompanias.png" alt="">
@@ -182,6 +187,8 @@
                     </div>
                 </div>
             </a>
+
+            <!-- TARJETA 7  -->
             <a href="">
                 <div class="eventos-tarjeta fiesta">
                     <img src="media/img/ultimacena.png" alt="">
@@ -200,6 +207,7 @@
                 </div>
             </a>
 
+            <!-- TARJETA 8  -->
             <a href="">
                 <div class="eventos-tarjeta espectaculo">
                     <img src="media/img/kingscabaret.png" alt="">
@@ -218,6 +226,7 @@
                 </div>
             </a>
 
+            <!-- TARJETA 9  -->
             <a href="">
                 <div class="eventos-tarjeta cultura">
                     <img src="media/img/lectura.png" alt="">
@@ -241,12 +250,7 @@
 
     </section>
 
-    <!-- <section class="eventos-anteriores">
-        <h2>Eventos anteriores</h2>
-
-
-    </section> -->
-
+    <!-------- EVENTOS PASADOS -------->
     <section class="eventos-pasados">
         <h2>Eventos pasados</h2>
 
@@ -311,7 +315,7 @@
                     </article>
                 </div>
 
-                <!-- COLUMNA 1 -->
+                <!-- COLUMNA 4 -->
                 <div class="carrusel-columna">
                     <article class="galeria-item item-alta">
                         <img src="media/img/slide13.png" alt="Evento baile">
@@ -330,7 +334,7 @@
                     </article>
                 </div>
 
-                <!-- COLUMNA 2 -->
+                <!-- COLUMNA 5 -->
                 <div class="carrusel-columna">
                     <article class="galeria-item item-baja">
                         <img src="media/img/slide3.png" alt="Brindis copa">
@@ -349,7 +353,7 @@
                     </article>
                 </div>
 
-                <!-- COLUMNA 3 -->
+                <!-- COLUMNA 6 -->
                 <div class="carrusel-columna">
                     <article class="galeria-item item-alta">
                         <img src="media/img/slide5.png" alt="Fiesta de verano">
@@ -371,13 +375,20 @@
             </div>
         </div>
 
+        <!-- CTA NEWSLETTER  -->
         <a href="#newsletter" class="btn-newsletter-evento btn-trigger">[SUSCRÍBETE A NUESTRA NEWSLETTER]</a>
     </section>
 
-     <!-- FOOTER  -->
+    <!-------- FOOTER -------->
     <footer>
+
+        <!-- ROW 1  -->
         <h1>Marcela's</h1>
+
+        <!-- ROW 2  -->
         <div class="footer-content">
+
+            <!-- COLUMNA IZQ  -->
             <div class="footer-izq">
                 <div class="footer-horario">
                     <div>
@@ -391,6 +402,8 @@
                 </div>
                 <p>Calle de Argensola, 2 (Madrid)</p>
             </div>
+
+            <!-- COLUMNA DRCH  -->
             <div class="footer-drch">
                 <div>
                     <p>+ 34 654753411</p>
@@ -414,7 +427,7 @@
         </div>
     </footer>
 
-    <!-- VENTANA MODAL  -->
+    <!-------- VENTANA MODAL NEWSLETTER -------->
     <div id="modal-newsletter" class="modal-overlay">
     <div class="modal-caja">
         
@@ -455,9 +468,6 @@
         </div>
 
     </div>
-
-
-
 
     <!----------ENLACES JS---------->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>

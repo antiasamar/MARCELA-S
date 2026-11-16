@@ -32,7 +32,7 @@
 </head>
 
 <body>
-        <!-- MENÚ RESPONSIVE -->
+        <!-------- MENÚ RESPONSIVE -------->
     <header class="cabecera">
         <div class="cabecera__barra">
             <a href="index.html" class="logo">Marcela's</a>
@@ -53,10 +53,7 @@
         </nav>
     </header>
 
-    <!-- FRANJA SUPERIOR  -->
-
-   
-
+    <!-------- FRANJA SUPERIOR ------->
     <div class="cabaret-header compra-header">
 
         <div>
@@ -70,18 +67,17 @@
         <h2>12€</h2>
     </div>
 
-   
-
-    <!-- FORMULARIO  -->
+    <!-------- FORMULARIO -------->
     <main class="checkout-wrapper">
         <form id="ticket-form" novalidate>
           
           <!-- SECCIÓN SUPERIOR -->
           <section class="top-section">
-            <!-- Columna Izquierda: Selector de entradas -->
+
+            <!-- COLUMNA IZQ (SELECCIÓN ENTRADAS)-->
             <div class="tickets-column">
               
-              <!-- Entrada 1 -->
+              <!-- ENTRADA STANDART-->
               <div class="ticket-pill pill-crema" data-id="standart" data-name="Entrada Standart" data-price="12">
                 <span class="ticket-title">Entrada Standart · 12€</span>
                 <div class="counter">
@@ -91,7 +87,7 @@
                 </div>
               </div>
 
-              <!-- Entrada 2 -->
+              <!-- ENTRADA + CONSUMICIÓN -->
               <div class="ticket-pill pill-rosa" data-id="consumicion1" data-name="Entrada + 1 consumición" data-price="18">
                 <span class="ticket-title">Entrada + 1 consumición · 18€</span>
                 <div class="counter">
@@ -101,7 +97,7 @@
                 </div>
               </div>
 
-              <!-- Entrada 3 -->
+              <!-- ENTRADA + 2 CONSUMICIONES -->
               <div class="ticket-pill pill-naranja" data-id="consumicion2" data-name="Entrada + 2 consumiciones" data-price="24">
                 <span class="ticket-title">Entrada + 2 consumiciones · 24€</span>
                 <div class="counter">
@@ -113,7 +109,7 @@
 
             </div>
 
-            <!-- Columna Derecha: Datos de la compradora -->
+            <!-- COLUMNA DRCHA (DATOS COMPRADORA) -->
             <div class="buyer-column">
               <h2 class="section-heading">Datos de la compradora</h2>
               
@@ -141,7 +137,8 @@
 
           <!-- SECCIÓN INFERIOR -->
           <section class="bottom-section">
-            <!-- Columna Izquierda: Resumen del pedido -->
+
+            <!-- COLUMNA IZQ (RESUMEN PEDIDO)-->
             <div class="summary-column">
               <div id="summary-items" class="summary-items">
                 <div class="summary-row empty-summary">
@@ -170,7 +167,7 @@
               <hr class="dashed-line">
             </div>
 
-            <!-- Columna Derecha: Checkboxes y botón Continuar -->
+            <!-- COLUMNA DRCH (CHECKBOX Y CONTINUAR)-->
             <div class="actions-column">
               <div class="checkboxes-group">
                 <label class="custom-checkbox">
@@ -197,17 +194,17 @@
         </form>
   </main>
 
-  <!-- VENTANA MODAL DE CONFIRMACIÓN (Estilo Ticket) -->
+  <!-------- VENTANA MODAL DE CONFIRMACIÓN -------->
   <div id="confirmation-modal" class="modal-overlay" aria-hidden="true">
     <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
       
-      <!-- Cabecera del ticket -->
+      <!-- CABECERA -->
       <div class="modal-header">
         <h3 id="modal-title" class="modal-title">Reserva confirmada</h3>
         <button type="button" id="close-modal" class="modal-close" aria-label="Cerrar ventana">&times;</button>
       </div>
 
-      <!-- Contenido en formato ticket con líneas punteadas -->
+      <!-- CONTENIDO -->
       <div class="ticket-receipt">
         <div class="ticket-row">
           <span class="ticket-label">EVENTO:</span>
@@ -244,7 +241,7 @@
         </p>
       </div>
 
-      <!-- Pie del ticket -->
+      <!-- PIE -->
       <div class="modal-footer">
         <p class="modal-goodbye">¡Nos vemos pronto!</p>
       </div>
@@ -252,46 +249,53 @@
     </div>
   </div>
 
-  <!-- FOOTER  -->
-    <footer>
-        <h1>Marcela's</h1>
-        <div class="footer-content">
-            <div class="footer-izq">
-                <div class="footer-horario">
-                    <div>
-                        <p>Martes - jueves:</p>
-                        <p>13:00 - 01:00</p>
-                    </div>
-                    <div>
-                        <p>Viernes - domingo:</p>
-                        <p>13:00 - 03:00</p>
-                    </div>
-                </div>
-                <p>Calle de Argensola, 2 (Madrid)</p>
-            </div>
-            <div class="footer-drch">
-                <div>
-                    <p>+ 34 654753411</p>
-                    <p>marcelas@gmail.com</p>
-                </div>
-                <div>
-                    <a href="">
-                        <img src="media/img/facebook.png" alt="">
-                    </a>
-                     <a href="">
-                        <img src="media/img/instagram.png" alt="">
-                    </a>
-                     <a href="">
-                        <img src="media/img/twitter.png" alt="">
-                    </a>
-                     <a href="">
-                        <img src="media/img/youtube.png" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
+  <!-------- FOOTER -------->
+  <footer>
+        
+      <!-- ROW 1  -->
+      <h1>Marcela's</h1>
 
+      <!-- ROW 2  -->
+      <div class="footer-content">
+
+        <!-- COLUMNA IZQ  -->
+        <div class="footer-izq">
+          <div class="footer-horario">
+            <div>
+              <p>Martes - jueves:</p>
+              <p>13:00 - 01:00</p>
+            </div>
+            <div>
+              <p>Viernes - domingo:</p>
+              <p>13:00 - 03:00</p>
+            </div>
+          </div>
+          <p>Calle de Argensola, 2 (Madrid)</p>
+        </div>
+
+        <!-- COLUMNA DRCH  -->
+        <div class="footer-drch">
+          <div>
+            <p>+ 34 654753411</p>
+            <p>marcelas@gmail.com</p>
+          </div>
+          <div>
+            <a href="">
+              <img src="media/img/facebook.png" alt="">
+            </a>
+            <a href="">
+              <img src="media/img/instagram.png" alt="">
+            </a>
+            <a href="">
+              <img src="media/img/twitter.png" alt="">
+            </a>
+            <a href="">
+              <img src="media/img/youtube.png" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!----------ENLACES JS---------->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
