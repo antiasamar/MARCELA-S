@@ -53,23 +53,250 @@
         </nav>
     </header>
 
+    <!-- FRANJA SUPERIOR  -->
 
-    <section class="cabaret-hero">
+   
 
-        <div class="cabaret-header">
+    <div class="cabaret-header compra-header">
 
-            <div>
-                <a href="eventos.html">
-                   <i class="fa-solid fa-angle-left"></i>
-                </a>
-                <h2>The Girl's Cabaret</h2>
+        <div>
+            <a href="eventoindividual.html">
+                <i class="fa-solid fa-angle-left"></i>
+            </a>
+            <h2>The Girl's Cabaret</h2>
 
+         </div>
+        <p>SÁBADO · 21/11/2026 · 21:00H</p>
+        <h2>12€</h2>
+    </div>
+
+   
+
+    <!-- FORMULARIO  -->
+     <main class="checkout-wrapper">
+    <form id="ticket-form" novalidate>
+      
+      <!-- SECCIÓN SUPERIOR -->
+      <section class="top-section">
+        <!-- Columna Izquierda: Selector de entradas -->
+        <div class="tickets-column">
+          
+          <!-- Entrada 1 -->
+          <div class="ticket-pill pill-crema" data-id="standart" data-name="Entrada Standart" data-price="12">
+            <span class="ticket-title">Entrada Standart · 12€</span>
+            <div class="counter">
+              <button type="button" class="btn-qty btn-minus" aria-label="Restar entrada">-</button>
+              <span class="qty-value">0</span>
+              <button type="button" class="btn-qty btn-plus" aria-label="Sumar entrada">+</button>
             </div>
-            <p>SÁBADO · 21/11/2026 · 21:00H</p>
-            <h2>12€</h2>
+          </div>
+
+          <!-- Entrada 2 -->
+          <div class="ticket-pill pill-rosa" data-id="consumicion1" data-name="Entrada + 1 consumición" data-price="18">
+            <span class="ticket-title">Entrada + 1 consumición · 18€</span>
+            <div class="counter">
+              <button type="button" class="btn-qty btn-minus" aria-label="Restar entrada">-</button>
+              <span class="qty-value">0</span>
+              <button type="button" class="btn-qty btn-plus" aria-label="Sumar entrada">+</button>
+            </div>
+          </div>
+
+          <!-- Entrada 3 -->
+          <div class="ticket-pill pill-naranja" data-id="consumicion2" data-name="Entrada + 2 consumiciones" data-price="24">
+            <span class="ticket-title">Entrada + 2 consumiciones · 24€</span>
+            <div class="counter">
+              <button type="button" class="btn-qty btn-minus" aria-label="Restar entrada">-</button>
+              <span class="qty-value">0</span>
+              <button type="button" class="btn-qty btn-plus" aria-label="Sumar entrada">+</button>
+            </div>
+          </div>
+
         </div>
 
-    </section>
+        <!-- Columna Derecha: Datos de la compradora -->
+        <div class="buyer-column">
+          <h2 class="section-heading">Datos de la compradora</h2>
+          
+          <div class="input-group">
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+          </div>
+          
+          <div class="input-group">
+            <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
+          </div>
+          
+          <div class="input-group">
+            <input type="email" id="email" name="email" placeholder="Email" required>
+          </div>
+          
+          <div class="input-group">
+            <input type="email" id="confirm-email" name="confirm-email" placeholder="Confirmar correo electrónico" required>
+            <span id="email-error" class="error-msg" aria-live="polite">Los correos electrónicos no coinciden</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- LÍNEA DIVISORIA HORIZONTAL -->
+      <hr class="main-divider">
+
+      <!-- SECCIÓN INFERIOR -->
+      <section class="bottom-section">
+        <!-- Columna Izquierda: Resumen del pedido -->
+        <div class="summary-column">
+          <div id="summary-items" class="summary-items">
+            <div class="summary-row empty-summary">
+              <span>Ninguna entrada seleccionada</span>
+              <span>0€</span>
+            </div>
+          </div>
+
+          <hr class="dashed-line">
+
+          <div class="summary-row fee-row">
+            <span>Gastos de gestión</span>
+            <span id="management-fee">--</span>
+          </div>
+
+          <hr class="solid-line">
+
+          <div class="summary-row total-row">
+            <div class="total-label">
+              <span class="total-title">Total</span>
+              <span class="total-subtitle">Tasas e impuestos incluidos</span>
+            </div>
+            <span id="total-price" class="total-amount">0€</span>
+          </div>
+
+          <hr class="dashed-line">
+        </div>
+
+        <!-- Columna Derecha: Checkboxes y botón Continuar -->
+        <div class="actions-column">
+          <div class="checkboxes-group">
+            <label class="custom-checkbox">
+              <input type="checkbox" id="promo-check">
+              <span class="checkmark"></span>
+              <span class="checkbox-text">Deseo recibir correos publicitarios.</span>
+            </label>
+
+            <label class="custom-checkbox">
+              <input type="checkbox" id="terms-check" required>
+              <span class="checkmark"></span>
+              <span class="checkbox-text">Acepto los términos y condiciones.</span>
+            </label>
+          </div>
+
+          <div class="submit-wrapper">
+            <button type="submit" id="btn-continue" class="btn-continue" disabled>
+              [CONTINUAR]
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </form>
+  </main>
+
+  <!-- VENTANA MODAL DE CONFIRMACIÓN (Estilo Ticket) -->
+<div id="confirmation-modal" class="modal-overlay" aria-hidden="true">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    
+    <!-- Cabecera del ticket -->
+    <div class="modal-header">
+      <h3 id="modal-title" class="modal-title">Reserva confirmada</h3>
+      <button type="button" id="close-modal" class="modal-close" aria-label="Cerrar ventana">&times;</button>
+    </div>
+
+    <!-- Contenido en formato ticket con líneas punteadas -->
+    <div class="ticket-receipt">
+      <div class="ticket-row">
+        <span class="ticket-label">EVENTO :</span>
+        <span class="ticket-value">The Girl's Cabaret</span>
+      </div>
+      <div class="ticket-divider"></div>
+
+      <div class="ticket-row">
+        <span class="ticket-label">FECHA :</span>
+        <span class="ticket-value">06/11/2026</span>
+      </div>
+      <div class="ticket-divider"></div>
+
+      <div class="ticket-row">
+        <span class="ticket-label">ENTRADAS :</span>
+        <span id="modal-summary-entries" class="ticket-value">--</span>
+      </div>
+      <div class="ticket-divider"></div>
+
+      <div class="ticket-row">
+        <span class="ticket-label">EMAIL :</span>
+        <span id="modal-buyer-email" class="ticket-value">--</span>
+      </div>
+      <div class="ticket-divider"></div>
+
+      <div class="ticket-row total-ticket-row">
+        <span class="ticket-label">TOTAL PAGADO :</span>
+        <span id="modal-total-price" class="ticket-value">--</span>
+      </div>
+      <div class="ticket-divider"></div>
+
+      <p class="modal-instruction">
+        *Recibirás un correo electrónico con tu entrada en formato PDF y el código QR de acceso.
+      </p>
+    </div>
+
+    <!-- Pie del ticket -->
+    <div class="modal-footer">
+      <p class="modal-goodbye">¡Nos vemos pronto!</p>
+    </div>
+
+  </div>
+</div>
+
+     <!-- FOOTER  -->
+    <footer>
+        <h1>Marcela's</h1>
+        <div class="footer-content">
+            <div class="footer-izq">
+                <div class="footer-horario">
+                    <div>
+                        <p>Martes - jueves:</p>
+                        <p>13:00 - 01:00</p>
+                    </div>
+                    <div>
+                        <p>Viernes - domingo:</p>
+                        <p>13:00 - 03:00</p>
+                    </div>
+                </div>
+                <p>Calle de Argensola, 2 (Madrid)</p>
+            </div>
+            <div class="footer-drch">
+                <div>
+                    <p>+ 34 654753411</p>
+                    <p>marcelas@gmail.com</p>
+                </div>
+                <div>
+                    <a href="">
+                        <img src="media/img/facebook.png" alt="">
+                    </a>
+                     <a href="">
+                        <img src="media/img/instagram.png" alt="">
+                    </a>
+                     <a href="">
+                        <img src="media/img/twitter.png" alt="">
+                    </a>
+                     <a href="">
+                        <img src="media/img/youtube.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!----------ENLACES JS---------->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/compraevento.js"></script>
     
 </body>
 </html>
