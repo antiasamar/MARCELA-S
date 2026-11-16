@@ -1802,6 +1802,8 @@ footer h1 {
   .modal-btn-submit {
     align-self: center;
   }
+
+  
 }
 
 /* 1. Evita que el navegador ponga fondo blanco al autocompletar */
@@ -3290,6 +3292,9 @@ body.modal-abierto .carrusel-pista {
         padding-right: 20px;
     }
     
+    .ticket-row {
+        font-size: 0.8rem;
+    }
 
     
 }
