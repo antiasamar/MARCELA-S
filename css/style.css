@@ -1633,10 +1633,16 @@ footer h1 {
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
+#modal-newsletter.modal-overlay {
+    background-color: color-mix(in srgb, var(--color-rosa) 70%, transparent);
+    backdrop-filter: none;
+}
+
 /* Clase que activa el JS */
 .modal-overlay.is-abierta {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
 }
 
 /* CAJA PRINCIPAL DEL MODAL */
@@ -3781,7 +3787,7 @@ body.modal-abierto .carrusel-pista {
 }
 
 .modal-goodbye {
-  font-family: 'Beth Ellen', cursive;
+  font-family: Beth Ellen; 
   font-size: 1.8rem;
   color: var(--color-vino);
 }
