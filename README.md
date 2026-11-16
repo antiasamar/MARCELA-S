@@ -69,3 +69,6 @@ https://api.jquery.com/animate/
 - CORREGIR DÍA, HORA Y  ZONA SELECCIONADA (QUE CAMBIEN DE BACKGROUND)
 - CORREGIR CAMPOS RELLENOS (BACKGROUND)
 - REVISAR RESPONSIVE (CENTRAR BOTÓN)
+
+
+data-aos="fade-up" data-aos-delay="600" 

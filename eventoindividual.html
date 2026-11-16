@@ -29,6 +29,11 @@
     <!------------- CSS ------------>
     <link rel="stylesheet" href="css/style.css">
 
+    <!------------- LIBRERÍAS JS ------------>
+
+    <!-- AOS  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+
 
 </head>
 
@@ -76,18 +81,18 @@
         <div class="cabaret-hero-container">
 
             <!-- COLUMNA IZQ  -->
-            <div class="cabaret-hero-titulo">
+            <div class="cabaret-hero-titulo" data-aos="fade-up" >
                 <h1>The <br>Girl's<br> Cabaret</h1>
                 
             </div>
 
             <!-- COLUMNA CENTRO  -->
-            <div class="cabaret-hero-img">
+            <div class="cabaret-hero-img" data-aos="fade-up" data-aos-delay="300">
                 <img src="media/img/eventocabaret.png" alt="">
             </div>
 
             <!-- COLUMNA DRCH  -->
-            <div class="cabaret-hero-text">
+            <div class="cabaret-hero-text" data-aos="fade-up" data-aos-delay="600">
                 <p>Cabaret, burlesque y performances protagonizadas por artistas femeninas y queer. Música, sensualidad y mucho descaro sobre el escenario de Marcela’s.</p>
 
                 <div class="artistas-cta">
@@ -102,13 +107,13 @@
 
     <!-------- SEPARADOR -------->
 
-    <section class="cabaret-separador">
+    <section class="cabaret-separador" data-aos="fade-up" >
         <p>Una noche para dejarse llevar por el espectáculo</p>
     </section>
 
     <!-------- ARTISTAS -------->
 
-    <section class="cabaret-artistas">
+    <section class="cabaret-artistas" data-aos="fade-up" >
         <h2>Artistas invitadas</h2>
 
         <!-- CONTAINER CARRUSEL  -->
@@ -173,7 +178,7 @@
 
     
     <!-------- FOOTER -------->
-    <footer>
+    <footer data-aos="fade-up" >
 
         <!-- ROW 1  -->
         <h1>Marcela's</h1>
@@ -221,9 +226,17 @@
     </footer>
 
     <!----------ENLACES JS---------->
+
+    <!-- jQuery  -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- AOS  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- MIS JS  -->
     <script src="js/menu.js"></script>
     <script src="js/cabaret.js"></script>
+    <script src="js/animaciones.js"></script>
     
 </body>
 

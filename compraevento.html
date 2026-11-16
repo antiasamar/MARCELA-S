@@ -29,6 +29,12 @@
     <!------------- CSS ------------>
     <link rel="stylesheet" href="css/style.css">
 
+
+    <!------------- LIBRERÍAS JS ------------>
+
+    <!-- AOS  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+
 </head>
 
 <body>
@@ -75,7 +81,7 @@
           <section class="top-section">
 
             <!-- COLUMNA IZQ (SELECCIÓN ENTRADAS)-->
-            <div class="tickets-column">
+            <div class="tickets-column" data-aos="fade-right">
               
               <!-- ENTRADA STANDART-->
               <div class="ticket-pill pill-crema" data-id="standart" data-name="Entrada Standart" data-price="12">
@@ -110,7 +116,7 @@
             </div>
 
             <!-- COLUMNA DRCHA (DATOS COMPRADORA) -->
-            <div class="buyer-column">
+            <div class="buyer-column" >
               <h2 class="section-heading">Datos de la compradora</h2>
               
               <div class="input-group-compra">
@@ -250,7 +256,7 @@
   </div>
 
   <!-------- FOOTER -------->
-  <footer>
+  <footer >
         
       <!-- ROW 1  -->
       <h1>Marcela's</h1>
@@ -298,9 +304,19 @@
     </footer>
 
     <!----------ENLACES JS---------->
+
+    <!-- jQuery  -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+
+    <!-- AOS  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <!-- MIS JS  -->
     <script src="js/menu.js"></script>
     <script src="js/compraevento.js"></script>
+    <script src="js/animaciones.js"></script>
     
 </body>
 </html>
