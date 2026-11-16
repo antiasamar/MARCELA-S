@@ -3294,7 +3294,11 @@ body.modal-abierto .carrusel-pista {
     }
     
     .ticket-row {
-        font-size: 0.8rem;
+        font-size: 0.65rem;
+    }
+
+    .modal-goodbye {
+        font-size: 1.5rem;
     }
 
     
