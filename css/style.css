@@ -3564,7 +3564,7 @@ s
 
 .custom-select-wrapper select option {
   background-color: var(--color-naranja);
-  color: var(--color-naranja);
+  color: var(--color-vino);
 }
 
 .full-width-select {
@@ -3595,6 +3595,7 @@ s
 .custom-select-wrapper select:focus {
   outline: none;
   border-color: var(--color-rosa);
+  color: var(--var-vino);
 }
 
 /* BOTÓN */
@@ -3626,7 +3627,7 @@ s
 }
 
 /* QUITAR ESTILO DEL NAVEGADOR DE LOS INPUTS  */
-.host-fieldset,
+/* .host-fieldset,
 .host-fieldset:focus-within,
 .host-fieldset .input-group {
     background-color: transparent !important;
@@ -3637,17 +3638,27 @@ s
 .host-fieldset input:valid,
 .host-fieldset input:not(:placeholder-shown) {
     background-color: transparent !important;
+} */
+
+.input-group input:-webkit-autofill,
+.input-group input:-webkit-autofill:hover,
+.input-group input:-webkit-autofill:focus,
+.input-group input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px var(--color-vino) inset !important;
+    box-shadow: 0 0 0 1000px var(--color-naranja) inset !important;
+    -webkit-text-fill-color: var(--color-vino) !important; 
+    transition: background-color 9999s ease-in-out 0s;
 }
 
-.host-fieldset input:-webkit-autofill,
+/* .host-fieldset input:-webkit-autofill,
 .host-fieldset input:-webkit-autofill:hover,
 .host-fieldset input:-webkit-autofill:focus,
 .host-fieldset input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
     box-shadow: 0 0 0 1000px transparent inset !important;
-    -webkit-text-fill-color: var(--color-rosa) !important; 
+    -webkit-text-fill-color: var(--color-vino) !important; 
     transition: background-color 9999s ease-in-out 0s;
-}
+} */
 
 /* VENTANA MODAL CONFIRMACIÓN RESERVA  */
 .modal-overlay {
