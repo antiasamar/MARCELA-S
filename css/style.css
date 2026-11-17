@@ -3562,9 +3562,13 @@ s
   background-image: none;
 }
 
+.custom-select-wrapper select:focus {
+    color: var(--color-rosa);
+}
+
 .custom-select-wrapper select option {
-  background-color: var(--color-naranja);
-  color: var(--color-vino);
+  background-color: var(--color-vino);
+  color: var(--color-naranja);
 }
 
 .full-width-select {
