@@ -28,16 +28,25 @@ function filtrarEventos(filtro) {
 
     for (var j = 0; j < tarjetas.length; j++) {
         var tarjeta = tarjetas[j];
-        
-        // BUSCAR EL DIV CON LA CLASE ASOCIADA AL BOTÓN
         var contenidoTarjeta = tarjeta.querySelector(".eventos-tarjeta");
 
-        // DIFERENCIAR FILTRO TODOS DE CLASES CONCRETAS
+        // DESACTIVAR AOS PARA QUE NO HAYA ANIMACIÓN AL FILTRAR
+        tarjeta.removeAttribute("data-aos");
+        tarjeta.removeAttribute("data-aos-delay");
+        contenidoTarjeta.removeAttribute("data-aos");
+        contenidoTarjeta.removeAttribute("data-aos-delay");
+
+        // MOSTRAR U OCULTAR SEGÚN EL FILTRO
         if (filtro === "Todos" || contenidoTarjeta.classList.contains(filtro.toLowerCase())) {
-            tarjeta.classList.remove("oculto"); //SE MUESTRA
+            tarjeta.classList.remove("oculto");
         } else {
-            tarjeta.classList.add("oculto"); //SE OCULTA
+            tarjeta.classList.add("oculto");
         }
+    }
+
+    // RECALCULAR POSICIONES DEL RESTO DE LA PÁGINA (CARRUSEL Y FOOTER)
+    if (typeof AOS !== "undefined") {
+        AOS.refreshHard();
     }
 }
 
